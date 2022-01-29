@@ -1,0 +1,134 @@
+html, body {
+  color: #fafafa!important;
+}
+
+html {
+  background: url("https://w.wallhaven.cc/full/73/wallhaven-73w51y.jpg") no-repeat center center fixed!important;
+  background-size: cover;
+}
+
+body#landing {
+  background-color: rgba(0, 0, 0, 0.815)!important;
+}
+
+body#about {
+  background-color: rgba(0, 0, 0, 0.911)!important;
+}
+
+.nav-item {
+  margin-right: 35px;
+  font-family: 'Mako', cursive!important;
+  text-transform: uppercase;
+}
+
+.nav-item a:hover, a:hover {
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+}
+.nav-item a, a {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none!important;
+  color: #fafafa!important;
+}
+
+.single-headline,
+.is-hidden,
+.is-visible {
+  display: inline-block;
+}
+
+.single-headline {
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+  border-right: #000;
+  font-family: 'Mako', cursive!important;
+  font-size: 2rem;
+  user-select: none;
+}
+
+.home-name {
+  font-family: 'Comforter', cursive;
+  font-size: 7rem;
+  user-select: none;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-visible {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#page {
+  margin-top: 150px;
+}
+
+.page-heading {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#about-content {
+  overflow: hidden;
+}
+
+.about-block {
+  background-color: rgba(0, 0, 0, 0.61);
+}
+
+#about-desc {
+  padding: 50px;
+  max-width: 800px;
+  margin: 150px auto;
+}
+
+#about .social-box {
+  margin-top: 150px;
+}
+
+.profile-image {
+  height: 100vh;
+}
+
+.social-box ul {
+  list-style: none;
+  display: flex;
+  margin-top: 2rem;
+}
+
+
+.social-box li {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  font-size: 4rem
+}
+
+#about-profile {
+  position: relative;
+}
+
+@media (max-width: 992px) {
+.profile-image {
+  width: 100%;
+  height: auto;
+}
+#about-desc {
+  background-color: rgba(0, 0, 0, 0.61);
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  margin-top: 0;
+  padding-top: 150px;
+  max-width: 100%;
+}
+#about-profile {
+  position: fixed;
+}
+}
