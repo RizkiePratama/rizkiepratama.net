@@ -1,5 +1,6 @@
 html, body {
   color: #fafafa!important;
+  font-family: 'Mako', cursive!important;
 }
 
 html {
@@ -15,9 +16,14 @@ body#about {
   background-color: rgba(0, 0, 0, 0.911)!important;
 }
 
+.flex-1 {
+  flex: 1;
+}
+.navbar-toggler {
+  z-index: 999;
+}
 .nav-item {
   margin-right: 35px;
-  font-family: 'Mako', cursive!important;
   text-transform: uppercase;
 }
 
@@ -28,6 +34,14 @@ body#about {
 .nav-item a, a {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+}
+
+.nav-item, .navbar-toggler {
+  color: #fafafa;
+}
+
+.navbar-toggler:hover {
+  opacity: 1;
 }
 
 a {
@@ -75,60 +89,26 @@ a {
   text-transform: uppercase;
 }
 
-#about-content {
-  overflow: hidden;
-}
-
-.about-block {
-  background-color: rgba(0, 0, 0, 0.61);
-}
-
-#about-desc {
-  padding: 50px;
-  max-width: 800px;
-  margin: 150px auto;
-}
-
-#about .social-box {
-  margin-top: 150px;
-}
-
-.profile-image {
-  height: 100vh;
-}
-
-.social-box ul {
-  list-style: none;
-  display: flex;
-  margin-top: 2rem;
-}
-
-
-.social-box li {
-  margin-right: 3rem;
-  margin-left: 3rem;
-  font-size: 4rem
-}
-
-#about-profile {
-  position: relative;
+.mobile-only {
+  display: none;
 }
 
 @media (max-width: 992px) {
-.profile-image {
-  width: 100%;
-  height: auto;
-}
-#about-desc {
-  background-color: rgba(0, 0, 0, 0.61);
-  position: absolute;
-  top: 0;
-  height: 100vh;
-  margin-top: 0;
-  padding-top: 150px;
-  max-width: 100%;
-}
-#about-profile {
-  position: fixed;
-}
+  .mobile-only {
+    display: inherit;
+  }
+  .navbar-collapse.show {
+    background-color: rgba(15, 15, 15, 0.95);
+    padding: 50px 50px 25px;
+    width: 100%;
+    position: fixed;
+    top: -200px;
+    left: 0;
+  }
+  .home-name {
+    font-size: 4rem;
+  }
+  .single-headline {
+    font-size: 1rem;
+  }
 }
