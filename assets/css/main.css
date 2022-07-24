@@ -1,6 +1,6 @@
 html, body {
   color: #fafafa!important;
-  font-family: 'Mako', cursive!important;
+  font-family: 'Roboto', cursive!important;
 }
 
 html {
@@ -8,11 +8,15 @@ html {
   background-size: cover;
 }
 
+#page {
+  min-height: 95vh;
+}
+
 body#landing {
   background-color: rgba(0, 0, 0, 0.815)!important;
 }
 
-body#about {
+body#about, body#page {
   background-color: rgba(0, 0, 0, 0.911)!important;
 }
 
@@ -81,12 +85,14 @@ a {
 }
 
 #page {
-  margin-top: 150px;
+  padding-top: 70px;
 }
 
 .page-heading {
   text-align: center;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4rem;
 }
 
 .mobile-only {
@@ -110,5 +116,121 @@ a {
   }
   .single-headline {
     font-size: 1rem;
+  }
+}
+
+#portofolio-selector {
+  margin-top: 5vh;
+}
+
+.p-selector-container div {
+  width: 100%;
+  height: 900px!important;
+  max-height: 60vh!important;
+  display: block;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-color: #000;
+  transition: all 0.5s;
+  -webkit-transition:all 0.5s ;
+  -o-transition:all 0.5s ;
+  -moz-transition:all 0.5s ;
+}
+
+.p-selector-container h1 {
+ position: absolute;
+ bottom: 0;
+ text-align: center;
+ width: 100%;
+ text-transform: uppercase;
+ font-weight: bold;
+ padding: 15px;
+}
+
+.p-selector-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.p-selector-container div:hover {
+  transform: scale(1.1);
+  opacity: 100%;
+}
+
+.p-selector-container div {
+  opacity: 50%;
+}
+
+.p-selector-container:hover {
+  opacity: 100%!important;
+}
+
+.portofolio-wrapper {
+  margin-top: 30px!important;
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+  position: absolute!important;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  opacity: 0%;
+}
+
+.portofolio-wrapper.active {
+  position: relative!important;
+  z-index: 0;
+  opacity: 100%;
+  transition: opacity 2s ease;
+  margin-right: calc(var(--bs-gutter-x) * -.5!important);
+  margin-left: calc(var(--bs-gutter-x) * -.5)!important;
+}
+
+.modal-fullscreen .modal-body {
+  background-color: #000000e8;
+}
+
+.gallery-item {
+  display: block;
+  max-width: 23vw;
+}
+
+.gallery-item img {
+  width: 100%;
+}
+
+.row > * {
+  padding: 0!important;
+}
+
+.portofolio-tab {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+.portofolio-tab li {
+  display: inline-block;
+  margin: 5px;
+}
+.portofolio-tab li a {
+  color: #5a5a5a!important;
+  background-color: #fafafa;
+  border-radius: 20px;
+  padding: 5px 10px;
+  min-width: 70px;
+  display: block;
+  text-align: center;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .portofolio-wrapper {
+    overflow: scroll;
   }
 }
