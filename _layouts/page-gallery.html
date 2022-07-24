@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body id="page" class="d-flex flex-fill flex-column">
+        <!-- Landing Header -->
+        {% include header.html %}
+
+        <!-- Page -->
+        <section id="page" class="container-fluid">
+            {{content}}
+        </section>
+
+        <!-- Footer -->
+        {% include footer-page-gallery.html %}
+    </body>
+</html>
