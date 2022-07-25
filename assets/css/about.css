@@ -51,6 +51,7 @@
 }
 
 .profile-image-badge {
+  width: 100%;
   max-width: 400px;
   margin: 50px auto;
   border-radius: 300px;
@@ -94,5 +95,11 @@
   .profile-image {
     width: 100%;
     height: auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .page-heading {
+    font-size: 2.5rem;
   }
 }
