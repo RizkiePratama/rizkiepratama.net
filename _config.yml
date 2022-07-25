@@ -28,9 +28,12 @@ twitter_username: RizkiePratama_
 github_username:  RizkiePratama
 
 # Build settings
+languages: ["en", "jp"]
+exclude_from_localizations: ["javascript", "images", "css"]
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-multiple-languages-plugin
 
 # Exclude from processing.
 # The following items will not be processed, by default.

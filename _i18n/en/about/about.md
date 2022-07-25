@@ -1,0 +1,5 @@
+<p>Hi, I'm a Software Developer from Bandung, Indonesia.</p>
+<p>An Introvert who love exploring new tech. Working on a Day Job as Livestream Enginner at <a href="https://vidio.com/">Vidio</a> and Mostly doing some side project at Night, of course when i'm not grinding for Apex Legends and Valorant.</p>
+<p>Have been really interested with Computer Science since 6th Grade, and have been self-learning about Programming on 8th Grade. From a simple HTML Static Page, developing basic Point-of-Sales software into creating my very first FPS Game with FPS Creator.</p>
+<p>Getting more focus on Software Engineering when i'm going into the College, and start to have interest in learning C/C++ and low level / bare metal stuff.</p>
+<p>For the most of my work stuff and side project are done using Ruby and C/C++, familiar with other language such as Python, Javascript, C# and much more but rarely using them except for certain needs</p>

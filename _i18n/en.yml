@@ -1,0 +1,24 @@
+global:
+  english: Eng
+  japanese: Jap
+  photography: Photography
+  software: Software
+  games: Games
+  street: Street
+  cosplay: Cosplay
+  soft_dev: Software Developer
+  game_dev: Game Developer
+  photog: Photographer
+pages:
+  home: Home
+  about: About
+  portofolio: Porotofolio
+  blog: Blog
+about_page:
+  title: A Little Story About Me
+  current_employment: Current Employment
+  founder_of: Founder Of
+  vidio_sub: 'Indonesia #1 OTT Platform'
+  hkz_sub: A Indie Game and Software Studio
+  social_title: Come and Follow me on Social Media
+  social_sub: to find more interesting bits

@@ -8,10 +8,14 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="/portofolio">Portofolio</a></li>
-              <li class="nav-item"><a class="nav-link" href="https://blog.rizkiepratama.net">Blog</a></li>
+              {% if site.lang == "en" %}
+              <li class="nav-item"><a class="nav-link" href="/">{% t pages.home %}</a></li>
+              {% elsif site.lang == "jp" %}
+              <li class="nav-item"><a class="nav-link" href="/jp">{% t pages.home %}</a></li>
+              {% endif %}
+              <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/about">{% t pages.about %}</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/portofolio">{% t pages.portofolio %}</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://blog.rizkiepratama.net">{% t pages.blog %}</a></li>
           </ul>
         </div>
       </div>

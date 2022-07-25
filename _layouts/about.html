@@ -4,7 +4,6 @@
     <body id="about" class="d-flex flex-fill flex-column">
         <!-- Landing Header -->
         {% include header.html %}
-
         <section id="about-section">
           <div class="row about-block">
             <div class="col col-lg-12">
@@ -15,35 +14,31 @@
             
             <div class="col">
               <div id="about-desc">
-                <h1 class="page-heading mb-5 fw-bold">A Little Story About Me</h1>
+                <h1 class="page-heading mb-5 fw-bold">{% t about_page.title %}</h1>
                 <img src="/assets/images/YGA08659_F.jpg" class="profile-image-badge mobile-only">
-                <p>Hi, I'm a Software Developer from Bandung, Indonesia.</p>
-                <p>An Introvert who love exploring new tech. Working on a Day Job as Livestream Enginner at <a href="https://vidio.com/">Vidio</a> and Mostly doing some side project at Night, of course when i'm not grinding for Apex Legends and Valorant.</p>
-                <p>Have been really interested with Computer Science since 6th Grade, and have been self-learning about Programming on 8th Grade. From a simple HTML Static Page, developing basic Point-of-Sales software into creating my very first FPS Game with FPS Creator.</p>
-                <p>Getting more focus on Software Enginnering whem i'm going into the College, and start to have interest in learning C/C++ and low level / bare metal stuff.</p>
-                <p>For the most of my work stuff and side project are done using Ruby and C/C++, familiar with outher language such as Python, Javascript, C# and much more but rarely using them except for certain needs</p>
+                {{ content }}
 
                 <div id="about-orgs" class="row align-items-center justify-content-center">
                   <div class="col">
                     <div id="about-day-job" class="text-center">
-                      <h4 class="text-uppercase fw-bold">Current Employment</h4>
+                      <h4 class="text-uppercase fw-bold">{% t about_page.current_employment %}</h4>
                       <a href="https://vidio.com/"><img src="/assets/images/vidio.svg" class="mt-3 mb-1"></a>
-                      <p>Indonesia #1 OTT Platform</p>
+                      <p>{% t about_page.vidio_sub %}</p>
                     </div>  
                   </div>
                   
                   <div class="col">
                     <div id="about-studio" class="text-center">
-                      <h4 class="text-uppercase fw-bold">Founder of</h4>
+                      <h4 class="text-uppercase fw-bold">{% t about_page.founder_of %}</h4>
                       <a href="https://hibikaze.id/"><img src="/assets/images/hibikaze_studio.png" class="mt-4 mb-2"></a>
-                      <p>A Indie Game and Software Studio</p>
+                      <p>{% t about_page.hkz_sub %}</p>
                     </div>
                   </div>
                 </div>
 
                 <div class="social-box text-center">
-                  <h4 class="fw-bold text-uppercase">Come and Follow me on Social Media</h4>
-                  <h5>to find more interesting bits</h5>
+                  <h4 class="fw-bold text-uppercase">{% t about_page.social_title %}</h4>
+                  <h5>{% t about_page.social_sub %}</h5>
                     
                   <ul class="align-items-center justify-content-center">
                     <li><a href="https://github.com/RizkiePratama"><i class="fab fa-github"></i></a></li>

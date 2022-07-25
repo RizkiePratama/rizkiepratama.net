@@ -1,0 +1,24 @@
+global:
+  english: 英語
+  japanese: 日本
+  photography: 写真撮影
+  software: ソフトウェア
+  games: ゲーム
+  street: 街
+  cosplay: コスプレ
+  soft_dev: ソフトウェア開発者
+  game_dev: ゲーム開発者
+  photog: 写真家
+pages:
+  home: 家
+  about: 約
+  portofolio: ポートフォリオ
+  blog: ブログ
+about_page:
+  title: 私についての小さな話
+  current_employment: 現在の雇用
+  founder_of: の創設者
+  vidio_sub: インドネシア ＃1 OTT プラットフォーム
+  hkz_sub: インディーゲームとソフトウェアスタジオ
+  social_title: ソーシャルメディアで私に従ってください
+  social_sub: もっと面白いビットを見つけるために
