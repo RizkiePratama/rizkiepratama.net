@@ -4,28 +4,29 @@ title: Projects Portofolio - Rizkie Pratama
 permalink: /portofolio/
 ---
 
-<section id="portofolio">
-  <h1 class="page-heading">{% t pages.portofolio %}</h1>
-   
-  <div id="portofolio-selector" class="row g-0">
-    <div class="col-md-12 col-lg-4">
-      <a class="p-selector-container" href="{{ site.baseurl }}/portofolio/photography">
-        <div style='background-image: url("https://cdn.rizkiepratama.net/a900c01a0d6c78f5/portofolio/thumbs/selector_photog.jpg")'></div>
-        <h1>{% t global.photography %}</h1>
-      </a>
+<div id="portofolio">
+  <section id="portofolio-heroes" class="row g-0 cover-block align-items-center">
+    <div class="col align-self-center shade-block">
+      <div class="align-middle">
+        <h1 class="page-heading">{% t pages.portofolio %}</h1>
+      </div>
     </div>
-    <div class="col-md-12 col-lg-4">
-      <a class="p-selector-container" href="{{ site.baseurl }}/portofolio/software">
-        <div style='background-image: url("https://cdn.rizkiepratama.net/a900c01a0d6c78f5/portofolio/thumbs/selector_software.jpg")'></div>
+  </section>
+
+  <section id="portofolio-software" class="row g-0 cover-block align-items-center">
+    <div class="align-middle">
+      <a class="btn btn-primary" href="{{ site.baseurl }}/portofolio/software">
         <h1>{% t global.software %}</h1>
       </a>
     </div>
-    <div class="col-md-12 col-lg-4">
-      <a class="p-selector-container" href="{{ site.baseurl }}/portofolio/games">
-        <div style='background-image: url("https://cdn.rizkiepratama.net/a900c01a0d6c78f5/portofolio/thumbs/selector_games.jpg")'></div>
+  </section>
+
+  <section id="portofolio-games" class="row g-0 cover-block align-items-center">
+    <div class="align-middle">
+      <a class="btn btn-primary" href="{{ site.baseurl }}/portofolio/games">
         <h1>{% t global.games %}</h1>
       </a>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 

@@ -4,12 +4,8 @@ html, body {
 }
 
 html {
-  background: url("https://w.wallhaven.cc/full/73/wallhaven-73w51y.jpg") no-repeat center center fixed!important;
+  background: url("/assets/images/73w51y.jpg") no-repeat center center fixed;
   background-size: cover;
-}
-
-#page {
-  min-height: 95vh;
 }
 
 body#landing {
@@ -18,6 +14,11 @@ body#landing {
 
 body#about, body#page {
   background-color: rgba(0, 0, 0, 0.911)!important;
+}
+
+#page {
+  padding-right: 0!important;
+  padding-left: 0!important;
 }
 
 .flex-1 {
@@ -84,10 +85,6 @@ a {
   white-space: nowrap;
 }
 
-#page {
-  padding-top: 70px;
-}
-
 .page-heading {
   text-align: center;
   text-transform: uppercase;
@@ -99,55 +96,24 @@ a {
   display: none;
 }
 
+#portofolio-heroes {
+  background: url("/assets/images/73w51y.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.shade-block {
+  background: rgba(0, 0, 0, 0.911)!important;
+  height: 100vh;
+}
+
 #portofolio-selector {
   margin-top: 5vh;
 }
 
-.p-selector-container div {
-  width: 100%;
-  height: 900px!important;
-  max-height: 60vh!important;
+.cover-block {
   display: block;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  background-color: #000;
-  transition: all 0.5s;
-  -webkit-transition:all 0.5s ;
-  -o-transition:all 0.5s ;
-  -moz-transition:all 0.5s ;
-}
-
-.p-selector-container h1 {
- position: absolute;
- bottom: 0;
- text-align: center;
- width: 100%;
- text-transform: uppercase;
- font-weight: bold;
- padding: 15px;
-}
-
-.p-selector-container {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: relative;
-}
-
-.p-selector-container div:hover {
-  transform: scale(1.1);
-  opacity: 100%;
-}
-
-.p-selector-container div {
-  opacity: 50%;
-}
-
-.p-selector-container:hover {
-  opacity: 100%!important;
+  height: 100vh;
+  background-color: #050505;
 }
 
 .portofolio-wrapper {
