@@ -3,6 +3,7 @@ global:
   japanese: Jap
   photography: Photography
   software: Software Development
+  website: Website Development
   games: Game Development
   street: Street
   cosplay: Cosplay
@@ -12,7 +13,7 @@ global:
 pages:
   home: Home
   about: About
-  portofolio: What can i Do?
+  portofolio: Portofolio
   blog: Blog
 about_page:
   title: A Little Story About Me
@@ -22,3 +23,15 @@ about_page:
   hkz_sub: A Indie Game and Software Studio
   social_title: Come and Follow me on Social Media
   social_sub: to find more interesting bits
+portofolio_page:
+  heroes_title: THINK, BUILD AND CREATE!!
+  heroes_subtitle: ":::: Here's some featured projects<br>:::: i have accomplish this past years"
+  tech: Tech Stack
+  prog_lang: Language
+  framework: Framework
+  website:
+    hibikaze_desc: Creative Studio based on Bandung Indonesia, specialized in Software and Game Development for remote and local client.
+  software:
+    majin_paste_desc: A Pastebin-like software to Create, Save and Share your paste/code snippet by the unique generated URL to view it from your web page.
+    red_catalyst_desc: Unified streaming media server software, supporting RTMP and SRT Protocol that can be used to relay broadcast and live transcode.
+    alter_pass_desc: Cloud base Password Manager, store your pasword and cridential on the cloud and access it trough the WebUI and Android App.

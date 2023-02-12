@@ -3,6 +3,7 @@ global:
   japanese: 日本
   photography: 写真撮影
   software: ソフトウェア
+  website: ウェブサイト
   games: ゲーム
   street: 街
   cosplay: コスプレ
@@ -22,3 +23,15 @@ about_page:
   hkz_sub: インディーゲームとソフトウェアスタジオ
   social_title: ソーシャルメディアで私に従ってください
   social_sub: もっと面白いビットを見つけるために
+portofolio_page:
+  heroes_title: 考え、構築し、創造する!!
+  heroes_subtitle: ":::: 過去数年間に私が達成した<br>:::: 注目のプロジェクトをいくつか紹介します"
+  tech: 技術スタック
+  prog_lang: プログラミング言語
+  framework: 枠組み
+  website:
+    hibikaze_desc: リモートおよびローカルクライアント向けのソフトウェアおよびゲーム開発に特化した、インドネシアのバンドンに拠点を置くクリエイティブスタジオ。
+  software:
+    majin_paste_desc: 独自に生成された URL でペースト/コード スニペットを作成、保存、共有して Web ページから表示するための Pastebin のようなソフトウェア。
+    red_catalyst_desc: ブロードキャストとライブ トランスコードの中継に使用できる RTMP および SRT プロトコルをサポートする統合ストリーミング メディア サーバー ソフトウェア。
+    alter_pass_desc: クラウド ベースのパスワード マネージャー。パスワードと資格情報をクラウドに保存し、WebUI と Android アプリからアクセスします。

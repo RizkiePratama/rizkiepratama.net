@@ -7,26 +7,104 @@ permalink: /portofolio/
 <div id="portofolio">
   <section id="portofolio-heroes" class="row g-0 cover-block align-items-center">
     <div class="col align-self-center shade-block">
-      <div class="align-middle">
-        <h1 class="page-heading">{% t pages.portofolio %}</h1>
+      <div class="container-xxl">
+        <div class="heroes-tagline">
+          <h1 class="heroes-title text-start">{% t portofolio_page.heroes_title %}</h1>
+          <h2 class="heroes-subtitle text-start">{% t portofolio_page.heroes_subtitle %}</h2>
+        </div>
+        <a href="#portofolio-content"><i class="heroes-scrolldown fa-solid fa-chevron-down"></i></a>
       </div>
     </div>
   </section>
 
-  <section id="portofolio-software" class="row g-0 cover-block align-items-center">
-    <div class="align-middle">
-      <a class="btn btn-primary" href="{{ site.baseurl }}/portofolio/software">
-        <h1>{% t global.software %}</h1>
-      </a>
+  <section id="portofolio-content" class="cover-block align-items-center">
+    <div class="container">
+      <div class="row portofolio-block pt-5">
+        <div class="col-sm-12 col-md-12 pt-5">
+          <div class="row mb-5">
+            <h1 class="text-center text-uppercase font-weight-bold">:: {% t global.website %} ::</h1>
+          </div>
+          <section id="web-portofolio-hibikaze" class="row web-portofolio align-items-center">
+            <div class="col-sm-12 col-md-6 p-3 order-sm-1">
+              <h1 class="text-center text-uppercase font-weight-bold">Hibikaze Studios</h1>
+              <p class="text-center">{% t portofolio_page.website.hibikaze_desc %}</p>
+            </div>
+            <div class="col-sm-12 col-md-6 p-3 order-sm-2 text-center">
+              <img class="portofolio-site-preview" src="/assets/images/hibikaze_site.jpg">
+            </div>
+          </section>
+        </div>
+        <div class="col-sm-12 col-md-12 pt-5">
+          <div class="row mb-5">
+            <h1 class="text-center text-uppercase font-weight-bold">:: {% t global.software %} ::</h1>
+          </div>
+          <div class="row mb-5">
+            <div class="col-md-4 col-sm-12">
+              <div id="software-portofolio-majin-paste" class="portofolio-cards">
+                <h3 class="text-center text-uppercase font-weight-bold">Majin Paste</h3>
+                <p class="text-center">{% t portofolio_page.software.majin_paste_desc %}</p>
+                <ul class="portofolio-links">
+                  <li><a href="https://github.com/RizkiePratama/majinpaste"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div id="software-portofolio-red-catalyst" class="portofolio-cards">
+                <h3 class="text-center text-uppercase font-weight-bold">Red Catalyst</h3>
+                <p class="text-center">{% t portofolio_page.software.red_catalyst_desc %}</p>
+                <ul class="portofolio-links">
+                  <li><a href="https://github.com/RizkiePratama/red-catalyst"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div id="software-portofolio-alter-pass" class="portofolio-cards">
+                <h3 class="text-center text-uppercase font-weight-bold">Alter Pass</h3>
+                <p class="text-center">{% t portofolio_page.software.alter_pass_desc %}</p>
+                <ul class="portofolio-links">
+                  <li><a href="https://github.com/RizkiePratama/alterpass"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-12 col-md-12 pt-5">
+          <div class="row mb-5">
+            <h1 class="text-center text-uppercase font-weight-bold">:: {% t portofolio_page.tech %} ::</h1>
+          </div>
+          <div class="row mb-5">
+            <div class="col-sm-12 col-md-6">
+              <section id="tech-stack-portofolio-language" class="portofolio-cards">
+                <h3 class="text-uppercase text-center font-weight-bold">{% t portofolio_page.prog_lang %}</h3>
+                <ul class="stack-list">
+                  <li><img src="/assets/images/stacks/ruby.svg"></li>
+                  <li><img src="/assets/images/stacks/python.svg"></li>
+                  <li><img src="/assets/images/stacks/php.svg"></li>
+                  <li><img src="/assets/images/stacks/lua.svg"></li>
+                  <li><img src="/assets/images/stacks/cpp.svg"></li>
+                  <li><img src="/assets/images/stacks/csharp.svg"></li>
+                  <li><img src="/assets/images/stacks/javascript.svg"></li>
+                  <li><img src="/assets/images/stacks/typescript.svg"></li>
+                </ul>
+              </section>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <section id="tech-stack-portofolio-language" class="portofolio-cards">
+              <h3 class="text-uppercase text-center font-weight-bold">{% t portofolio_page.framework %}</h3>
+              <ul class="stack-list">
+                <li><img class="wide" src="/assets/images/stacks/rails.svg"></li>
+                <li><img src="/assets/images/stacks/sinatra.svg"></li>
+                <li><img src="/assets/images/stacks/code_igniter.svg"></li>
+                <li><img class="wide" src="/assets/images/stacks/unity.svg"></li>
+                <li><img src="/assets/images/stacks/unreal.svg"></li>
+                <li><img src="/assets/images/stacks/godot.svg"></li>
+              </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <section id="portofolio-games" class="row g-0 cover-block align-items-center">
-    <div class="align-middle">
-      <a class="btn btn-primary" href="{{ site.baseurl }}/portofolio/games">
-        <h1>{% t global.games %}</h1>
-      </a>
-    </div>
-  </section>
+  </section> <!-- #portofolio-content -->
 </div>
 
