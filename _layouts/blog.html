@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body id="blog" class="d-flex flex-fill flex-column">
+        <!-- Landing Header -->
+        {% include header.html %}
+        <div id="blog-post">
+        <div class="row hero-post-header" style="background: url('{{page.cover}}') no-repeat center center">
+        </div>
+        <div class="container">
+          <div class="row blog-block">
+            <div class="col-12 col-lg-12">
+                <div class="post-meta">
+                    <h1 class="post-title">{{page.title}}</h1>
+                    <ul class="post-meta-items">
+                        <li class="meta-item meta-date">Posted at {{page.date  | date: "%B %d, %Y"}}</li>
+                        {% for tag in page.tags %}
+                        <li class="meta-item meta-tag"><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <section class="blog-post-content">
+                    {{ content }}
+                </section>
+            </div>
+            
+            
+            {% assign current_tags = page.tags %}
+            {% assign related_posts = site.posts | where:"tags", current_tags %}
+
+            {% if related_posts.size > 0 %}
+            <div class="col-12 col-lg-12">
+                <div class="row author-block">
+                    <div class="col author-title-block">
+                        <h3>Done Reading this Post?</h3>
+                        <p>Maybe check some More Similar Content...</p>
+                    </div>
+                </div>
+                <div class="row similar-post-block">
+                    {% for post in related_posts limit: 3 %}
+                    <div class="col col-lg-4 similar-post-item">
+                        <a href="{{ post.url }}">
+                            <img class="similar-post-cover-thumb" src="{{ post.cover }}">
+                            <h3 class="similar-post-title">{{ post.title }}</h3>
+                            <p class="similar-post-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <!-- Footer -->
+        {% include footer.html %}
+    </body>
+</html>
