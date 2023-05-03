@@ -1,0 +1,140 @@
+#blog {
+    background-color: rgba(0, 0, 0, 0.900);
+    min-height: 100vh;
+}
+
+#blog .navbar.fixed-top {
+    position: absolute!important;    
+}
+
+#blog-post {
+    padding-bottom: 200px;
+}
+
+#blog-index {
+    margin-top: 10rem;
+}
+
+.blog-post-content img {
+    width: 100%;
+}
+
+.post-title {
+    margin-bottom: .5rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.blog-post-content {
+    margin-top: 3rem;
+}
+
+
+.blog-post-content h2 {
+    margin-top: 3rem;
+}
+
+.hero-post-header {
+    height: 100vw;
+    min-height: 30vh;
+    max-height: 70vh;
+    content: "";
+    margin-bottom: 3rem;
+    background-size: cover!important;
+}
+
+.post-meta-items {
+    list-style: none;
+    padding-left: 0!important;
+}
+
+.meta-date,
+.meta-tag {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.meta-item {
+    padding: 5px 10px;
+    color: #2A2A2A;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.meta-item {
+    background: #FAFAFA;
+}
+
+.meta-tag {
+    background: #FAFAFA31;
+    color: #FAFAFA;
+}
+
+.author-title-block {
+    margin: 4rem 0 3rem!important;
+    border-left: #FAFAFA solid 5px;
+    padding-left: 1rem!important;
+}
+
+.author-block h3,
+.author-block p {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.similar-post-items {
+    width: 250px;
+}
+
+.similar-post-cover-thumb {
+    width: 100%;
+}
+
+.similar-post-title {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.similar-post-excerpt {
+    font-size: 0.85rem;
+}
+
+.post-card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.post-card-excerpt {
+    font-size: 0.9rem;
+    color: #DADADA;
+}
+
+
+.post-card-date {
+    font-size: .8rem;
+}
+
+.post-cards-meta {
+    padding: 0 2rem!important;
+}
+
+.blog-badge {
+    margin-bottom: 2rem;
+}
+
+.blog-badge h1 {
+    padding-left: 1.5rem;
+    font-weight: bold;
+    font-size: 3rem;
+    background: #FAFAFA;
+    color: #2A2A2A
+}
+
+.similar-post-item {
+    padding: 1rem!important;
+}

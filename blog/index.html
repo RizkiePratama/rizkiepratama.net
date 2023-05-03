@@ -1,0 +1,42 @@
+---
+layout: blog-index
+custom_css: blog
+title: Blog Posts
+permalink: /blog/
+pagination: 
+  enabled: true
+---
+{% assign sorted_pages = paginator.posts | sort: 'date' | reverse %}
+{% for post in sorted_pages %}
+<a href="{{ post.url }}">
+  <div class="post-cards row mb-3">
+    <div class="post-cards-cover col col-4">
+      <img class="img-fluid" src="{{ post.cover }}">
+    </div>
+    <div class="post-cards-meta col col-8">
+      <h1 class="post-card-title">{{ post.title }}</h1>
+      <ul class="post-meta-items">
+        <li class="post-card-date meta-item meta-date">{{post.date  | date: "%B %d, %Y"}}</li>
+      </ul>
+      <div class="post-card-excerpt">
+        {{ post.content | strip_html | truncatewords: 30 }}
+      </div>
+    </div>
+  </div>
+</a>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% endif %}
+
+  <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% endif %}
+</div>
