@@ -52,5 +52,3 @@ Hampir sama pada kasus di atas,Masalah ini muncul dikarenakan anda tidak memilik
 ```term
 $ sudo dnf install patch
 ```
-
-

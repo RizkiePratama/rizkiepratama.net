@@ -1,3 +1,11 @@
+div.highlight {
+    display: block;
+    background: #000000a6;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-left: #DADADA solid 5px;
+}
+
 #blog {
     background-color: rgba(0, 0, 0, 0.900);
     min-height: 100vh;
@@ -56,6 +64,7 @@
 .meta-tag {
     display: inline-block;
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 .meta-item {
@@ -74,14 +83,14 @@
     color: #FAFAFA;
 }
 
-.author-title-block {
+.similar-post-block-title {
     margin: 4rem 0 3rem!important;
     border-left: #FAFAFA solid 5px;
     padding-left: 1rem!important;
 }
 
-.author-block h3,
-.author-block p {
+.similar-post-block-title h3,
+.similar-post-block-title p {
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -119,6 +128,10 @@
     font-size: .8rem;
 }
 
+.post-cards {
+    margin-bottom: 1.5rem;
+}
+
 .post-cards-meta {
     padding: 0 2rem!important;
 }
@@ -137,4 +150,34 @@
 
 .similar-post-item {
     padding: 1rem!important;
+}
+
+.pagination .next,
+.pagination .previous {
+    font-weight: bold;
+}
+
+.pagination .next {
+    margin-left: 1rem;
+}
+
+.pagination .previous {
+    margin-right: 1rem;
+}
+
+@media (max-width: 992px) {
+    #blog-index {
+        margin-top: 5rem;
+    }
+
+    .post-cards {
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .post-card-title {
+        margin-top: 1.5rem;
+    }
 }

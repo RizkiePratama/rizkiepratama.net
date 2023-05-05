@@ -21,5 +21,3 @@ From this time forward, this blog will cover much more deeper than what i did be
 Well, that one probably just copy pasting from what i remember from last blog 'First Post', but i guess that should do it.
 
 So, i hope you'll looking forward for it and if you do please subscribe to my mailing list if you havent yet, it should be somewhere between the sidebar or some where near the footer.
-
-

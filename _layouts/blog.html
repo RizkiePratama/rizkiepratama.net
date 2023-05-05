@@ -8,7 +8,7 @@
         <div class="row hero-post-header" style="background: url('{{page.cover}}') no-repeat center center">
         </div>
         <div class="container">
-          <div class="row blog-block">
+          <div class="row blog-block p-5">
             <div class="col-12 col-lg-12">
                 <div class="post-meta">
                     <h1 class="post-title">{{page.title}}</h1>
@@ -27,26 +27,32 @@
             
             
             {% assign current_tags = page.tags %}
-            {% assign related_posts = site.posts | where:"tags", current_tags %}
+            {% assign related_posts = site.posts %}
+            {% for tag in current_tags %}
+                {% assign related_posts = related_posts | where: 'tags', tag %}
+            {% endfor %}
+            {% assign related_posts = related_posts | where_exp: 'post', 'post != page' %}
 
             {% if related_posts.size > 0 %}
             <div class="col-12 col-lg-12">
-                <div class="row author-block">
-                    <div class="col author-title-block">
+                <div class="row similar-post-block">
+                    <div class="col-12 col-lg-12 similar-post-block-title">
                         <h3>Done Reading this Post?</h3>
                         <p>Maybe check some More Similar Content...</p>
                     </div>
-                </div>
-                <div class="row similar-post-block">
-                    {% for post in related_posts limit: 3 %}
-                    <div class="col col-lg-4 similar-post-item">
-                        <a href="{{ post.url }}">
-                            <img class="similar-post-cover-thumb" src="{{ post.cover }}">
-                            <h3 class="similar-post-title">{{ post.title }}</h3>
-                            <p class="similar-post-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
-                        </a>
+                    <div class="col-12 col-lg-12 similar-post-block-list">
+                        <div class="row">
+                            {% for post in related_posts limit: 3 %}
+                            <div class="col-12 col-md-4 col-lg-4 similar-post-item">
+                                <a href="{{ post.url }}">
+                                    <img class="similar-post-cover-thumb" src="{{ post.cover }}">
+                                    <h3 class="similar-post-title">{{ post.title }}</h3>
+                                    <p class="similar-post-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
                     </div>
-                    {% endfor %}
                 </div>
             </div>
             {% endif %}

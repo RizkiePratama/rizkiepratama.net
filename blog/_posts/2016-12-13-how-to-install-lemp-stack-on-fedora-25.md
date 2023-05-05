@@ -105,5 +105,3 @@ If youre happen to get a 403 (Access Denied) or 502 () errors from nginx, you ca
 4. Make sure to restart the services after you made change into your config.
 
 to make it easy to figure out whats went wrong, you can always check the very last line of nginx error log ( default at `/var/log/nginx/error.log` )
-
-

@@ -5,15 +5,16 @@ title: Blog Posts
 permalink: /blog/
 pagination: 
   enabled: true
+  sort_reverse: true
 ---
-{% assign sorted_pages = paginator.posts | sort: 'date' | reverse %}
-{% for post in sorted_pages %}
+
+{% for post in paginator.posts %}
 <a href="{{ post.url }}">
-  <div class="post-cards row mb-3">
-    <div class="post-cards-cover col col-4">
+  <div class="post-cards row p-2">
+    <div class="post-cards-cover col-12 col-md-4">
       <img class="img-fluid" src="{{ post.cover }}">
     </div>
-    <div class="post-cards-meta col col-8">
+    <div class="post-cards-meta col-12 col-md-8">
       <h1 class="post-card-title">{{ post.title }}</h1>
       <ul class="post-meta-items">
         <li class="post-card-date meta-item meta-date">{{post.date  | date: "%B %d, %Y"}}</li>
