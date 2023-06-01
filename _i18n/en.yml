@@ -31,6 +31,7 @@ portofolio_page:
   framework: Framework
   website:
     hibikaze_desc: Creative Studio based on Bandung Indonesia, specialized in Software and Game Development for remote and local client.
+    symphonyart_desc: SymphonyArt Photography is a Photography services in Bandung. Offering different types photography services such as product and wedding photography.
   software:
     majin_paste_desc: A Pastebin-like software to Create, Save and Share your paste/code snippet by the unique generated URL to view it from your web page.
     red_catalyst_desc: Unified streaming media server software, supporting RTMP and SRT Protocol that can be used to relay broadcast and live transcode.

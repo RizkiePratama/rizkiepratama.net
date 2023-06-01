@@ -308,6 +308,10 @@ a {
   .portofolio-site-preview {
     max-width: 90%;
   }
+
+  #web-portofolio-landing-title h3 {
+    margin-left: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
