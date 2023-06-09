@@ -106,11 +106,11 @@ a {
 
 .page-heading, .heroes-title {
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .heroes-subtitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .mobile-only {
@@ -129,7 +129,7 @@ a {
 }
 
 .web-portofolio {
-  margin-bottom: 5rem!important;
+  margin-top: 5rem!important;
 }
 
 .web-portofolio p {
@@ -304,14 +304,15 @@ a {
 #portofolio-tabs {
   color: #fafafa!important;
   border-bottom: 0;
+  margin: 0 -15px;
+}
+
+#portofolio-tabs li {
+  display: block;
 }
 
 #portofolio-tabs .nav-item {
   margin-right: 0!important;
-}
-
-#portofolio-tabs {
-  margin: 0 -15px;
 }
 
 #portofolio-tabs .nav-item .nav-link {
@@ -321,7 +322,7 @@ a {
   transition: color 1s ease;
   border: none;
   border-radius: 0;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 #portofolio-tabs .nav-item .nav-link:hover {
@@ -372,6 +373,14 @@ a {
   .single-headline {
     font-size: 1rem;
   }
+
+  .heroes-title {
+    font-size: 2rem;
+  }
+  
+  .heroes-subtitle {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 425px) {
@@ -406,6 +415,10 @@ a {
 
   #portofolio-heroes .container-xxl .heroes-tagline {
     left: 1rem;
+  }
+
+  #portofolio-tabs .nav-item .nav-link {
+    font-size: 0.9rem;
   }
 }
 
