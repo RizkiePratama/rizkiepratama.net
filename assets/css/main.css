@@ -10,8 +10,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 html {
-  background: url("/assets/images/73w51y.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background-size: cover!important;
 }
 
 body#landing {
@@ -114,7 +113,7 @@ a {
 }
 
 #portofolio-heroes {
-  background: url("/assets/images/73w51y.jpg") no-repeat center center;
+  background: url("/assets/images/bg/3.jpg") no-repeat center center;
   background-size: cover;
 }
 

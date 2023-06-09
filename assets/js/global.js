@@ -19,4 +19,10 @@ $(document).ready(function(){
       nav_toggler.children().removeClass('fa-bars').addClass('fa-times');
     }
   });
+
+  // Randomnize Background Images
+  var html_parent = $('html');
+  var min = 1; var max = 4;
+  var rand = Math.floor(Math.random() * (max - min + 1)) + min;
+  html_parent.css("background", "url('/assets/images/bg/" + rand + ".jpg') no-repeat center center fixed");
 });
