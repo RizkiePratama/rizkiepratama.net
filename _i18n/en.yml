@@ -1,7 +1,6 @@
 global:
   english: Eng
   japanese: Jap
-  photography: Photography
   software: Software Projects
   website: Website Development
   games: Game Development
@@ -29,6 +28,8 @@ portofolio_page:
   tech: Tech Stack
   prog_lang: Language
   framework: Framework
+  landing_page: Landing Page
+  dev: Development
   website:
     hibikaze_desc: Creative Studio based on Bandung Indonesia, specialized in Software and Game Development for remote and local client.
     symphonyart_desc: SymphonyArt Photography is a Photography services in Bandung. Offering different types photography services such as product and wedding photography.
@@ -38,3 +39,9 @@ portofolio_page:
     alter_pass_desc: Cloud base Password Manager, store your pasword and cridential on the cloud and access it trough the WebUI and Android App.
     gnews_dart_desc: Google News scraper packages build with Dart, also equipped with plugin to parse aggregated news from 3rd party news site.
     briefly_desc: A Simple News Reader App build with Flutter frameworks and powered by <b>gnews.dart</b> plugin.
+  photography:
+    title: Photography
+    street: Street Photography
+  ai_art:
+    title: Ai Art
+    stable_diffusion: Stable Diffusion Art

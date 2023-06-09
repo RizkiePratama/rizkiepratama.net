@@ -1,7 +1,6 @@
 global:
   english: 英語
   japanese: 日本
-  photography: 写真撮影
   software: ソフトウェア
   website: ウェブサイト
   games: ゲーム
@@ -29,11 +28,20 @@ portofolio_page:
   tech: 技術スタック
   prog_lang: プログラミング言語
   framework: 枠組み
+  landing_page: ランディングページ
+  dev: 開発
   website:
     hibikaze_desc: リモートおよびローカルクライアント向けのソフトウェアおよびゲーム開発に特化した、インドネシアのバンドンに拠点を置くクリエイティブスタジオ。
+    symphonyart_desc: SymphonyArt Photographyは、バンドンにある写真サービスで、製品写真やウェディング写真などのさまざまなタイプの写真サービスを提供しています。
   software:
     majin_paste_desc: 独自に生成された URL でペースト/コード スニペットを作成、保存、共有して Web ページから表示するための Pastebin のようなソフトウェア。
     red_catalyst_desc: ブロードキャストとライブ トランスコードの中継に使用できる RTMP および SRT プロトコルをサポートする統合ストリーミング メディア サーバー ソフトウェア。
     alter_pass_desc: クラウド ベースのパスワード マネージャー。パスワードと資格情報をクラウドに保存し、WebUI と Android アプリからアクセスします。
     gnews_dart_desc: Google ニュース スクレーパー パッケージは Dart で構築されており、サードパーティのニュース サイトから集約されたニュースを解析するプラグインも備えています。
     briefly_desc: Flutter フレームワークで構築され、<b>gnews.dart</b> プラグインを利用したシンプルなニュース リーダー アプリです。
+  photography:
+    title: 写真撮影
+    street: ストリート
+  ai_art:
+    title: AIアート
+    stable_diffusion: 安定拡散アート

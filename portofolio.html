@@ -19,133 +19,180 @@ permalink: /portofolio/
 
   <section id="portofolio-content" class="cover-block align-items-center">
     <div class="container">
-      <div class="row portofolio-block pt-5 pb-5">
-        <div class="col-sm-12 col-md-12 pt-5">
-          <div class="row mb-5">
-            <h1 class="text-center text-uppercase font-weight-bold">:: {% t global.website %} ::</h1>
-          </div>
-          <section id="web-portofolio-hibikaze" class="row web-portofolio align-items-center">
-            <div class="col-sm-12 col-md-6 p-3 order-sm-1">
-              <h1 class="text-center text-uppercase font-weight-bold">Hibikaze Studios</h1>
-              <p class="text-center">{% t portofolio_page.website.hibikaze_desc %}</p>
-            </div>
-            <div class="col-sm-12 col-md-6 p-3 order-sm-2 text-center">
-              <img class="portofolio-site-preview" src="/assets/images/portofolio/website/hibikaze_site.jpg">
-            </div>
-          </section>
-          <section id="web-portofolio-hibikaze" class="row web-portofolio align-items-center">
-            <div class="col-sm-12 col-md-6 p-3 order-sm-1 order-md-2">
-              <h1 class="text-center text-uppercase font-weight-bold">Symphony Art Photography</h1>
-              <p class="text-center">{% t portofolio_page.website.symphonyart_desc %}</p>
-            </div>
-            <div class="col-sm-12 col-md-6 p-3 order-sm-2 order-md-1 text-center">
-              <img class="portofolio-site-preview" src="/assets/images/portofolio/website/symphony-art.jpg">
-            </div>
-          </section>
-          <section id="web-portofolio-landing" class="row web-portofolio align-items-center">
-            <div id="web-portofolio-landing-title" class="col-sm-12 col-md-12 p-3">
-              <h3 class="text-left text-uppercase font-weight-bold">Landing Pages</h3>
-            </div>
-            <div class="col-sm-4 col-md-4 p-3 order-sm-1 text-center">
-              <img class="portofolio-site-preview" src="/assets/images/portofolio/website/bsm-consultant.jpg">
-            </div>
-            <div class="col-sm-4 col-md-4 p-3 order-sm-2 text-center">
-              <img class="portofolio-site-preview" src="/assets/images/portofolio/website/abys-burger.jpg">
-            </div>
-            <div class="col-sm-4 col-md-4 p-3 order-sm-3 text-center">
-              <img class="portofolio-site-preview" src="/assets/images/portofolio/website/repos.jpg">
-            </div>
-          </section>
-          <section id="web-portofolio-more" class="row web-portofolio align-items-center" style="display: none;">
-            <div class="col-12 text-center">
-              <a class="btn btn-primary btn-lg btn-block" href="">See More Web Portofolio</a>
-            </div>
-          </section>
-        </div>
-        <div class="col-sm-12 col-md-12 pt-5">
-          <div class="row mb-5">
-            <h1 class="text-center text-uppercase font-weight-bold">:: {% t global.software %} ::</h1>
-          </div>
-          <div class="row mb-5 justify-content-center">
-            <div class="col-md-4 col-sm-12 py-md-3">
-              <div id="software-portofolio-majin-paste" class="portofolio-cards">
-                <h3 class="text-center text-uppercase font-weight-bold">Majin Paste</h3>
-                <p class="text-center">{% t portofolio_page.software.majin_paste_desc %}</p>
-                <ul class="portofolio-links">
-                  <li><a href="https://github.com/RizkiePratama/majinpaste"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
+      <ul class="nav nav-tabs" id="portofolio-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="development-tab" data-bs-toggle="tab" data-bs-target="#development" type="button" role="tab" aria-controls="development" aria-selected="true">{% t portofolio_page.dev %}</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#photography" type="button" role="tab" aria-controls="Photography" aria-selected="false">{% t portofolio_page.photography.title %}</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#ai-art" type="button" role="tab" aria-controls="ai-art" aria-selected="false">{% t portofolio_page.ai_art.title %}</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="portofolio-tab-contents">
+        <div class="tab-pane fade show active" id="development" role="tabpanel" aria-labelledby="home-tab">
+          <div class="row portofolio-block pt-5 pb-5">
+            <div class="col-sm-12 col-md-12 pt-5">
+              <div class="portotfolio-head-title-container col">
+                <h2 class="portofolio-head-title">{% t global.website %}</h2>
               </div>
-            </div>
-            <div class="col-md-4 col-sm-12 py-md-3">
-              <div id="software-portofolio-red-catalyst" class="portofolio-cards">
-                <h3 class="text-center text-uppercase font-weight-bold">Red Catalyst</h3>
-                <p class="text-center">{% t portofolio_page.software.red_catalyst_desc %}</p>
-                <ul class="portofolio-links">
-                  <li><a href="https://github.com/RizkiePratama/red-catalyst"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-12 py-md-3">
-              <div id="software-portofolio-alter-pass" class="portofolio-cards">
-                <h3 class="text-center text-uppercase font-weight-bold">Alter Pass</h3>
-                <p class="text-center">{% t portofolio_page.software.alter_pass_desc %}</p>
-                <ul class="portofolio-links">
-                  <li><a href="https://github.com/RizkiePratama/alterpass"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-12 py-md-3">
-              <div id="software-portofolio-majin-paste" class="portofolio-cards">
-                <h3 class="text-center text-uppercase font-weight-bold">GNews.Dart</h3>
-                <p class="text-center">{% t portofolio_page.software.gnews_dart_desc %}</p>
-                <ul class="portofolio-links">
-                  <li><a href="https://github.com/RizkiePratama/gnews.dart"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-12 py-md-3">
-              <div id="software-portofolio-red-catalyst" class="portofolio-cards">
-                <h3 class="text-center text-uppercase font-weight-bold">Briefly</h3>
-                <p class="text-center">{% t portofolio_page.software.briefly_desc %}</p>
-                <ul class="portofolio-links">
-                  <li><a href="https://github.com/RizkiePratama/briefly-app"><i class="fa-brands fa-github"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col col-sm-12 col-md-12 pt-5">
-          <div class="row mb-5">
-            <h1 class="text-center text-uppercase font-weight-bold">:: {% t portofolio_page.tech %} ::</h1>
-          </div>
-          <div class="row mb-5">
-            <div class="col-sm-12 col-md-6">
-              <section id="tech-stack-portofolio-language" class="portofolio-cards">
-                <h3 class="text-uppercase text-center font-weight-bold">{% t portofolio_page.prog_lang %}</h3>
-                <ul class="stack-list">
-                  <li><img src="/assets/images/stacks/ruby.svg"></li>
-                  <li><img src="/assets/images/stacks/python.svg"></li>
-                  <li><img src="/assets/images/stacks/php.svg"></li>
-                  <li><img src="/assets/images/stacks/lua.svg"></li>
-                  <li><img src="/assets/images/stacks/cpp.svg"></li>
-                  <li><img src="/assets/images/stacks/csharp.svg"></li>
-                  <li><img src="/assets/images/stacks/javascript.svg"></li>
-                  <li><img src="/assets/images/stacks/typescript.svg"></li>
-                </ul>
+              <section id="web-portofolio-hibikaze" class="row web-portofolio align-items-center">
+                <div class="col-sm-12 col-md-6 p-3 order-sm-1">
+                  <h1 class="text-center text-uppercase font-weight-bold">Hibikaze Studios</h1>
+                  <p class="text-center">{% t portofolio_page.website.hibikaze_desc %}</p>
+                </div>
+                <div class="col-sm-12 col-md-6 p-3 order-sm-2 text-center">
+                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/hibikaze_site.jpg"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/hibikaze_site.jpg"></a>
+                </div>
+              </section>
+              <section id="web-portofolio-hibikaze" class="row web-portofolio align-items-center">
+                <div class="col-sm-12 col-md-6 p-3 order-sm-1 order-md-2">
+                  <h1 class="text-center text-uppercase font-weight-bold">Symphony Art Photography</h1>
+                  <p class="text-center">{% t portofolio_page.website.symphonyart_desc %}</p>
+                </div>
+                <div class="col-sm-12 col-md-6 p-3 order-sm-2 order-md-1 text-center">
+                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/symphony-art.jpg"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/symphony-art.jpg"></a>
+                </div>
+              </section>
+              <section id="web-portofolio-landing" class="row web-portofolio align-items-center">
+                <div id="web-portofolio-landing-title" class="col-sm-12 col-md-12 p-3">
+                  <h3 class="text-left text-uppercase font-weight-bold">{% t portofolio_page.landing_page %}</h3>
+                </div>
+                <div class="col-sm-4 col-md-4 p-3 order-sm-1 text-center">
+                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/bsm-consultant.jpg"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/bsm-consultant.jpg"></a>
+                </div>
+                <div class="col-sm-4 col-md-4 p-3 order-sm-2 text-center">
+                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/abys-burger.jpg"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/abys-burger.jpg"></a>
+                </div>
+                <div class="col-sm-4 col-md-4 p-3 order-sm-3 text-center">
+                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/repos.jpg"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/repos.jpg"></a>
+                </div>
+              </section>
+              <section id="web-portofolio-more" class="row web-portofolio align-items-center" style="display: none;">
+                <div class="col-12 text-center">
+                  <a class="btn btn-primary btn-lg btn-block" href="">See More Web Portofolio</a>
+                </div>
               </section>
             </div>
-            <div class="col-sm-12 col-md-6">
-              <section id="tech-stack-portofolio-language" class="portofolio-cards">
-              <h3 class="text-uppercase text-center font-weight-bold">{% t portofolio_page.framework %}</h3>
-              <ul class="stack-list">
-                <li><img class="wide" src="/assets/images/stacks/rails.svg"></li>
-                <li><img src="/assets/images/stacks/sinatra.svg"></li>
-                <li><img src="/assets/images/stacks/code_igniter.svg"></li>
-                <li><img class="wide" src="/assets/images/stacks/unity.svg"></li>
-                <li><img src="/assets/images/stacks/unreal.svg"></li>
-                <li><img src="/assets/images/stacks/godot.svg"></li>
-              </ul>
-              </section>
+            <div class="col-sm-12 col-md-12 pt-5">
+              <div class="portotfolio-head-title-container col">
+                <h2 class="portofolio-head-title">{% t global.software %}</h2>
+              </div>
+              <div class="row mb-5 justify-content-center">
+                <div class="col-md-4 col-sm-12 py-md-3">
+                  <div id="software-portofolio-majin-paste" class="portofolio-cards">
+                    <h3 class="text-center text-uppercase font-weight-bold">Majin Paste</h3>
+                    <p class="text-center">{% t portofolio_page.software.majin_paste_desc %}</p>
+                    <ul class="portofolio-links">
+                      <li><a href="https://github.com/RizkiePratama/majinpaste"><i class="fa-brands fa-github"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 py-md-3">
+                  <div id="software-portofolio-red-catalyst" class="portofolio-cards">
+                    <h3 class="text-center text-uppercase font-weight-bold">Red Catalyst</h3>
+                    <p class="text-center">{% t portofolio_page.software.red_catalyst_desc %}</p>
+                    <ul class="portofolio-links">
+                      <li><a href="https://github.com/RizkiePratama/red-catalyst"><i class="fa-brands fa-github"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 py-md-3">
+                  <div id="software-portofolio-alter-pass" class="portofolio-cards">
+                    <h3 class="text-center text-uppercase font-weight-bold">Alter Pass</h3>
+                    <p class="text-center">{% t portofolio_page.software.alter_pass_desc %}</p>
+                    <ul class="portofolio-links">
+                      <li><a href="https://github.com/RizkiePratama/alterpass"><i class="fa-brands fa-github"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 py-md-3">
+                  <div id="software-portofolio-majin-paste" class="portofolio-cards">
+                    <h3 class="text-center text-uppercase font-weight-bold">GNews.Dart</h3>
+                    <p class="text-center">{% t portofolio_page.software.gnews_dart_desc %}</p>
+                    <ul class="portofolio-links">
+                      <li><a href="https://github.com/RizkiePratama/gnews.dart"><i class="fa-brands fa-github"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 py-md-3">
+                  <div id="software-portofolio-red-catalyst" class="portofolio-cards">
+                    <h3 class="text-center text-uppercase font-weight-bold">Briefly</h3>
+                    <p class="text-center">{% t portofolio_page.software.briefly_desc %}</p>
+                    <ul class="portofolio-links">
+                      <li><a href="https://github.com/RizkiePratama/briefly-app"><i class="fa-brands fa-github"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-sm-12 col-md-12 pt-5">
+              <div class="portotfolio-head-title-container col">
+                <h2 class="portofolio-head-title">{% t portofolio_page.tech %}</h2>
+              </div>
+              <div class="row mb-5">
+                <div class="col-sm-12 col-md-6">
+                  <section id="tech-stack-portofolio-language" class="portofolio-cards">
+                    <h3 class="text-uppercase text-center font-weight-bold">{% t portofolio_page.prog_lang %}</h3>
+                    <ul class="stack-list">
+                      <li><img src="/assets/images/stacks/ruby.svg"></li>
+                      <li><img src="/assets/images/stacks/python.svg"></li>
+                      <li><img src="/assets/images/stacks/php.svg"></li>
+                      <li><img src="/assets/images/stacks/lua.svg"></li>
+                      <li><img src="/assets/images/stacks/cpp.svg"></li>
+                      <li><img src="/assets/images/stacks/csharp.svg"></li>
+                      <li><img src="/assets/images/stacks/javascript.svg"></li>
+                      <li><img src="/assets/images/stacks/typescript.svg"></li>
+                    </ul>
+                  </section>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <section id="tech-stack-portofolio-language" class="portofolio-cards">
+                  <h3 class="text-uppercase text-center font-weight-bold">{% t portofolio_page.framework %}</h3>
+                  <ul class="stack-list">
+                    <li><img class="wide" src="/assets/images/stacks/rails.svg"></li>
+                    <li><img src="/assets/images/stacks/sinatra.svg"></li>
+                    <li><img src="/assets/images/stacks/code_igniter.svg"></li>
+                    <li><img class="wide" src="/assets/images/stacks/unity.svg"></li>
+                    <li><img src="/assets/images/stacks/unreal.svg"></li>
+                    <li><img src="/assets/images/stacks/godot.svg"></li>
+                  </ul>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="photography" role="tabpanel" aria-labelledby="photography-tab">
+          <div class="row portofolio-block pt-5 pb-5">
+            <div class="col-sm-12 col-md-12 pt-5">
+              <div class="portotfolio-head-title-container">
+                <h2 class="portofolio-head-title">{% t portofolio_page.photography.street %}</h2>
+              </div>
+              <div class="masonry-galery-container">
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/MAY06511.jpg"><img src="/assets/images/portofolio/photography/street/thumb/MAY06511.jpg"></a>
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/MAY06585.jpg"><img src="/assets/images/portofolio/photography/street/thumb/MAY06585.jpg"></a>
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/MAY06590.jpg"><img src="/assets/images/portofolio/photography/street/thumb/MAY06590.jpg"></a>
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA07658.jpg"><img src="/assets/images/portofolio/photography/street/thumb/YGA07658.jpg"></a>
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA07979.jpg"><img src="/assets/images/portofolio/photography/street/thumb/YGA07979.jpg"></a>
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA06773.jpg"><img src="/assets/images/portofolio/photography/street/thumb/YGA06773.jpg"></a>
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA06824.jpg"><img src="/assets/images/portofolio/photography/street/thumb/YGA06824.jpg"></a>
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA07986.jpg"><img src="/assets/images/portofolio/photography/street/thumb/YGA07986.jpg"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="ai-art" role="tabpanel" aria-labelledby="ai-art-tab">
+          <div class="row portofolio-block pt-5 pb-5">
+            <div class="col-sm-12 col-md-12 pt-5">
+              <div class="portotfolio-head-title-container">
+                <h2 class="portofolio-head-title">{% t portofolio_page.ai_art.stable_diffusion %}</h2>
+              </div>
+              <div class="masonry-galery-container">
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/ai-art/source/00003.jpg"><img src="/assets/images/portofolio/ai-art/source/00003.jpg"></a>
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/ai-art/source/00007.jpg"><img src="/assets/images/portofolio/ai-art/source/00007.jpg"></a>
+                <a href="#" data-lity data-lity-target="/assets/images/portofolio/ai-art/source/00036.jpg"><img src="/assets/images/portofolio/ai-art/source/00036.jpg"></a>
             </div>
           </div>
         </div>
