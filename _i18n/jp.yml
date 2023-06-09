@@ -35,3 +35,5 @@ portofolio_page:
     majin_paste_desc: 独自に生成された URL でペースト/コード スニペットを作成、保存、共有して Web ページから表示するための Pastebin のようなソフトウェア。
     red_catalyst_desc: ブロードキャストとライブ トランスコードの中継に使用できる RTMP および SRT プロトコルをサポートする統合ストリーミング メディア サーバー ソフトウェア。
     alter_pass_desc: クラウド ベースのパスワード マネージャー。パスワードと資格情報をクラウドに保存し、WebUI と Android アプリからアクセスします。
+    gnews_dart_desc: Google ニュース スクレーパー パッケージは Dart で構築されており、サードパーティのニュース サイトから集約されたニュースを解析するプラグインも備えています。
+    briefly_desc: Flutter フレームワークで構築され、<b>gnews.dart</b> プラグインを利用したシンプルなニュース リーダー アプリです。

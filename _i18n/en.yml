@@ -2,7 +2,7 @@ global:
   english: Eng
   japanese: Jap
   photography: Photography
-  software: Software Development
+  software: Software Projects
   website: Website Development
   games: Game Development
   street: Street
@@ -36,3 +36,5 @@ portofolio_page:
     majin_paste_desc: A Pastebin-like software to Create, Save and Share your paste/code snippet by the unique generated URL to view it from your web page.
     red_catalyst_desc: Unified streaming media server software, supporting RTMP and SRT Protocol that can be used to relay broadcast and live transcode.
     alter_pass_desc: Cloud base Password Manager, store your pasword and cridential on the cloud and access it trough the WebUI and Android App.
+    gnews_dart_desc: Google News scraper packages build with Dart, also equipped with plugin to parse aggregated news from 3rd party news site.
+    briefly_desc: A Simple News Reader App build with Flutter frameworks and powered by <b>gnews.dart</b> plugin.
