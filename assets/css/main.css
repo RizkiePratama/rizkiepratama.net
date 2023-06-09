@@ -3,6 +3,7 @@ html, body {
   font-family: 'Roboto', cursive!important;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;
+  min-height: 100vh;
 }
 
 html::-webkit-scrollbar, body::-webkit-scrollbar {
@@ -17,8 +18,12 @@ body#landing {
   background-color: rgba(0, 0, 0, 0.815)!important;
 }
 
-body#about, body#page {
+body#page {
   background-color: rgba(0, 0, 0, 0.911)!important;
+}
+
+body#about, body#blog {
+  background-color: rgba(0, 0, 0, 0.97)!important;
 }
 
 #page {
