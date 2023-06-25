@@ -1,0 +1,11 @@
+<div class="blog-badge">
+    <h1>BLOG POST</h1>
+</div>
+<div class="tags-list">
+    <h1>Post Tags</h1>
+    <div class="list-group-flush">
+        {% for tag in site.tags %}
+        <a href="/blog/tags/{{ tag[0] }}" class="list-group-item list-group-item-dark-rp list-group-item-action">{{ tag[0] }} <span class="list-item-article-count">({{ tag[1] | size }} Articles)</b></a>
+        {% endfor %}
+    </div>
+</div>

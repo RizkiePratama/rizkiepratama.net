@@ -136,16 +136,37 @@ div.highlight {
     padding: 0 2rem!important;
 }
 
+.tags-list,
 .blog-badge {
     margin-bottom: 2rem;
 }
 
+.tags-list h1,
 .blog-badge h1 {
     padding-left: 1.5rem;
     font-weight: bold;
-    font-size: 3rem;
     background: #FAFAFA;
-    color: #2A2A2A
+    color: #2A2A2A;
+    text-transform: uppercase;
+}
+
+
+.blog-badge h1 {
+    font-size: 3rem;
+}
+
+.tags-list h1 {
+    font-size: 2rem;
+}
+
+.list-group-item-dark-rp {
+    background-color: transparent!important;
+    border-bottom: 1px solid rgb(255 255 255 / 30%)!important;
+}
+
+span.list-item-article-count {
+    font-weight: bold;
+    color: #737373;
 }
 
 .similar-post-item {
