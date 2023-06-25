@@ -23,7 +23,7 @@ email: itsme@rizkiepratama.net
 description: >- # this means to ignore newlines until "baseurl:"
   This is my personal portofolio site, i simply show off everything i can do on this site
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://rizkiepratama.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter:
   username: RizkiePratama_
   card: summary
@@ -39,6 +39,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-avatar
   - jekyll-paginate-v2
+  - jekyll-sitemap
 
 pagination:
   enabled: true
