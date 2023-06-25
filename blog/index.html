@@ -17,7 +17,7 @@ pagination:
     <div class="post-cards-meta col-12 col-md-8">
       <h1 class="post-card-title">{{ post.title }}</h1>
       <ul class="post-meta-items">
-        <li class="post-card-date meta-item meta-date">{{post.date  | date: "%B %d, %Y"}}</li>
+        <li class="post-card-date meta-item meta-date"><i class="fa-sharp fa-solid fa-calendar-days me-2"></i>{{post.date  | date: "%B %d, %Y"}}</li>
       </ul>
       <div class="post-card-excerpt">
         {{ post.content | strip_html | truncatewords: 30 }}
