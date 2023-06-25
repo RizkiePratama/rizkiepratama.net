@@ -243,6 +243,11 @@ span.list-item-article-count {
     }
 
     .similar-post-block-title {
+        width: 100%;
         margin-bottom: 0!important;
+    }
+
+    .post-cards-meta {
+        padding: 0!important;
     }
 }

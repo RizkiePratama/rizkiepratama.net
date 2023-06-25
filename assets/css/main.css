@@ -446,6 +446,10 @@ a {
   .navbar-brand.home-name {
     display: block;
   }
+
+  #landing .navbar-brand.home-name {
+    display: none;
+  }
 }
 
 
