@@ -46,11 +46,18 @@ body#about, body#blog {
   text-transform: uppercase;
 }
 
-.nav-item a:hover, a:hover {
+.nav-item a:hover, .portofolio-links a:hover {
   opacity: 0.5;
   transition: opacity 0.5s ease-in-out;
 }
-.nav-item a, a {
+
+#web-portofolio-more a:hover {
+  transition: background-color 0.5s ease-in-out;
+  color: #000!important;
+  font-weight: 600;
+}
+
+.nav-item a, .portofolio-links a {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
@@ -359,6 +366,10 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   padding: .5rem 5rem .5rem 1.5rem;
+}
+
+#portofolio-single > #portofolio-content {
+  padding-top: 10rem;
 }
 
 @media (max-width: 992px) {
