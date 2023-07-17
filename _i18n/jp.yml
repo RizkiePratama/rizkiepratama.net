@@ -45,3 +45,7 @@ portofolio_page:
   ai_art:
     title: AIアート
     stable_diffusion: 安定拡散アート
+  video_editing:
+    title: ビデオ編集
+    yt_content: YouTube コンテンツ
+    shorts: 短い形式のコンテンツ

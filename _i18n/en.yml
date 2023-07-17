@@ -45,3 +45,7 @@ portofolio_page:
   ai_art:
     title: Ai Art
     stable_diffusion: Stable Diffusion Art
+  video_editing:
+    title: Video Editing
+    yt_content: Youtube Content
+    shorts: Short Form Content
