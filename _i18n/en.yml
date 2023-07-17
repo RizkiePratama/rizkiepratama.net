@@ -8,6 +8,7 @@ global:
   cosplay: Cosplay
   soft_dev: Software Developer
   game_dev: Game Developer
+  video_editor: Video Editor
   photog: Photographer
 pages:
   home: Home
