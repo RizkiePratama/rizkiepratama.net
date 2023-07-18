@@ -41,6 +41,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
 
+permalink: /:categories/:year/:month/:day/:title
 pagination:
   enabled: true
   per_page: 5
