@@ -2,7 +2,7 @@
 layout: blog
 title:  Playing Apex again after months and new update is Game Changing!
 custom_css: blog
-cover: /assets/images/posts/apex-season-17.jpg
+cover: /assets/images/post-thumbnails/apex-season-17.jpg
 tags: ["Gaming"]
 ---
 
@@ -23,7 +23,7 @@ More Space to Run arround, More Targets and Interactable action, like that line 
 
 And now you have dummy running around by default, NO NEED TO DO THE RITUAL EVERYTIME!
 
-![](/assets/images/posts/apex-firing-range-2.0.jpg)
+![](/assets/images/posts/apex-season-17/apex-firing-range-2.0.jpg)
 <br/><br/>
 
 
@@ -44,7 +44,7 @@ Instead of giving you ability for Self Revive, Golden Knocked-out shield just Gi
 
 And this one is game changing for me as i relly on the self revive every time i get the item, especialy if i'm on thight spot. It help me to get some impresive clutch multiple time as well 😩😩
 
-![](/assets/images/posts/apex-ko-shields.jpg)
+![](/assets/images/posts/apex-season-17/apex-ko-shields.jpg)
 
 <br/><br/><br/>
 If you want to check more detailed update on Season 17 you can read here on [Dexerto Article](https://www.dexerto.com/apex-legends/apex-legends-season-17-update-patch-notes-map-updates-firing-range-2-0-ranked-overhaul-2137912/)

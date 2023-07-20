@@ -2,7 +2,7 @@
 layout: blog
 title:  Setup Ruby on Rails on Fedora 25
 custom_css: blog
-cover: /assets/images/posts/SetupRoRFedora25.jpg
+cover: /assets/images/post-thumbnails/SetupRoRFedora25.jpg
 tags: ["Tutorial","Ruby on Rails","Fedora"]
 ---
 
