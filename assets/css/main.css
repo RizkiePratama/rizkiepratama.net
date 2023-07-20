@@ -248,7 +248,7 @@ a {
   z-index: 0;
   opacity: 100%;
   transition: opacity 2s ease;
-  margin-right: calc(var(--bs-gutter-x) * -.5!important);
+  margin-right: calc(var(--bs-gutter-x) * -.5)!important;
   margin-left: calc(var(--bs-gutter-x) * -.5)!important;
 }
 

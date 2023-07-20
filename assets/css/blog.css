@@ -27,11 +27,16 @@ pre.highlight {
     margin-top: 10rem;
 }
 
+.blog-post-content img.original-width { 
+    max-width: fit-content;
+}
+
 .blog-post-content img  {
     width: 100%;
     margin: auto;
     display: block;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .blog-post-content  .video-embed {
