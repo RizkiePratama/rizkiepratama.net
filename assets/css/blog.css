@@ -217,6 +217,7 @@ pre.highlight {
 .list-group-item-dark-rp {
     background-color: transparent!important;
     border-bottom: 1px solid rgb(255 255 255 / 30%)!important;
+    padding-left: 1.5rem!important;
 }
 
 span.list-item-article-count {
