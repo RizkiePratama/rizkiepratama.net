@@ -43,6 +43,8 @@ portofolio_page:
   photography:
     title: 写真撮影
     street: ストリート
+    potraiture: ポートレート
+    cosplay: コスプレ
   ai_art:
     title: AIアート
     stable_diffusion: 安定拡散アート

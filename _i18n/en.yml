@@ -43,6 +43,8 @@ portofolio_page:
   photography:
     title: Photography
     street: Street Photography
+    potraiture: Portraiture
+    cosplay: Cosplay
   ai_art:
     title: Ai Art
     stable_diffusion: Stable Diffusion Art
