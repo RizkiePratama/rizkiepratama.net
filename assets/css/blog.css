@@ -243,6 +243,14 @@ span.list-item-article-count {
     margin-right: 1rem;
 }
 
+.invert {
+    filter: invert(1);
+}
+
+.invert.fa-times {
+    filter: invert(0);
+}
+
 @media (max-width: 992px) {
     #blog-index {
         margin-top: 5rem;
@@ -257,8 +265,11 @@ span.list-item-article-count {
     }
 }
 
-
 @media (max-width: 768px) {
+    .nav-link.invert {
+        filter: invert(0);
+    }
+
     .post-title {
         font-size: 2rem;
     }

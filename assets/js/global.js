@@ -25,4 +25,28 @@ $(document).ready(function(){
   var min = 1; var max = 4;
   var rand = Math.floor(Math.random() * (max - min + 1)) + min;
   html_parent.css("background", "url('/assets/images/bg/" + rand + ".jpg') no-repeat center center fixed");
+
+  // Adaptive Navbar Text Color
+  const heroPostHeader = $('.hero-post-header');
+  function isDarkColor(color) {
+    const rgb = color.match(/\d+/g);
+    const luminance = 0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2];
+    return luminance < 128;
+  }
+
+  function checkAndInvertNavLinks() {
+    const navLinks = $('.nav-link');
+    const navBars = $('.navbar-toggler .fa-bars');
+    const bgColor = heroPostHeader.css('background-color');
+
+    if (isDarkColor(bgColor)) {
+      navLinks.addClass('invert');
+      navBars.addClass('invert');
+    } else {
+      navLinks.removeClass('invert');
+      navBars.removeClass('invert');
+    }
+  }
+
+  checkAndInvertNavLinks();
 });
