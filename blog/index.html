@@ -12,7 +12,7 @@ pagination:
 <a href="{{ post.url }}">
   <div class="post-cards row p-2">
     <div class="post-cards-cover col-12 col-md-4">
-      <img class="img-fluid" src="{{ post.cover }}">
+      <img alt="{{ post.title }}"  width="280px" height="157px" class="img-fluid" src="{{ post.cover | replace: '/source/', '/thumbs/' }}">
     </div>
     <div class="post-cards-meta col-12 col-md-8">
       <h1 class="post-card-title">{{ post.title }}</h1>

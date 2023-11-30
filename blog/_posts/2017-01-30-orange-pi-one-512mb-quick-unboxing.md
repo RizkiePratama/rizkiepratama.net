@@ -2,7 +2,7 @@
 layout: blog
 title:  Orange Pi One 512MB quick unboxing and preview
 custom_css: blog
-cover: /assets/images/post-thumbnails/OrangePiReview.jpg
+cover: /assets/images/post-thumbnails/source/OrangePiReview.jpg
 tags: ["Review", "Logs"]
 ---
 

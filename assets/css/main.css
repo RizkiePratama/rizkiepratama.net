@@ -142,6 +142,7 @@ a {
 .portofolio-site-preview {
   width: 100%;
   max-width: 650px;
+  height: auto;
   border-radius: 3px;
 }
 

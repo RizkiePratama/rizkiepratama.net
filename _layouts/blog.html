@@ -46,7 +46,7 @@
                                 {% for post in related_posts limit: 3 %}
                                 <div class="col-12 col-md-4 col-lg-4">
                                     <a class="similar-post-item" href="{{ post.url }}">
-                                        <img class="similar-post-cover-thumb" src="{{ post.cover }}">
+                                        <img class="similar-post-cover-thumb" alt="{ post.title }" src="{{ post.cover | replace: '/source/', '/thumbs/' }}">
                                         <h3 class="similar-post-title">{{ post.title }}</h3>
                                         <p class="similar-post-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
                                     </a>

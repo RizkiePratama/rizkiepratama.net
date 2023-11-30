@@ -2,7 +2,7 @@
 layout: blog
 title:  Using 'locate' with Mac OS
 custom_css: blog
-cover: /assets/images/post-thumbnails/mlocate-db-mac.jpg
+cover: /assets/images/post-thumbnails/source/mlocate-db-mac.jpg
 tags: ["Tutorial","MacOS"]
 ---
 

@@ -22,6 +22,16 @@
   height: 100vh;
 }
 
+#about-day-job h1,
+#about-studio h1,
+.social-box h1 {
+  font-size: 1.5rem;
+}
+
+.social-box h2 {
+  font-size: 1.3rem;
+}
+
 .social-box ul {
   list-style: none;
   display: flex;
@@ -42,17 +52,20 @@
 #about-day-job img {
   width: 100%;
   max-width: 250px;
+  height: auto;
 }
 
 #about-studio img {
   width: 100%;
   max-width: 250px;
+  height: auto;
   filter: invert();
 }
 
 .profile-image-badge {
   width: 100%;
   max-width: 400px;
+  height: auto;
   margin: 50px auto;
   border-radius: 300px;
 }

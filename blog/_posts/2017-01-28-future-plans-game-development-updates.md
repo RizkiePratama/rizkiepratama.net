@@ -2,7 +2,7 @@
 layout: blog
 title:  Future Plans, game development And some updates!
 custom_css: blog
-cover: /assets/images/post-thumbnails/FuturePlanCover.jpg
+cover: /assets/images/post-thumbnails/source/FuturePlanCover.jpg
 tags: Updates Logs
 ---
 

@@ -4,14 +4,14 @@ title: Projects Portofolio
 ---
 
 <div id="portofolio">
-  <section id="portofolio-heroes" class="row g-0 cover-block align-items-center">
+  <section id="portofolio-heroes" class="row g-0 cover-block align-items-center" loading="lazy">
     <div class="col align-self-center shade-block">
       <div class="container-xxl">
         <div class="heroes-tagline">
           <h1 class="heroes-title text-start">{% t portofolio_page.heroes_title %}</h1>
           <h2 class="heroes-subtitle text-start">{% t portofolio_page.heroes_subtitle %}</h2>
         </div>
-        <a href="#portofolio-content"><i class="heroes-scrolldown fa-solid fa-chevron-down"></i></a>
+        <a href="#portofolio-content" aria-label="Scroll Down to Portofolio Content"><i class="heroes-scrolldown fa-solid fa-chevron-down"></i></a>
       </div>
     </div>
   </section>
@@ -23,13 +23,13 @@ title: Projects Portofolio
           <button class="nav-link active" id="development-tab" data-bs-toggle="tab" data-bs-target="#development" type="button" role="tab" aria-controls="development" aria-selected="true">{% t portofolio_page.dev %}</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#video-editing" type="button" role="tab" aria-controls="video-editing" aria-selected="false">{% t portofolio_page.video_editing.title %}</button>
+          <button class="nav-link" id="video-editing-tab" data-bs-toggle="tab" data-bs-target="#video-editing" type="button" role="tab" aria-controls="video-editing" aria-selected="false">{% t portofolio_page.video_editing.title %}</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#photography" type="button" role="tab" aria-controls="Photography" aria-selected="false">{% t portofolio_page.photography.title %}</button>
+          <button class="nav-link" id="photography-tab" data-bs-toggle="tab" data-bs-target="#photography" type="button" role="tab" aria-controls="Photography" aria-selected="false">{% t portofolio_page.photography.title %}</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#ai-art" type="button" role="tab" aria-controls="ai-art" aria-selected="false">{% t portofolio_page.ai_art.title %}</button>
+          <button class="nav-link" id="ai-art-tab" data-bs-toggle="tab" data-bs-target="#ai-art" type="button" role="tab" aria-controls="ai-art" aria-selected="false">{% t portofolio_page.ai_art.title %}</button>
         </li>
       </ul>
 
@@ -47,7 +47,7 @@ title: Projects Portofolio
                   <p class="text-center">{% t portofolio_page.website.hibikaze_desc %}</p>
                 </div>
                 <div class="col-sm-12 col-md-6 p-3 order-sm-2 text-center">
-                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/source/hibikaze_site.jpg"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/thumbs/hibikaze_site.jpg" loading="lazy"></a>
+                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/source/hibikaze_site.jpg"><img class="portofolio-site-preview" alt="Hibikaze Studios" width="538px" height="302px" src="/assets/images/portofolio/website/thumbs/hibikaze_site.jpg" loading="lazy"></a>
                 </div>
               </section>
               <section id="web-portofolio-hibikaze" class="row web-portofolio align-items-center">
@@ -56,30 +56,30 @@ title: Projects Portofolio
                   <p class="text-center">{% t portofolio_page.website.symphonyart_desc %}</p>
                 </div>
                 <div class="col-sm-12 col-md-6 p-3 order-sm-2 order-md-1 text-center">
-                  <a href="/portofolio/web-dev/symphony-art"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/symphony/landing.jpg" loading="lazy"></a>
+                  <a href="/portofolio/web-dev/symphony-art"><img class="portofolio-site-preview" alt="Symphony Art Website" width="538px" height="302px" src="/assets/images/portofolio/website/symphony/thumb/landing.jpg" loading="lazy"></a>
                 </div>
               </section>
               <section id="web-portofolio-landing" class="row web-portofolio align-items-center">
                 <div id="web-portofolio-landing-title" class="col-sm-12 col-md-12 p-3">
-                  <h3 class="text-left text-uppercase font-weight-bold">{% t portofolio_page.template_design %}</h3>
+                  <h1 class="text-left text-uppercase font-weight-bold">{% t portofolio_page.template_design %}</h3>
                 </div>
                 <div class="col-sm-4 col-md-4 p-3 text-center">
-                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/source/bsm-consultant.jpg"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/thumbs/bsm-consultant.jpg" loading="lazy"></a>
+                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/source/bsm-consultant.jpg"><img class="portofolio-site-preview" alt="BSM Consultant Company Profile Template" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/bsm-consultant.jpg" loading="lazy"></a>
                 </div>
                 <div class="col-sm-4 col-md-4 p-3 text-center">
-                  <a href="https://static-demo.rizkiepratama.net/abys-burger/" target="_blank"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/thumbs/abys-burger.jpg" loading="lazy"></a>
+                  <a href="https://static-demo.rizkiepratama.net/abys-burger/" target="_blank"><img class="portofolio-site-preview" alt="Abys Burger Template for Resto App Website" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/abys-burger.jpg" loading="lazy"></a>
                 </div>
                 <div class="col-sm-4 col-md-4 p-3 text-center">
-                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/source/repos.jpg"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/thumbs/repos.jpg" loading="lazy"></a>
+                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/source/repos.jpg"><img class="portofolio-site-preview" alt="RePOS Point of Sales Software Landing Page" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/repos.jpg" loading="lazy"></a>
                 </div>
                 <div class="col-sm-4 col-md-4 p-3 text-center">
-                  <a href="https://static-demo.rizkiepratama.net/news-portal-template" target="_blank"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/thumbs/news-portal.jpg" loading="lazy"></a>
+                  <a href="https://static-demo.rizkiepratama.net/news-portal-template" target="_blank"><img class="portofolio-site-preview" alt="News Portal Template" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/news-portal.jpg" loading="lazy"></a>
                 </div>
                 <div class="col-sm-4 col-md-4 p-3 text-center">
-                  <a href="https://ptagrowijaya.com/" target="_blank"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/thumbs/agrowijaya.jpg" loading="lazy"></a>
+                  <a href="https://ptagrowijaya.com/" target="_blank"><img class="portofolio-site-preview" alt="PT Agro Wijaya Company Profile Site" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/agrowijaya.jpg" loading="lazy"></a>
                 </div>
                 <div class="col-sm-4 col-md-4 p-3 text-center">
-                  <a href="https://adrianeparamitha.my.id/" target="_blank"><img class="portofolio-site-preview" src="/assets/images/portofolio/website/thumbs/adrparamitha.jpg" loading="lazy"></a>
+                  <a href="https://adrianeparamitha.my.id/" target="_blank"><img class="portofolio-site-preview" alt="Adriane's Portofolio Website" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/adrparamitha.jpg" loading="lazy"></a>
                 </div>
               </section>
               <section id="web-portofolio-more" class="row web-portofolio align-items-center collapse">
@@ -98,7 +98,7 @@ title: Projects Portofolio
                     <h3 class="text-center text-uppercase font-weight-bold">Majin Paste</h3>
                     <p class="text-center">{% t portofolio_page.software.majin_paste_desc %}</p>
                     <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/majinpaste"><i class="fa-brands fa-github"></i></a></li>
+                      <li><a href="https://github.com/RizkiePratama/majinpaste" aria-label="Github Page for Majin Paste Projects"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
                     </ul>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ title: Projects Portofolio
                     <h3 class="text-center text-uppercase font-weight-bold">Red Catalyst</h3>
                     <p class="text-center">{% t portofolio_page.software.red_catalyst_desc %}</p>
                     <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/red-catalyst"><i class="fa-brands fa-github"></i></a></li>
+                      <li><a href="https://github.com/RizkiePratama/red-catalyst" aria-label="Github Page for Red Catalyst"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
                     </ul>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ title: Projects Portofolio
                     <h3 class="text-center text-uppercase font-weight-bold">Alter Pass</h3>
                     <p class="text-center">{% t portofolio_page.software.alter_pass_desc %}</p>
                     <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/alterpass"><i class="fa-brands fa-github"></i></a></li>
+                      <li><a href="https://github.com/RizkiePratama/alterpass" aria-label="Github Page for AlterPass"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
                     </ul>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ title: Projects Portofolio
                     <h3 class="text-center text-uppercase font-weight-bold">GNews.Dart</h3>
                     <p class="text-center">{% t portofolio_page.software.gnews_dart_desc %}</p>
                     <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/gnews.dart"><i class="fa-brands fa-github"></i></a></li>
+                      <li><a href="https://github.com/RizkiePratama/gnews.dart" aria-label="Github Page for GNews Project"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
                     </ul>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ title: Projects Portofolio
                     <h3 class="text-center text-uppercase font-weight-bold">Briefly</h3>
                     <p class="text-center">{% t portofolio_page.software.briefly_desc %}</p>
                     <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/briefly-app"><i class="fa-brands fa-github"></i></a></li>
+                      <li><a href="https://github.com/RizkiePratama/briefly-app" aria-label="Github Page for Briefly App"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
                     </ul>
                   </div>
                 </div>
@@ -149,14 +149,14 @@ title: Projects Portofolio
                   <section id="tech-stack-portofolio-language" class="portofolio-cards">
                     <h3 class="text-uppercase text-center font-weight-bold">{% t portofolio_page.prog_lang %}</h3>
                     <ul class="stack-list">
-                      <li><img src="/assets/images/stacks/ruby.svg"></li>
-                      <li><img src="/assets/images/stacks/python.svg"></li>
-                      <li><img src="/assets/images/stacks/php.svg"></li>
-                      <li><img src="/assets/images/stacks/lua.svg"></li>
-                      <li><img src="/assets/images/stacks/cpp.svg"></li>
-                      <li><img src="/assets/images/stacks/csharp.svg"></li>
-                      <li><img src="/assets/images/stacks/javascript.svg"></li>
-                      <li><img src="/assets/images/stacks/typescript.svg"></li>
+                      <li><img width="50px" height="50px" alt="Ruby Lang" src="/assets/images/stacks/ruby.svg"></li>
+                      <li><img width="50px" height="50px" alt="Python" src="/assets/images/stacks/python.svg"></li>
+                      <li><img width="50px" height="50px" alt="PHP" src="/assets/images/stacks/php.svg"></li>
+                      <li><img width="50px" height="50px" alt="LUA Lang" src="/assets/images/stacks/lua.svg"></li>
+                      <li><img width="50px" height="50px" alt="C++" src="/assets/images/stacks/cpp.svg"></li>
+                      <li><img width="50px" height="50px" alt="C#" src="/assets/images/stacks/csharp.svg"></li>
+                      <li><img width="50px" height="50px" alt="Javascript" src="/assets/images/stacks/javascript.svg"></li>
+                      <li><img width="50px" height="50px" alt="Typescript" src="/assets/images/stacks/typescript.svg"></li>
                     </ul>
                   </section>
                 </div>
@@ -164,12 +164,12 @@ title: Projects Portofolio
                   <section id="tech-stack-portofolio-language" class="portofolio-cards">
                   <h3 class="text-uppercase text-center font-weight-bold">{% t portofolio_page.framework %}</h3>
                   <ul class="stack-list">
-                    <li><img class="wide" src="/assets/images/stacks/rails.svg"></li>
-                    <li><img src="/assets/images/stacks/sinatra.svg"></li>
-                    <li><img src="/assets/images/stacks/code_igniter.svg"></li>
-                    <li><img class="wide" src="/assets/images/stacks/unity.svg"></li>
-                    <li><img src="/assets/images/stacks/unreal.svg"></li>
-                    <li><img src="/assets/images/stacks/godot.svg"></li>
+                    <li><img width="50px" height="50px" alt="Ruby on Rails" class="wide" src="/assets/images/stacks/rails.svg"></li>
+                    <li><img width="50px" height="50px" alt="Ruby Sinatra" src="/assets/images/stacks/sinatra.svg"></li>
+                    <li><img width="50px" height="50px" alt="Code Igniter" src="/assets/images/stacks/code_igniter.svg"></li>
+                    <li><img width="50px" height="50px" alt="Unity 3D" class="wide" src="/assets/images/stacks/unity.svg"></li>
+                    <li><img width="50px" height="50px" alt="Unreal Engine" src="/assets/images/stacks/unreal.svg"></li>
+                    <li><img width="50px" height="50px" alt="Godot Engine" src="/assets/images/stacks/godot.svg"></li>
                   </ul>
                   </section>
                 </div>
@@ -264,22 +264,22 @@ title: Projects Portofolio
               <div class="row p-0 mt-3">
                 <div class="col col-6 p-2">
                   <div class="video-embed">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VZQkNPft6D8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VZQkNPft6D8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                   </div>
                 </div>
                 <div class="col col-6 p-2">
                   <div class="video-embed">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_mxzsXh0ndU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_mxzsXh0ndU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                   </div>
                 </div>
                 <div class="col col-6 p-2">
                   <div class="video-embed">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FZB2NHuiHA0?si=NUqzi40gd3mlxkjh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FZB2NHuiHA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                   </div>
                 </div>
                 <div class="col col-6 p-2">
                   <div class="video-embed">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CGiyQFdDrXk?si=DPDJtDiCa0LcOns4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CGiyQFdDrXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                   </div>
                 </div>
               </div>
@@ -290,22 +290,22 @@ title: Projects Portofolio
                 <div class="row">
                   <div class="col col-3 px-1">
                     <div class="video-embed-vertical">
-                      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_FN9IqfMVXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/_FN9IqfMVXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                     </div>
                   </div>
                   <div class="col col-3 px-1">
                     <div class="video-embed-vertical">
-                      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/D9kSsWfg498" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/D9kSsWfg498" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                     </div>
                   </div>
                   <div class="col col-3 px-1">
                     <div class="video-embed-vertical">
-                      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MCodaBSwAfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/MCodaBSwAfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                     </div>
                   </div>
                   <div class="col col-3 px-1">
                     <div class="video-embed-vertical">
-                      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lGW2CwS4w90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/lGW2CwS4w90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                     </div>
                   </div>
                 </div>

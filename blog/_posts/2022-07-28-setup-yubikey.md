@@ -2,7 +2,7 @@
 layout: blog
 title:  Using Yubikey for SSH Authentication on Linux
 custom_css: blog
-cover: /assets/images/post-thumbnails/setup-yubikey.jpg
+cover: /assets/images/post-thumbnails/source/setup-yubikey.jpg
 tags: ["Tutorial","Linux"]
 ---
 

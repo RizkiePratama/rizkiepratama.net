@@ -2,7 +2,7 @@
 layout: blog
 title:  Playing Apex again after months and new update is Game Changing!
 custom_css: blog
-cover: /assets/images/post-thumbnails/apex-season-17.jpg
+cover: /assets/images/post-thumbnails/source/apex-season-17.jpg
 tags: ["Gaming"]
 ---
 
@@ -34,7 +34,7 @@ Alternatively to Heat Shiled now we're getting the "Portable" Jump tower, that i
 its much better to see it in action, since i don't have any video deploying it here's some good video that do demostrate it pretty good.
 
 <figure class="video-embed">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/pBhogj3NFfo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pBhogj3NFfo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></figure>
 <br/><br/>
 
 ## Golden Knocked out Shield is No Longer have Self Revive :(

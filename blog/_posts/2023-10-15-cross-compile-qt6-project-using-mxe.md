@@ -2,7 +2,7 @@
 layout: blog
 title:  Cross Compile QT6 Project From Linux to Windows Using MXE
 custom_css: blog
-cover: /assets/images/post-thumbnails/cross-compile-qt6-project-using-mxe.jpg
+cover: /assets/images/post-thumbnails/source/cross-compile-qt6-project-using-mxe.jpg
 tags: ["Tutorial", "QT6", "Linux", "Windows"]
 ---
 

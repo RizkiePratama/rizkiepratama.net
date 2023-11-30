@@ -2,7 +2,7 @@
 layout: blog
 title:  Deploy Jekyll on Github Pages with Unsupported Plugins
 custom_css: blog
-cover: /assets/images/post-thumbnails/jekyll-github.jpg
+cover: /assets/images/post-thumbnails/source/jekyll-github.jpg
 tags: ["Tutorial","Ruby","Github"]
 ---
 

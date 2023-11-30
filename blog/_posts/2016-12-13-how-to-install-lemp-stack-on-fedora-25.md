@@ -2,7 +2,7 @@
 layout: blog
 title:  How to install LEMP stack on Fedora 25
 custom_css: blog
-cover: /assets/images/post-thumbnails/Fedora25LEMPCover.jpg
+cover: /assets/images/post-thumbnails/source/Fedora25LEMPCover.jpg
 tags: ["Tutorial","Ruby on Rails","Fedora"]
 ---
 

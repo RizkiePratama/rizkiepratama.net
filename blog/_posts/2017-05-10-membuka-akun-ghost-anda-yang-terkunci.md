@@ -2,7 +2,7 @@
 layout: blog
 title:  Membuka Akun Ghost Anda Yang Terkunci
 custom_css: blog
-cover: /assets/images/post-thumbnails/GhostBlogLocked.jpg
+cover: /assets/images/post-thumbnails/source/GhostBlogLocked.jpg
 tags: ["Tutorial","Ghost Blog"]
 ---
 

@@ -2,7 +2,7 @@
 layout: blog
 title:  "And I'm Back! Did I?"
 custom_css: blog
-cover: /assets/images/post-thumbnails/IMG_20190805_114313.jpg
+cover: /assets/images/post-thumbnails/source/IMG_20190805_114313.jpg
 tags: Updates Logs
 ---
 

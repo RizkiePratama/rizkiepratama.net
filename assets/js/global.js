@@ -39,7 +39,7 @@ $(document).ready(function(){
     const navBars = $('.navbar-toggler .fa-bars');
     const bgColor = heroPostHeader.css('background-color');
 
-    if (isDarkColor(bgColor)) {
+    if (bgColor !== undefined && isDarkColor(bgColor)) {
       navLinks.addClass('invert');
       navBars.addClass('invert');
     } else {

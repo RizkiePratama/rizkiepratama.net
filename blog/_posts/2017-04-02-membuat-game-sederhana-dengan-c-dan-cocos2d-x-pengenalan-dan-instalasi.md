@@ -2,7 +2,7 @@
 layout: blog
 title:  Membuat Game Sederhana dengan C++ dan Cocos2d-x ~ Pengenalan dan Instalasi
 custom_css: blog
-cover: /assets/images/post-thumbnails/Cocos2D-Intro.jpg
+cover: /assets/images/post-thumbnails/source/Cocos2D-Intro.jpg
 tags: ["Tutorial", "Game Dev", "Cocos2D X"]
 ---
 

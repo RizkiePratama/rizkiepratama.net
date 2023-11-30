@@ -2,7 +2,7 @@
 layout: blog
 title:  Choosing Project Name is Harder than you think! (at least for me)
 custom_css: blog
-cover: /assets/images/post-thumbnails/project_name_thumb.jpg
+cover: /assets/images/post-thumbnails/source/project_name_thumb.jpg
 tags: ["Intrusive Thoughts","Logs"]
 ---
 

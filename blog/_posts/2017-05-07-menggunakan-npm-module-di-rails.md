@@ -2,7 +2,7 @@
 layout: blog
 title:  Menggunakan NPM Module di Ruby on Rails
 custom_css: blog
-cover: /assets/images/post-thumbnails/NPMRails.jpg
+cover: /assets/images/post-thumbnails/source/NPMRails.jpg
 tags: ["Tutorial","Ruby on Rails"]
 ---
 

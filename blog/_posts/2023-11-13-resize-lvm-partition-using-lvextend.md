@@ -2,7 +2,7 @@
 layout: blog
 title:  Resize LVM Partition with lvextend on Linux
 custom_css: blog
-cover: /assets/images/post-thumbnails/resize-lvm-partition-using-lvextend.jpg
+cover: /assets/images/post-thumbnails/source/resize-lvm-partition-using-lvextend.jpg
 tags: ["Tutorial", "Linux"]
 ---
 

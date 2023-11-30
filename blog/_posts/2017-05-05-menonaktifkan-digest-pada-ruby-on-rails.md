@@ -2,7 +2,7 @@
 layout: blog
 title:  Menonaktifkan Digest di Ruby on Rails
 custom_css: blog
-cover: /assets/images/post-thumbnails/RoRCacheBusting.jpg
+cover: /assets/images/post-thumbnails/source/RoRCacheBusting.jpg
 tags: ["Tutorial","Ruby on Rails"]
 ---
 

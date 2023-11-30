@@ -2,7 +2,7 @@
 layout: blog
 title:  How to Build Libraries For B4X
 custom_css: blog
-cover: /assets/images/post-thumbnails/how-to-build-libraries-for-b4x.jpg
+cover: /assets/images/post-thumbnails/source/how-to-build-libraries-for-b4x.jpg
 tags: ["Tutorial","Java"]
 ---
 

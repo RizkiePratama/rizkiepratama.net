@@ -2,7 +2,7 @@
 layout: blog
 title:  Mengatasi 403 Pada Nginx Dan SELinux
 custom_css: blog
-cover: /assets/images/post-thumbnails/SELinuxnginx.jpg
+cover: /assets/images/post-thumbnails/source/SELinuxnginx.jpg
 tags: ["Tutorial","Ghost Blog"]
 ---
 
