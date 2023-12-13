@@ -40,6 +40,7 @@ portofolio_page:
     alter_pass_desc: Cloud base Password Manager, store your pasword and cridential on the cloud and access it trough the WebUI and Android App.
     gnews_dart_desc: Google News scraper packages build with Dart, also equipped with plugin to parse aggregated news from 3rd party news site.
     briefly_desc: A Simple News Reader App build with Flutter frameworks and powered by <b>gnews.dart</b> plugin.
+    vim_desc: Browser Extensions for better Watch Experience on <b>Vidio.com</b> by Enabling windowed fullscreen player.
   photography:
     title: Photography
     street: Street Photography

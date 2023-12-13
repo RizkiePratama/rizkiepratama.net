@@ -40,6 +40,7 @@ portofolio_page:
     alter_pass_desc: クラウド ベースのパスワード マネージャー。パスワードと資格情報をクラウドに保存し、WebUI と Android アプリからアクセスします。
     gnews_dart_desc: Google ニュース スクレーパー パッケージは Dart で構築されており、サードパーティのニュース サイトから集約されたニュースを解析するプラグインも備えています。
     briefly_desc: Flutter フレームワークで構築され、<b>gnews.dart</b> プラグインを利用したシンプルなニュース リーダー アプリです。
+    vim_desc: ウィンドウの全画面プレーヤーを有効にすることで、<b>Vidio.com</b> での視聴エクスペリエンスを向上させるブラウザ拡張機能。
   photography:
     title: 写真撮影
     street: ストリート
