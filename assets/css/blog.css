@@ -31,6 +31,10 @@ pre.highlight {
     max-width: fit-content;
 }
 
+.blog-post-content img.w-50  {
+    width: 50%;
+}
+
 .blog-post-content img  {
     width: 100%;
     margin: auto;
