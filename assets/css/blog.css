@@ -218,15 +218,27 @@ pre.highlight {
     font-size: 2rem;
 }
 
+.list-group-flush {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .list-group-item-dark-rp {
-    background-color: transparent!important;
-    border-bottom: 1px solid rgb(255 255 255 / 30%)!important;
-    padding-left: 1.5rem!important;
+    background-color: #FAFAFA!important;
+    color: #252525!important;
+    padding: .4rem!important;
+    margin: 0 .2rem .2rem 0;
+    transition: all 1s ease;
+    font-weight: bold;
+}
+
+.list-group-item-dark-rp:hover {
+    background-color: #FAFAFAAA!important;
 }
 
 span.list-item-article-count {
-    font-weight: bold;
     color: #737373;
+    font-size: .7em;
 }
 
 .similar-post-item {
