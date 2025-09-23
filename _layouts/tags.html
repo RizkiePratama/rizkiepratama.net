@@ -14,20 +14,20 @@ pagination:
         <div id="blog-index">
             <div class="container">
                 <div class="row">
-                    <div class="col col-lg-4 col-12 pe-4 pt-2">
+                    <div class="col col-lg-4 col-12 pe-4 pt-2 reveal">
                         {% include sidebar.html %}
                     </div>
                     <div class="col col-lg-8 col-12">
-                        <div class="container">
+                        <div class="container reveal">
                             <h3 class="mb-4 mt-2">Showing Post with Tag: <b>{{ page.tag-name }} ({{ site.tags[page.tag-name] | size }} Posts)</b></h3>
                         </div>
                         <div class="container">
                         {% for post in site.posts %}
                             {% if post.tags contains page.tag-name %}
                             <a href="{{ post.url }}">
-                                <div class="post-cards row p-2">
+                                <div class="post-cards row p-2 reveal">
                                     <div class="post-cards-cover col-12 col-md-4">
-                                    <img class="img-fluid" alt="{ post.title }" width="280px" height="157px" src="{{ post.cover | replace: '/source/', '/thumbs/' }}">
+                                    <img class="img-fluid skeleton-loader" alt="{ post.title }" width="280px" height="157px" src="{{ post.cover | replace: '/source/', '/thumbs/' }}" loading="lazy">
                                     </div>
                                     <div class="post-cards-meta col-12 col-md-8">
                                     <h1 class="post-card-title">{{ post.title }}</h1>

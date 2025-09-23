@@ -7,18 +7,18 @@
         <section id="about-section">
           <div class="row about-block">
             <div class="col-12">
-              <div id="about-profile">
+              <div id="about-profile" class="reveal">
                 <img class="profile-image" src="/assets/images/YGA08659.jpg" alt="Rizkie's Featured Image" loading="lazy">
               </div>
             </div>
             
             <div class="col-12">
-              <div id="about-desc">
+              <div id="about-desc" class="reveal">
                 <h1 class="page-heading mb-5 fw-bold">{% t about_page.title %}</h1>
                 <img src="/assets/images/YGA08659_F.jpg" width="400px" height="400px" alt="Rizkie's Profile Picture" class="profile-image-badge mobile-only" loading="lazy">
                 {{ content }}
 
-                <div id="about-orgs" class="row align-items-center justify-content-center">
+                <div id="about-orgs" class="row align-items-center justify-content-center reveal">
                   <div class="col">
                     <div id="about-day-job" class="text-center">
                       <h1 class="text-uppercase fw-bold">{% t about_page.current_employment %}</h1>
@@ -36,7 +36,7 @@
                   </div>
                 </div>
 
-                <div class="social-box text-center">
+                <div class="social-box text-center reveal">
                   <h1 class="fw-bold text-uppercase">{% t about_page.social_title %}</h1>
                   <h2>{% t about_page.social_sub %}</h2>
                     

@@ -1,6 +1,6 @@
 html, body {
-  color: #fafafa!important;
-  font-family: 'Roboto', cursive!important;
+  color: #e0e0e0!important; /* Slightly darker white for better contrast */
+  font-family: 'Roboto', sans-serif!important; /* Changed cursive to sans-serif for modern look */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;
   min-height: 100vh;
@@ -52,20 +52,25 @@ body#about, body#blog {
   text-transform: uppercase;
 }
 
+.nav-item a, .portofolio-links a {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transform for subtle movement */
+}
+
 .nav-item a:hover, .portofolio-links a:hover {
-  opacity: 0.5;
-  transition: opacity 0.5s ease-in-out;
+  opacity: 0.7; /* Slightly less opaque for a subtle effect */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+#web-portofolio-more a {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 #web-portofolio-more a:hover {
-  transition: background-color 0.5s ease-in-out;
-  color: #000!important;
+  background-color: #ffffffad; /* Lighter background on hover */
+  color: #212121!important; /* Darker text on hover */
   font-weight: 600;
-}
-
-.nav-item a, .portofolio-links a {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transform: translateY(-3px); /* Lift effect on hover */
 }
 
 .nav-item, .navbar-toggler {
@@ -122,12 +127,14 @@ a {
 }
 
 .page-heading, .heroes-title {
-  font-weight: 700;
-  font-size: 3rem;
+  font-weight: 800; /* Bolder for more impact */
+  font-size: 3.2rem; /* Slightly larger */
+  letter-spacing: 2px; /* Add some letter spacing */
 }
 
 .heroes-subtitle {
-  font-size: 2rem;
+  font-weight: 300; /* Lighter weight for subtitle */
+  font-size: 2.1rem; /* Slightly larger */
 }
 
 .mobile-only {
@@ -353,8 +360,9 @@ a {
 }
 
 #portofolio-tabs .nav-item .nav-link.active{
-  color: #212121;
-  font-weight: 600;
+  color: #1a1a1a; /* Darker active tab color */
+  font-weight: 700; /* Bolder active tab */
+  border-bottom: 3px solid #007bff; /* Accent color for active tab */
 }
 
 #portofolio-tabs .nav-item .nav-link.active:hover{
@@ -413,12 +421,18 @@ a {
     display: inherit;
   }
   .navbar-collapse.show {
-    background-color: rgba(15, 15, 15, 0.95);
+    background-color: rgba(15, 15, 15, 0.98); /* Slightly more opaque */
     padding: 50px 50px 25px;
     width: 100%;
     position: fixed;
-    top: -200px;
+    top: 0; /* Start from top */
     left: 0;
+    transform: translateX(100%); /* Initially off-screen to the right */
+    transition: transform 0.4s ease-out; /* Smooth slide-in animation */
+  }
+
+  .navbar-collapse.show.active {
+    transform: translateX(0); /* Slide into view */
   }
   .home-name {
     font-size: 4rem;
@@ -555,4 +569,56 @@ a {
 
 .carousel-control-next-icon-dark {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: #007bff;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 56px;
+  font-size: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 1s ease, transform 1s ease, opacity 1s ease, visibility 1s ease, color 1s ease, border-color 1s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    line-height: 41px;
+    font-size: 1.3rem;
+    bottom: 15px;
+    right: 15px;
+  }
 }

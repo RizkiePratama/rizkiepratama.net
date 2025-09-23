@@ -10,7 +10,7 @@
         <div class="container">
           <div class="row blog-block py-5 px-3">
             <div class="col-12 col-lg-12">
-                <div class="post-meta">
+                <div class="post-meta reveal">
                     <h1 class="post-title">{{page.title}}</h1>
                     <ul class="post-meta-items">
                         <li class="meta-item meta-date"><i class="fa-sharp fa-solid fa-calendar-days me-2"></i> Posted at {{page.date  | date: "%B %d, %Y"}}</li>
@@ -20,7 +20,7 @@
                     </ul>
                 </div>
 
-                <section class="blog-post-content">
+                <section class="blog-post-content reveal">
                     {{ content }}
                 </section>
             </div>
@@ -35,7 +35,7 @@
 
             {% if related_posts.size > 0 %}
             <div class="col-12 col-lg-12">
-                <div class="row similar-post-block">
+                <div class="row similar-post-block reveal">
                     <div class="col-12 col-lg-12">
                         <div class="similar-post-block-title">
                             <h3>Done Reading this Post?</h3>
@@ -44,7 +44,7 @@
                         <div class="similar-post-block-list">
                             <div class="row">
                                 {% for post in related_posts limit: 3 %}
-                                <div class="col-12 col-md-4 col-lg-4">
+                                <div class="col-12 col-md-4 col-lg-4 reveal">
                                     <a class="similar-post-item" href="{{ post.url }}">
                                         <img class="similar-post-cover-thumb" alt="{ post.title }" src="{{ post.cover | replace: '/source/', '/thumbs/' }}">
                                         <h3 class="similar-post-title">{{ post.title }}</h3>
