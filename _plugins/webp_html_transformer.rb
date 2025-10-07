@@ -11,16 +11,13 @@ module Jekyll
         doc.css('img').each do |img_tag|
           original_src = img_tag['src']
           
-          next if original_src.nil? || original_src.empty? || original_src.start_with?('data:') || original_src.end_with?('.webp')
+          next if original_src.nil? || original_src.empty? || original_src.start_with?('data:') || original_src.end_with?('.webp') || original_src.end_with?('.svg')
           next if img_tag.ancestors('picture').any?
 
           if original_src.start_with?('/assets/images/')
             # Construct the WebP path
-            puts "Original Source Path: #{original_src}"
             webp_src = original_src.sub('/assets/images/', '/assets/images/webp/')
             webp_src = webp_src.sub(/\.(jpg|jpeg|png)$/i, '.webp')
-            
-            puts "Target WEBP Source Path: #{webp_src}"
 
             root_site_dest_path = page.site.config['destination']
             relative_webp_path = webp_src.sub(/^\//, '')
