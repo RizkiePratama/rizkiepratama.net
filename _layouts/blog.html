@@ -5,7 +5,7 @@
         <!-- Landing Header -->
         {% include header.html %}
         <div id="blog-post">
-        <div class="row mx-0 hero-post-header" style="background: url('{{page.cover}}') no-repeat center center">
+        <div class="row mx-0 hero-post-header" style="background: url('{{page.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' | uri_escape }}') no-repeat center center">
         </div>
         <div class="container">
           <div class="row blog-block py-5 px-3">
@@ -46,7 +46,10 @@
                                 {% for post in related_posts limit: 3 %}
                                 <div class="col-12 col-md-4 col-lg-4 reveal">
                                     <a class="similar-post-item" href="{{ post.url }}">
-                                        <img class="similar-post-cover-thumb" alt="{ post.title }" src="{{ post.cover | replace: '/source/', '/thumbs/' }}">
+                                        <picture>
+                                            <source srcset="{{ post.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
+                                            <img class="similar-post-cover-thumb skeleton-loader" alt="{ post.title }" src="{{ post.cover | replace: '/source/', '/thumbs/' }}" loading="lazy">
+                                        </picture>
                                         <h3 class="similar-post-title">{{ post.title }}</h3>
                                         <p class="similar-post-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
                                     </a>

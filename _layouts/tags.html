@@ -27,7 +27,10 @@ pagination:
                             <a href="{{ post.url }}">
                                 <div class="post-cards row p-2 reveal">
                                     <div class="post-cards-cover col-12 col-md-4">
-                                    <img class="img-fluid skeleton-loader" alt="{ post.title }" width="280px" height="157px" src="{{ post.cover | replace: '/source/', '/thumbs/' }}" loading="lazy">
+                                        <picture>
+                                            <source srcset="{{ post.cover | replace: '/source/', '/asdas/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
+                                            <img class="img-fluid skeleton-loader" alt="{ post.title }" width="280px" height="157px" src="{{ post.cover | replace: '/source/', '/thumbs/' }}" loading="lazy">
+                                        </picture>
                                     </div>
                                     <div class="post-cards-meta col-12 col-md-8">
                                     <h1 class="post-card-title">{{ post.title }}</h1>

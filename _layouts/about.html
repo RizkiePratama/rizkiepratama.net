@@ -8,21 +8,32 @@
           <div class="row about-block">
             <div class="col-12">
               <div id="about-profile" class="reveal">
-                <img class="profile-image" src="/assets/images/YGA08659.jpg" alt="Rizkie's Featured Image" loading="lazy">
+                <picture>
+                  <source srcset="/assets/images/webp/YGA08659.webp" type="image/webp">
+                  <img class="profile-image skeleton-loader" src="/assets/images/YGA08659.jpg" alt="Rizkie's Featured Image" loading="lazy">
+                </picture>
               </div>
             </div>
             
             <div class="col-12">
               <div id="about-desc" class="reveal">
                 <h1 class="page-heading mb-5 fw-bold">{% t about_page.title %}</h1>
-                <img src="/assets/images/YGA08659_F.jpg" width="400px" height="400px" alt="Rizkie's Profile Picture" class="profile-image-badge mobile-only" loading="lazy">
+                <picture>
+                  <source srcset="/assets/images/webp/YGA08659_F.webp" type="image/webp">
+                  <img src="/assets/images/YGA08659_F.jpg" width="400px" height="400px" alt="Rizkie's Profile Picture" class="profile-image-badge mobile-only skeleton-loader" loading="lazy">
+                </picture>
                 {{ content }}
 
                 <div id="about-orgs" class="row align-items-center justify-content-center reveal">
                   <div class="col">
                     <div id="about-day-job" class="text-center">
                       <h1 class="text-uppercase fw-bold">{% t about_page.current_employment %}</h1>
-                      <a href="https://vidio.com/"><img alt="Vidio.com" src="/assets/images/vidio.svg" width="250px" height="72px" class="mt-3 mb-1" loading="lazy"></a>
+                      <a href="https://vidio.com/">
+                        <picture>
+                          <source srcset="/assets/images/webp/vidio.webp" type="image/webp">
+                          <img alt="Vidio.com" src="/assets/images/vidio.svg" width="250px" height="72px" class="mt-3 mb-1 skeleton-loader" loading="lazy">
+                        </picture>
+                      </a>
                       <p>{% t about_page.vidio_sub %}</p>
                     </div>  
                   </div>
@@ -30,7 +41,12 @@
                   <div class="col">
                     <div id="about-studio" class="text-center">
                       <h1 class="text-uppercase fw-bold">{% t about_page.founder_of %}</h1>
-                      <a href="https://hibikaze.id/"><img alt="Hibikaze Studios" src="/assets/images/hibikaze_studio.png" width="250px" height="72px" class="mt-4 mb-2" loading="lazy"></a>
+                      <a href="https://hibikaze.id/">
+                        <picture>
+                          <source srcset="/assets/images/webp/hibikaze_studio.webp" type="image/webp">
+                          <img alt="Hibikaze Studios" src="/assets/images/hibikaze_studio.png" width="250px" height="72px" class="mt-4 mb-2 skeleton-loader" loading="lazy">
+                        </picture>
+                      </a>
                       <p>{% t about_page.hkz_sub %}</p>
                     </div>
                   </div>
