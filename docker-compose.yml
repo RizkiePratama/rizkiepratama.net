@@ -1,0 +1,17 @@
+services:
+  jekyll:
+    build: .
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - .:/site
+      - bundle_cache:/usr/local/bundle
+    environment:
+      # Overrides .bundle/config so gems resolve from the Docker volume, not vendor/bundle
+      - BUNDLE_PATH=/usr/local/bundle
+      - JEKYLL_ENV=development
+    command: bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling
+
+volumes:
+  bundle_cache:
