@@ -66,3 +66,7 @@ host: 0.0.0.0
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+sass:
+  quiet_deps: true
+  silence_deprecations: ["import"]

@@ -47,8 +47,8 @@
                                 <div class="col-12 col-md-4 col-lg-4 reveal">
                                     <a class="similar-post-item" href="{{ post.url }}">
                                         <picture>
-                                            <source srcset="{{ post.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
-                                            <img class="similar-post-cover-thumb skeleton-loader" alt="{ post.title }" src="{{ post.cover | replace: '/source/', '/thumbs/' }}" loading="lazy">
+                                            <source srcset="{{ post.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/thumbs/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
+                                            <img class="similar-post-cover-thumb skeleton-loader" alt="{{ post.title }}" src="{{ post.cover | replace: '/source/', '/thumbs/' }}" loading="lazy">
                                         </picture>
                                         <h3 class="similar-post-title">{{ post.title }}</h3>
                                         <p class="similar-post-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>

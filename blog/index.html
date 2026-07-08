@@ -12,7 +12,10 @@ pagination:
 <a href="{{ post.url }}">
   <div class="post-cards row p-2">
     <div class="post-cards-cover col-12 col-md-4">
-      <img alt="{{ post.title }}"  width="280px" height="157px" class="img-fluid" src="{{ post.cover | replace: '/source/', '/thumbs/' }}">
+      <picture>
+        <source srcset="{{ post.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/thumbs/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
+        <img alt="{{ post.title }}"  width="280px" height="157px" class="img-fluid" src="{{ post.cover | replace: '/source/', '/thumbs/' }}">
+      </picture>
     </div>
     <div class="post-cards-meta col-12 col-md-8">
       <h1 class="post-card-title">{{ post.title }}</h1>
