@@ -4,16 +4,25 @@
     <body id="blog" class="d-flex flex-fill flex-column">
         <!-- Landing Header -->
         {% include header.html %}
+        <main id="swup" class="transition-fade">
+        <!-- Reading Progress Bar -->
+        <div id="read-progress-bar" class="read-progress-bar"></div>
         <div id="blog-post">
         <div class="row mx-0 hero-post-header" style="background: url('{{page.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' | uri_escape }}') no-repeat center center">
         </div>
         <div class="container">
           <div class="row blog-block py-5 px-3">
             <div class="col-12 col-lg-12">
-                <div class="post-meta reveal">
-                    <h1 class="post-title">{{page.title}}</h1>
-                    <ul class="post-meta-items">
-                        <li class="meta-item meta-date"><i class="fa-sharp fa-solid fa-calendar-days me-2"></i> Posted at {{page.date  | date: "%B %d, %Y"}}</li>
+                <div class="sys-post-meta reveal mb-5">
+                    <h1 class="sys-log-title-main">{{page.title}}</h1>
+                    <div class="sys-log-header d-flex flex-wrap gap-3 mt-3">
+                        <span class="meta-item meta-date"><i class="fa-sharp fa-solid fa-calendar-days me-2"></i> {% t blog_page.post.posted_at %} {{page.date  | date: "%B %d, %Y"}}</span>
+                        {% assign words = content | number_of_words %}
+                        {% assign readtime = words | divided_by: 180 | plus: 1 %}
+                        <span class="meta-item meta-telemetry"><i class="fa-solid fa-hourglass-half me-2"></i> [EST_READ_TIME : {{ readtime }} MIN]</span>
+                        <span class="meta-item meta-telemetry"><i class="fa-solid fa-file-lines me-2"></i> [LOG_SIZE : {{ words }} WORDS]</span>
+                    </div>
+                    <ul class="post-meta-items mt-3">
                         {% for tag in page.tags %}
                         <li class="meta-item meta-tag"><a href="/blog/tags/{{ tag }}">{{ tag }}</a></li>
                         {% endfor %}
@@ -35,30 +44,47 @@
 
             {% if related_posts.size > 0 %}
             <div class="col-12 col-lg-12">
-                <div class="row similar-post-block reveal">
+                <div class="row similar-post-block reveal mt-5">
                     <div class="col-12 col-lg-12">
-                        <div class="similar-post-block-title">
-                            <h3>Done Reading this Post?</h3>
-                            <span>Maybe check some More Similar Content...</span>
+                        <div class="sys-tag-header">
+                            > QUERY_SIMILAR_LOGS... <span class="hud-sys ms-2">{% t blog_page.post.done_reading %}</span>
                         </div>
-                        <div class="similar-post-block-list">
-                            <div class="row">
+                        <div class="similar-post-block-list mt-4">
+                            <div class="blog-grid blog-grid--uniform">
                                 {% for post in related_posts limit: 3 %}
-                                <div class="col-12 col-md-4 col-lg-4 reveal">
-                                    <a class="similar-post-item" href="{{ post.url }}">
-                                        <picture>
-                                            <source srcset="{{ post.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/thumbs/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
-                                            <img class="similar-post-cover-thumb skeleton-loader" alt="{{ post.title }}" src="{{ post.cover | replace: '/source/', '/thumbs/' }}" loading="lazy">
-                                        </picture>
-                                        <h3 class="similar-post-title">{{ post.title }}</h3>
-                                        <p class="similar-post-excerpt">{{ post.content | strip_html | truncatewords: 30 }}</p>
-                                    </a>
+                                <div class="blog-grid-item">
+                                    <div class="blog-grid-card">
+                                        <div class="blog-grid-thumb">
+                                            <a href="{{ post.url }}" class="blog-grid-thumb-link">
+                                                <picture>
+                                                    <source srcset="{{ post.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
+                                                    <img src="{{ post.cover | replace: '/source/', '/' }}" alt="{{ post.title }}" loading="lazy">
+                                                </picture>
+                                                <div class="blog-grid-scanline"></div>
+                                            </a>
+                                        </div>
+                                        <div class="blog-grid-body">
+                                            <span class="hud-sys blog-grid-date">[LOG_FILE : {{ post.date | date: "%Y%m%d%H%M" }}]</span>
+                                            <h2 class="blog-grid-title"><a href="{{ post.url }}">{{ post.title | upcase }}</a></h2>
+                                            <p class="blog-grid-excerpt">{{ post.content | strip_html | truncatewords: 20 }}</p>
+                                            <div class="blog-grid-tags">
+                                                {% for tag in post.tags %}
+                                                <a href="/blog/tags/{{ tag }}" class="blog-grid-tag">{{ tag }}</a>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <div class="hi-br tl">+</div>
+                                        <div class="hi-br tr">+</div>
+                                        <div class="hi-br bl">+</div>
+                                        <div class="hi-br br">+</div>
+                                    </div>
                                 </div>
                                 {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
             {% endif %}
           </div>
@@ -83,6 +109,7 @@
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
         {% endif %}
+        </main>
 
         <!-- Footer -->
         {% include footer.html %}

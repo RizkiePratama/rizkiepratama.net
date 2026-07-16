@@ -43,7 +43,7 @@ plugins:
 
 permalink: /:categories/:year/:month/:day/:title
 pagination:
-  enabled: true
+  enabled: false
   per_page: 5
 
 host: 0.0.0.0

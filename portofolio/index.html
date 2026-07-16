@@ -1,378 +1,56 @@
 ---
 layout: page
 title: Projects Portofolio
+custom_css:
+  - porto
 ---
 
-<div id="portofolio">
-  <section id="portofolio-heroes" class="row g-0 cover-block align-items-center" loading="lazy">
-    <div class="col align-self-center shade-block">
-      <div class="container-xxl">
-        <div class="heroes-tagline">
-          <h1 class="heroes-title text-start reveal">{% t portofolio_page.heroes_title %}</h1>
-          <h2 class="heroes-subtitle text-start reveal">{% t portofolio_page.heroes_subtitle %}</h2>
-        </div>
-        <a href="#portofolio-content" aria-label="Scroll Down to Portofolio Content"><i class="heroes-scrolldown fa-solid fa-chevron-down reveal"></i></a>
-      </div>
+<div id="portofolio-menu" class="porto-menu-fullscreen">
+  <!-- Background with scanlines -->
+  <div class="porto-menu-bg"></div>
+
+  <div class="porto-menu-inner">
+    
+    <div class="porto-menu-left">
+      <p class="porto-hero-eyebrow">{% t pages.portofolio %}</p>
+      <h1 class="porto-hero-title">
+        {% t portofolio_page.heroes_title_1 %}<br>
+        <span class="porto-hero-accent-bold">{% t portofolio_page.heroes_title_2 %}</span><br>
+        {% t portofolio_page.heroes_title_3 %}
+      </h1>
+      <p class="porto-hero-index">
+        Rizkie Pratama<br>
+        ——————<br>
+        {% t portofolio_page.heroes_subtitle %}
+      </p>
     </div>
-  </section>
 
-  <section id="portofolio-content" class="cover-block align-items-center">
-    <div class="container">
-      <ul class="nav nav-tabs reveal" id="portofolio-tabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="development-tab" data-bs-toggle="tab" data-bs-target="#development" type="button" role="tab" aria-controls="development" aria-selected="true">{% t portofolio_page.dev %}</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="video-editing-tab" data-bs-toggle="tab" data-bs-target="#video-editing" type="button" role="tab" aria-controls="video-editing" aria-selected="false">{% t portofolio_page.video_editing.title %}</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="photography-tab" data-bs-toggle="tab" data-bs-target="#photography" type="button" role="tab" aria-controls="Photography" aria-selected="false">{% t portofolio_page.photography.title %}</button>
-        </li>
-      </ul>
+    <div class="porto-menu-right">
+      <nav class="porto-nav-list" aria-label="Portfolio Categories">
+        
+        <a href="{{ site.baseurl }}/portofolio/development" class="porto-nav-item" onclick="this.classList.add('is-active-click')">
+          <div class="porto-nav-highlight"></div>
+          <span class="porto-nav-num">01</span>
+          <span class="porto-nav-label" data-text="{% t portofolio_page.dev %}">{% t portofolio_page.dev %}</span>
+          <span class="porto-nav-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-      <div class="tab-content" id="portofolio-tab-contents">
-        <!-- DEVELOPMENT START -->
-        <div class="tab-pane fade show active" id="development" role="tabpanel" aria-labelledby="home-tab">
-          <div class="row portofolio-block pt-5 pb-5">
-            <div class="col-sm-12 col-md-12 pt-5">
-              <div class="portotfolio-head-title-container col reveal">
-                <h2 class="portofolio-head-title">{% t global.website %}</h2>
-              </div>
-              <section id="web-portofolio-landing" class="row web-portofolio align-items-center">
-                <div class="col-sm-4 col-md-4 p-3 text-center reveal">
-                  <a href="https://squareteams.co/" target="_blank">
-                    <img class="portofolio-site-preview skeleton-loader" alt="Square Teams Website" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/squareteams.jpg" loading="lazy" decoding="async">
-                  </a>
-                </div>
-                <div class="col-sm-4 col-md-4 p-3 text-center reveal">
-                  <a href="https://static-demo.rizkiepratama.net/abys-burger/" target="_blank">
-                    <img class="portofolio-site-preview skeleton-loader" alt="Abys Burger Template for Resto App Website" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/abys-burger.jpg" loading="lazy">
-                  </a>
-                </div>
-                <div class="col-sm-4 col-md-4 p-3 text-center reveal">
-                  <a href="#" data-lity data-lity-target="/assets/images/portofolio/website/source/repos.jpg">
-                    <img class="portofolio-site-preview skeleton-loader" alt="RePOS Point of Sales Software Landing Page" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/repos.jpg" loading="lazy">
-                  </a>
-                </div>
-                <div class="col-sm-4 col-md-4 p-3 text-center reveal">
-                  <a href="https://static-demo.rizkiepratama.net/news-portal-template" target="_blank">
-                    <img class="portofolio-site-preview skeleton-loader" alt="News Portal Template" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/news-portal.jpg" loading="lazy">
-                  </a>
-                </div>
-                <div class="col-sm-4 col-md-4 p-3 text-center reveal">
-                  <a href="https://ptagrowijaya.com/" target="_blank">
-                    <img class="portofolio-site-preview skeleton-loader" alt="PT Agro Wijaya Company Profile Site" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/agrowijaya.jpg" loading="lazy">
-                  </a>
-                </div>
-                <div class="col-sm-4 col-md-4 p-3 text-center reveal">
-                  <a href="https://adrianeparamitha.my.id/" target="_blank">
-                    <img class="portofolio-site-preview skeleton-loader" alt="Adriane's Portofolio Website" width="400px" height="225px" src="/assets/images/portofolio/website/thumbs/adrparamitha.jpg" loading="lazy">
-                  </a>
-                </div>
-              </section>
-              <section id="web-portofolio-more" class="row web-portofolio align-items-center collapse reveal">
-                <div class="col-12 text-center">
-                  <a class="btn btn-outline-light" href="/portofolio/web-dev">See More Web Portofolio<i class="fa-solid fa-angle-right ms-3"></i></a>
-                </div>
-              </section>
-            </div>
-            <div class="col-sm-12 col-md-12 pt-5">
-              <div class="portotfolio-head-title-container col reveal">
-                <h2 class="portofolio-head-title">{% t global.mobiledev %}</h2>
-              </div>
-              <section id="web-portofolio-landing" class="row web-portofolio align-items-center">
-                <div class="col-sm-4 col-md-4 p-3 text-center reveal">
-                  <a href="https://apps.apple.com/us/app/football-money/id6605934587" target="_blank">
-                    <img class="portofolio-site-preview skeleton-loader" alt="Square Teams Website" width="400px" height="225px" src="/assets/images/portofolio/mobile-app/thumbs/footballmoney.webp" loading="lazy">
-                  </a>
-                </div>
-              </section>
-              <section id="web-portofolio-more" class="row web-portofolio align-items-center collapse reveal">
-                <div class="col-12 text-center">
-                  <a class="btn btn-outline-light" href="/portofolio/web-dev">See More Web Portofolio<i class="fa-solid fa-angle-right ms-3"></i></a>
-                </div>
-              </section>
-            </div>
-            <div class="col-sm-12 col-md-12 pt-5 mt-5">
-              <div class="portotfolio-head-title-container col reveal">
-                <h2 class="portofolio-head-title">{% t global.software %}</h2>
-              </div>
-              <div class="row mb-5 justify-content-center px-3 px-sm-0">
-                <div class="col-md-4 col-sm-12 py-md-3 reveal">
-                  <div id="software-portofolio-majin-paste" class="portofolio-cards">
-                    <h3 class="text-center text-uppercase font-weight-bold">Majin Paste</h3>
-                    <p class="text-center">{% t portofolio_page.software.majin_paste_desc %}</p>
-                    <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/majinpaste" target="_blank" aria-label="Github Page for Majin Paste Projects"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12 py-md-3 reveal">
-                  <div id="software-portofolio-red-catalyst" class="portofolio-cards">
-                    <h3 class="text-center text-uppercase font-weight-bold">Red Catalyst</h3>
-                    <p class="text-center">{% t portofolio_page.software.red_catalyst_desc %}</p>
-                    <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/red-catalyst" target="_blank" aria-label="Github Page for Red Catalyst"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12 py-md-3 reveal">
-                  <div id="software-portofolio-alter-pass" class="portofolio-cards">
-                    <h3 class="text-center text-uppercase font-weight-bold">Alter Pass</h3>
-                    <p class="text-center">{% t portofolio_page.software.alter_pass_desc %}</p>
-                    <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/alterpass" target="_blank" aria-label="Github Page for AlterPass"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12 py-md-3 reveal">
-                  <div id="software-portofolio-majin-paste" class="portofolio-cards">
-                    <h3 class="text-center text-uppercase font-weight-bold">GNews.Dart</h3>
-                    <p class="text-center">{% t portofolio_page.software.gnews_dart_desc %}</p>
-                    <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/gnews.dart" target="_blank" aria-label="Github Page for GNews Project"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12 py-md-3 reveal">
-                  <div id="software-portofolio-red-catalyst" class="portofolio-cards">
-                    <h3 class="text-center text-uppercase font-weight-bold">Briefly</h3>
-                    <p class="text-center">{% t portofolio_page.software.briefly_desc %}</p>
-                    <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/briefly-app" target="_blank" aria-label="Github Page for Briefly App"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12 py-md-3 reveal">
-                  <div id="software-portofolio-red-catalyst" class="portofolio-cards">
-                    <h3 class="text-center text-uppercase font-weight-bold">Vidio Immersive Mode</h3>
-                    <p class="text-center">{% t portofolio_page.software.vim_desc %}</p>
-                    <ul class="portofolio-links">
-                      <li><a href="https://github.com/RizkiePratama/vidio-immersive-mode" target="_blank" aria-label="Github Page for Vidio Immersive Mode Browser Extensions"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#ffffff"/></svg></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col col-sm-12 col-md-12 pt-5 mt-5">
-              <div class="portotfolio-head-title-container col reveal">
-                <h2 class="portofolio-head-title">{% t portofolio_page.tech %}</h2>
-              </div>
-              <div class="row mb-5 px-3 px-sm-0">
-                <div class="col-sm-12 col-md-6 reveal">
-                  <section id="tech-stack-portofolio-language" class="portofolio-cards">
-                    <h3 class="text-uppercase text-center font-weight-bold">{% t portofolio_page.prog_lang %}</h3>
-                    <ul class="stack-list">
-                      <li><img width="50px" height="50px" alt="Ruby Lang" src="/assets/images/stacks/ruby.svg"></li>
-                      <li><img width="50px" height="50px" alt="Python" src="/assets/images/stacks/python.svg"></li>
-                      <li><img width="50px" height="50px" alt="PHP" src="/assets/images/stacks/php.svg"></li>
-                      <li><img width="50px" height="50px" alt="LUA Lang" src="/assets/images/stacks/lua.svg"></li>
-                      <li><img width="50px" height="50px" alt="C++" src="/assets/images/stacks/cpp.svg"></li>
-                      <li><img width="50px" height="50px" alt="C#" src="/assets/images/stacks/csharp.svg"></li>
-                      <li><img width="50px" height="50px" alt="Javascript" src="/assets/images/stacks/javascript.svg"></li>
-                      <li><img width="50px" height="50px" alt="Typescript" src="/assets/images/stacks/typescript.svg"></li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="col-sm-12 col-md-6 reveal">
-                  <section id="tech-stack-portofolio-language" class="portofolio-cards">
-                  <h3 class="text-uppercase text-center font-weight-bold">{% t portofolio_page.framework %}</h3>
-                  <ul class="stack-list">
-                    <li><img width="50px" height="50px" alt="Ruby on Rails" class="wide" src="/assets/images/stacks/rails.svg"></li>
-                    <li><img width="50px" height="50px" alt="Ruby Sinatra" src="/assets/images/stacks/sinatra.svg"></li>
-                    <li><img width="50px" height="50px" alt="Code Igniter" src="/assets/images/stacks/code_igniter.svg"></li>
-                    <li><img width="50px" height="50px" alt="Unity 3D" class="wide" src="/assets/images/stacks/unity.svg"></li>
-                    <li><img width="50px" height="50px" alt="Unreal Engine" src="/assets/images/stacks/unreal.svg"></li>
-                    <li><img width="50px" height="50px" alt="Godot Engine" src="/assets/images/stacks/godot.svg"></li>
-                  </ul>
-                  </section>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- DEVELOPMENT END -->
+        <a href="{{ site.baseurl }}/portofolio/video-editing" class="porto-nav-item" onclick="this.classList.add('is-active-click')">
+          <div class="porto-nav-highlight"></div>
+          <span class="porto-nav-num">02</span>
+          <span class="porto-nav-label" data-text="{% t portofolio_page.video_editing.title %}">{% t portofolio_page.video_editing.title %}</span>
+          <span class="porto-nav-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-         <!-- PHOTOGRAPHY START -->
-        <div class="tab-pane fade" id="photography" role="tabpanel" aria-labelledby="photography-tab">
-          <div class="row portofolio-block pt-5 pb-5">
-            <!-- STREET -->
-            <div class="col-sm-12 col-md-12 pt-5">
-              <div class="portotfolio-head-title-container reveal">
-                <h2 class="portofolio-head-title">{% t portofolio_page.photography.street %}</h2>
-              </div>
-              <div class="masonry-galery-container reveal">
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/MAY06511.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/street/thumbs/MAY06511.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/MAY06585.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/street/thumbs/MAY06585.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/MAY06590.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/street/thumbs/MAY06590.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA07658.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/street/thumbs/YGA07658.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA07979.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/street/thumbs/YGA07979.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA06773.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/street/thumbs/YGA06773.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA06824.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/street/thumbs/YGA06824.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA07986.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/street/thumbs/YGA07986.jpg" loading="lazy">
-                </a>
-              </div>
+        <a href="{{ site.baseurl }}/portofolio/photography" class="porto-nav-item" onclick="this.classList.add('is-active-click')">
+          <div class="porto-nav-highlight"></div>
+          <span class="porto-nav-num">03</span>
+          <span class="porto-nav-label" data-text="{% t portofolio_page.photography.title %}">{% t portofolio_page.photography.title %}</span>
+          <span class="porto-nav-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-              <!-- PORTRAITURE -->
-              <div class="portotfolio-head-title-container reveal">
-                <h2 class="portofolio-head-title">{% t portofolio_page.photography.potraiture %}</h2>
-              </div>
-              <div class="masonry-galery-container reveal">
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_9558.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_9558.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_9638.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_9638.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_9685.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_9685.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_9641.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_9641.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/YGA06802.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/YGA06802.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/YGA06835.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/YGA06835.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/YGA06838.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/YGA06838.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/YGA06841.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/YGA06841.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/YGA06845.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/YGA06845.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0034_2.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0034_2.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0036-1.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0036-1.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0039.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0039.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0374.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0374.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0375.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0375.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0377.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0377.jpg" loading="lazy">
-                </a>
-              </div>
-
-              <!-- COSPLAY -->
-              <div class="portotfolio-head-title-container reveal">
-                <h2 class="portofolio-head-title">{% t portofolio_page.photography.cosplay %}</h2>
-              </div>
-              <div class="masonry-galery-container reveal">
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/YGA08815.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/cosplay/thumbs/YGA08815.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/YGA08817.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/cosplay/thumbs/YGA08817.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/YGA08809.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/cosplay/thumbs/YGA08809.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/YGA08792.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/cosplay/thumbs/YGA08792.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/YGA06937.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/cosplay/thumbs/YGA06937.jpg" loading="lazy">
-                </a>
-                <a href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/IMG_8149.jpg">
-                  <img class="skeleton-loader reveal" src="/assets/images/portofolio/photography/cosplay/thumbs/IMG_8149.jpg" loading="lazy">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- PHOTOGRAPHY END -->
-
-        <!-- VIDEO EDITING START -->
-        <div class="tab-pane fade" id="video-editing" role="tabpanel" aria-labelledby="video-editing-tab">
-          <div class="row portofolio-block pt-5 pb-5">
-            <div class="col-sm-12 col-md-12 pt-5">
-              <div class="portotfolio-head-title-container reveal">
-                <h2 class="portofolio-head-title">{% t portofolio_page.video_editing.yt_content %}</h2>
-              </div>
-              <div class="row p-0 mt-3">
-                <div class="col col-6 p-2 reveal">
-                  <div class="video-embed skeleton-loader">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VZQkNPft6D8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                  </div>
-                </div>
-                <div class="col col-6 p-2">
-                  <div class="video-embed skeleton-loader">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_mxzsXh0ndU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                  </div>
-                </div>
-                <div class="col col-6 p-2">
-                  <div class="video-embed skeleton-loader">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FZB2NHuiHA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                  </div>
-                </div>
-                <div class="col col-6 p-2">
-                  <div class="video-embed skeleton-loader">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CGiyQFdDrXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                  </div>
-                </div>
-              </div>
-              <div class="portotfolio-head-title-container mt-5 reveal">
-                <h2 class="portofolio-head-title">{% t portofolio_page.video_editing.shorts %}</h2>
-              </div>
-              <div class="container p-0 mt-3">
-                <div class="row reveal">
-                  <div class="col col-3 px-1">
-                    <div class="video-embed-vertical skeleton-loader">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/_FN9IqfMVXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                  </div>
-                  <div class="col col-3 px-1">
-                    <div class="video-embed-vertical skeleton-loader">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/D9kSsWfg498" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                  </div>
-                  <div class="col col-3 px-1">
-                    <div class="video-embed-vertical skeleton-loader">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/MCodaBSwAfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                  </div>
-                  <div class="col col-3 px-1">
-                    <div class="video-embed-vertical skeleton-loader">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/lGW2CwS4w90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- VIDEO EDITING END -->
-      </div>
+      </nav>
     </div>
-  </section> <!-- #portofolio-content -->
-</div>
-    </div>
-  </section> <!-- #portofolio-content -->
+
+  </div>
 </div>

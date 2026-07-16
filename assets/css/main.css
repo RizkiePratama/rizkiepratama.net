@@ -1,7 +1,27 @@
+/* Global Design Tokens */
+:root {
+  --p-bg:        #080808;
+  --p-surface:   #101010;
+  --p-surface-2: #161616;
+  --p-border:    #1c1c1c;
+  --p-border-2:  #2a2a2a;
+  --p-text:      #f0f0f0;
+  --p-muted:      #4a4a4a;
+  --p-muted-2:   #333333;
+  --p-red:       #e8192c;
+  --p-red-dim:   rgba(232, 25, 44, 0.1);
+  --p-white:     #f0f0f0;
+
+  --p-font-head: 'Mako', sans-serif !important;
+  --p-font-mono: 'Roboto', sans-serif !important;
+  --p-font-body: 'Roboto', sans-serif !important;
+}
+
 html, body {
-  color: #e0e0e0!important; /* Slightly darker white for better contrast */
-  font-family: 'Roboto', sans-serif!important; /* Changed cursive to sans-serif for modern look */
-  -ms-overflow-style: none;  /* IE and Edge */
+  background-color: var(--p-bg) !important;
+  color: var(--p-text) !important;
+  font-family: var(--p-font-body);
+  -ms-overflow-style: none;
   scrollbar-width: none;
   min-height: 100vh;
 }
@@ -11,19 +31,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 html {
-  background-size: cover!important;
 }
 
 body#landing {
-  background-color: rgba(0, 0, 0, 0.815)!important;
 }
 
 body#page {
-  background-color: rgba(0, 0, 0, 0.911)!important;
 }
 
 body#about, body#blog {
-  background-color: rgba(0, 0, 0, 0.97)!important;
 }
 
 *:focus {
@@ -175,6 +191,10 @@ a {
 .portofolio-cards h3 {
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.fa-brands {
+  margin-right: 15px;
 }
 
 .portofolio-cards .fa-brands {
@@ -420,20 +440,6 @@ a {
   .mobile-only {
     display: inherit;
   }
-  .navbar-collapse.show {
-    background-color: rgba(15, 15, 15, 0.98); /* Slightly more opaque */
-    padding: 50px 50px 25px;
-    width: 100%;
-    position: fixed;
-    top: 0; /* Start from top */
-    left: 0;
-    transform: translateX(100%); /* Initially off-screen to the right */
-    transition: transform 0.4s ease-out; /* Smooth slide-in animation */
-  }
-
-  .navbar-collapse.show.active {
-    transform: translateX(0); /* Slide into view */
-  }
   .home-name {
     font-size: 4rem;
   }
@@ -447,6 +453,97 @@ a {
 
   .heroes-subtitle {
     font-size: 1.2rem;
+  }
+}
+
+/* Default state: hide drawer header on desktop */
+.navbar-drawer-header {
+  display: none !important;
+}
+
+/* Cyberpunk sliding navigation drawer - collapses below 768px (Bootstrap Expand-MD breakpoint) */
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    display: flex !important;
+    position: fixed !important;
+    top: 0;
+    right: -320px; /* hidden off-screen to the right */
+    width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.98) !important;
+    border-left: 1px solid var(--p-red, #e8192c);
+    z-index: 1060;
+    flex-direction: column;
+    padding: 80px 0 2rem !important;
+    visibility: hidden;
+    transition: right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .navbar-collapse.open {
+    right: 0 !important;
+    visibility: visible !important;
+  }
+
+  /* Drawer Header */
+  .navbar-drawer-header {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem 1.2rem;
+    border-bottom: 1px solid #222;
+    margin-bottom: 1.5rem;
+    font-size: 0.7rem;
+    font-family: var(--p-font-mono, monospace);
+    color: var(--p-red, #e8192c);
+    letter-spacing: 0.5px;
+  }
+
+  .navbar-drawer-close {
+    background: transparent;
+    border: none;
+    color: var(--p-red, #e8192c);
+    font-family: var(--p-font-mono, monospace);
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.75rem;
+    transition: color 0.15s ease;
+  }
+  .navbar-drawer-close:hover {
+    color: var(--p-white, #fafafa);
+  }
+
+  /* List navigation items */
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    border-bottom: 1px solid #0f0f0f;
+  }
+
+  .navbar-nav .nav-link {
+    display: block !important;
+    padding: 0.8rem 1.5rem !important;
+    color: var(--p-white, #fafafa) !important;
+    font-family: var(--p-font-mono, monospace) !important;
+    font-size: 0.85rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-item.active .nav-link {
+    background: var(--p-red, #e8192c) !important;
+    color: #000 !important;
+    border-left-color: var(--p-white, #fafafa) !important;
   }
 }
 
@@ -622,3 +719,62 @@ a {
     right: 15px;
   }
 }
+
+/* Option 1: Red Catalyst Wipe (Pure Transition) */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px),
+    var(--p-red, #e8192c);
+  z-index: 999999;
+  transform: translateX(-100%);
+  pointer-events: none;
+  transition: none; /* Snap back to start instantly when done */
+}
+
+/* Phase 1: Wipe sweeps IN from left */
+html.is-animating.is-leaving body::after {
+  transform: translateX(0%);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Phase 2: Wipe sweeps OUT to right */
+html.is-animating:not(.is-leaving) body::after {
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* CONTENT TRANSITIONS (Option C: Layered Depth) */
+.transition-fade {
+  opacity: 1;
+  transform: scale(1);
+  filter: brightness(1) blur(0px);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1), filter 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  transform-origin: center top; /* Top prevents layout jump if height changes */
+}
+
+/* Incoming state (New page starts sunken and dark in the background) */
+html.is-animating .transition-fade {
+  opacity: 1;
+  transform: scale(0.94);
+  filter: brightness(0.2) blur(3px);
+}
+
+/* Outgoing state (Old page sinks and darkens into the background) */
+html.is-animating.is-leaving .transition-fade {
+  opacity: 1;
+  transform: scale(0.94);
+  filter: brightness(0.2) blur(3px);
+}
+
+/* PREVENT JAGGED REVEALS DURING WIPE */
+html.is-animating .reveal,
+html.is-animating .porto-project-row,
+html.is-animating .porto-soft-card {
+  transition: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+

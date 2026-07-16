@@ -4,21 +4,47 @@
     <body id="blog" class="d-flex flex-fill flex-column">
         <!-- Landing Header -->
         {% include header.html %}
+        <main id="swup" class="transition-fade">
         <div id="blog-index">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-lg-4 col-12 pe-4 pt-2 reveal">
-                        {% include sidebar.html %}
-                    </div>
-                    <div class="col col-lg-8 col-12">
-                        <div class="container mb-5 reveal">
-                            {{ content }}
-                        </div>
-                    </div>
+
+            <!-- Ambient Background Animation -->
+            <div class="ambient-bg">
+                <div class="ambient-grid"></div>
+                <div class="ambient-scanline"></div>
+                <div class="ambient-scanline ambient-scanline--delay"></div>
+                <div class="ambient-telemetry">
+                    <div class="tel-node tn-1">[ SEC_SYS_STATUS: ACTIVE ]</div>
+                    <div class="tel-node tn-2">[+]</div>
+                    <div class="tel-node tn-3">PORT_SCAN_0x8F</div>
+                    <div class="tel-node tn-4">[+]</div>
                 </div>
             </div>
+
+            <!-- Tag Sidebar Toggle Button -->
+            <button id="tag-sidebar-toggle" class="sys-btn" onclick="document.getElementById('tag-sidebar').classList.toggle('open')">
+                <i class="fa-solid fa-filter me-2"></i>[ TAGS ]
+            </button>
+
+            <!-- Tag Sidebar -->
+            <div id="tag-sidebar">
+                <div class="tag-sidebar-header">
+                    <span class="hud-sys">&gt; QUERY_DATABASE_BY_TAG_</span>
+                    <button class="sys-btn" onclick="document.getElementById('tag-sidebar').classList.remove('open')" style="background:transparent;border:none;color:var(--p-red);">[ X ]</button>
+                </div>
+                <div class="tag-sidebar-list">
+                    {% for tag in site.tags %}
+                    <a href="/blog/tags/{{ tag[0] }}" class="tag-sidebar-item">
+                        <span>{{ tag[0] }}</span>
+                        <span class="hud-sys">[{{ tag[1] | size }}]</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            {{ content }}
+
         </div>
-        <!-- Footer -->
+        </main>
         {% include footer.html %}
     </body>
 </html>

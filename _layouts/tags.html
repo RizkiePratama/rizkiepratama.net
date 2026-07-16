@@ -1,8 +1,5 @@
 ---
 custom_css: blog
-pagination: 
-  enabled: true
-  sort_reverse: true
 ---
 
 <!DOCTYPE html>
@@ -11,46 +8,82 @@ pagination:
     <body id="blog" class="d-flex flex-fill flex-column">
         <!-- Landing Header -->
         {% include header.html %}
+        <main id="swup" class="transition-fade">
         <div id="blog-index">
-            <div class="container">
-                <div class="row">
-                    <div class="col col-lg-4 col-12 pe-4 pt-2 reveal">
-                        {% include sidebar.html %}
-                    </div>
-                    <div class="col col-lg-8 col-12">
-                        <div class="container reveal">
-                            <h3 class="mb-4 mt-2">Showing Post with Tag: <b>{{ page.tag-name }} ({{ site.tags[page.tag-name] | size }} Posts)</b></h3>
-                        </div>
-                        <div class="container">
-                        {% for post in site.posts %}
-                            {% if post.tags contains page.tag-name %}
-                            <a href="{{ post.url }}">
-                                <div class="post-cards row p-2 reveal">
-                                    <div class="post-cards-cover col-12 col-md-4">
-                                        <picture>
-                                            <source srcset="{{ post.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/thumbs/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
-                                            <img class="img-fluid skeleton-loader" alt="{{ post.title }}" width="280px" height="157px" src="{{ post.cover | replace: '/source/', '/thumbs/' }}" loading="lazy">
-                                        </picture>
-                                    </div>
-                                    <div class="post-cards-meta col-12 col-md-8">
-                                    <h1 class="post-card-title">{{ post.title }}</h1>
-                                    <ul class="post-meta-items">
-                                        <li class="post-card-date meta-item meta-date"><i class="fa-sharp fa-solid fa-calendar-days me-2"></i>{{post.date  | date: "%B %d, %Y"}}</li>
-                                    </ul>
-                                    <div class="post-card-excerpt">
-                                        {{ post.content | strip_html | truncatewords: 30 }}
-                                    </div>
-                                    </div>
-                                </div>
-                            </a>
-                            {% endif %}
-                        {% endfor %}
-                        </div>
-                    </div>
+
+            <!-- Ambient Background Animation -->
+            <div class="ambient-bg">
+                <div class="ambient-grid"></div>
+                <div class="ambient-scanline"></div>
+                <div class="ambient-scanline ambient-scanline--delay"></div>
+                <div class="ambient-telemetry">
+                    <div class="tel-node tn-1">[ SEC_SYS_STATUS: ACTIVE ]</div>
+                    <div class="tel-node tn-2">[+]</div>
+                    <div class="tel-node tn-3">PORT_SCAN_0x8F</div>
+                    <div class="tel-node tn-4">[+]</div>
                 </div>
             </div>
+
+            <!-- Tag Sidebar Toggle -->
+            <button id="tag-sidebar-toggle" class="sys-btn" onclick="document.getElementById('tag-sidebar').classList.toggle('open')">
+                <i class="fa-solid fa-filter me-2"></i>[ FILTERS ]
+            </button>
+
+            <!-- Tag Sidebar -->
+            <div id="tag-sidebar">
+                <div class="tag-sidebar-header">
+                    <span class="hud-sys">&gt; QUERY_DATABASE_BY_TAG_</span>
+                    <button class="sys-btn" onclick="document.getElementById('tag-sidebar').classList.remove('open')" style="background:transparent;border:none;color:var(--p-red);">[ X ]</button>
+                </div>
+                <div class="tag-sidebar-list">
+                    {% for tag in site.tags %}
+                    <a href="/blog/tags/{{ tag[0] }}" class="tag-sidebar-item">
+                        <span>{{ tag[0] }}</span>
+                        <span class="hud-sys">[{{ tag[1] | size }}]</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="container-fluid px-lg-5 py-4">
+                <h3 class="mb-4 sys-tag-header">QUERY_DB: <span class="text-danger">{{ page.tag-name | upcase }}</span> <span class="hud-sys">[{{ site.tags[page.tag-name] | size }} MATCHES]</span></h3>
+
+                <div class="blog-grid blog-grid--uniform">
+                    {% assign filtered = site.posts | where_exp: "post", "post.tags contains page.tag-name" %}
+                    {% for post in filtered %}
+                    <div class="blog-grid-item">
+                        <div class="blog-grid-card">
+                            <div class="blog-grid-thumb">
+                                <a href="{{ post.url }}" class="blog-grid-thumb-link">
+                                    <picture>
+                                        <source srcset="{{ post.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
+                                        <img src="{{ post.cover | replace: '/source/', '/' }}" alt="{{ post.title }}" loading="lazy">
+                                    </picture>
+                                    <div class="blog-grid-scanline"></div>
+                                </a>
+                            </div>
+                            <div class="blog-grid-body">
+                                <span class="hud-sys blog-grid-date">[LOG_FILE : {{ post.date | date: "%Y%m%d%H%M" }}]</span>
+                                <h2 class="blog-grid-title"><a href="{{ post.url }}">{{ post.title | upcase }}</a></h2>
+                                <p class="blog-grid-excerpt">{{ post.content | strip_html | truncatewords: 20 }}</p>
+                                <div class="blog-grid-tags">
+                                    {% for tag in post.tags %}
+                                    <a href="/blog/tags/{{ tag }}" class="blog-grid-tag">{{ tag }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="hi-br tl">+</div>
+                            <div class="hi-br tr">+</div>
+                            <div class="hi-br bl">+</div>
+                            <div class="hi-br br">+</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
         </div>
-        <!-- Footer -->
+        </main>
         {% include footer.html %}
     </body>
 </html>

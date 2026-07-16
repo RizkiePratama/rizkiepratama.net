@@ -1,0 +1,1591 @@
+/* =========================================
+   PORTFOLIO — SHARP BOXY | BLACK + WHITE + RED
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+/* ---- Layout max-width ---- */
+.porto-centered {
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .porto-centered {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .porto-centered {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ---- Tokens ---- */
+:root {
+  --p-bg:        #080808;
+  --p-surface:   #101010;
+  --p-surface-2: #161616;
+  --p-border:    #1c1c1c;
+  --p-border-2:  #2a2a2a;
+  --p-text:      #f0f0f0;
+  --p-muted:     #4a4a4a;
+  --p-muted-2:   #333333;
+  --p-red:       #e8192c;
+  --p-red-dim:   rgba(232, 25, 44, 0.1);
+  --p-white:     #f0f0f0;
+
+  --p-font-head: 'Mako', sans-serif !important;
+  --p-font-mono: 'Roboto', sans-serif !important;
+  --p-font-body: 'Roboto', sans-serif !important;
+
+  --p-ease:      cubic-bezier(0.4, 0, 0.2, 1);
+  --p-fast:      0.15s var(--p-ease);
+  --p-mid:       0.25s var(--p-ease);
+  --p-slow:      0.45s var(--p-ease);
+}
+
+/* ---- Scope reset ---- */
+#portofolio,
+#portofolio * {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+}
+
+#portofolio {
+  background: var(--p-bg);
+  color: var(--p-text);
+  font-family: var(--p-font-body) !important;
+  min-height: 100vh;
+}
+
+/* =========================================
+   FULLSCREEN MENU (Main Index)
+   ========================================= */
+.porto-menu-fullscreen {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  background: var(--p-bg);
+  display: flex;
+  align-items: center;
+}
+
+.porto-menu-bg {
+  position: absolute;
+  inset: 0;
+  background: url("/assets/images/bg/2.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.porto-menu-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.7) 40%, rgba(8,8,8,0.95) 100%);
+}
+
+.porto-menu-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px);
+  pointer-events: none;
+}
+
+.porto-menu-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  padding-left: max(2rem, calc(50vw - 660px + 2rem));
+  padding-right: 0; /* Bleed right */
+  height: 100vh;
+}
+
+/* --- Left Side (Hero Text) --- */
+.porto-menu-left {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.porto-hero-eyebrow {
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--p-red);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.porto-hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: var(--p-red);
+}
+
+.porto-hero-title {
+  font-family: var(--p-font-head) !important;
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  color: var(--p-white);
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+}
+
+.porto-hero-title em {
+  font-style: italic;
+  color: var(--p-red);
+}
+
+.porto-hero-accent-bold {
+  color: var(--p-red);
+  font-family: var(--p-font-sans, sans-serif) !important;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.porto-hero-index {
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--p-muted);
+  line-height: 2;
+}
+
+/* --- Right Side (Menu List) --- */
+.porto-menu-right {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.porto-nav-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0;
+}
+
+.porto-nav-item {
+  position: relative;
+  display: flex;
+  flex: 1; /* Fixed equal height */
+  align-items: center;
+  gap: 2rem;
+  padding: 0 3rem;
+  border-bottom: 1px solid var(--p-border-2);
+  text-decoration: none;
+  overflow: hidden;
+  transition: border-color 0.4s;
+}
+
+.porto-nav-item:first-child {
+  border-top: 1px solid var(--p-border-2);
+}
+
+/* Scanline Overlay on Hover */
+.porto-nav-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.porto-nav-item:hover::before {
+  opacity: 1;
+}
+
+/* Hover Sweep Highlight Bar (Solid Red Frame) */
+.porto-nav-highlight {
+  position: absolute;
+  top: 0; right: -100%; left: auto; bottom: 0;
+  width: 100%;
+  background: var(--p-red);
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 0;
+}
+
+.porto-nav-num {
+  position: relative;
+  z-index: 2;
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.85rem;
+  color: var(--p-muted);
+  transition: color 0.3s, transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.porto-nav-label {
+  position: relative;
+  z-index: 2;
+  font-family: var(--p-font-head) !important;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: var(--p-text);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), color 0.3s, text-shadow 0.3s;
+}
+
+/* Glitch Pseudo-elements */
+.porto-nav-label::before,
+.porto-nav-label::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.porto-nav-label::before {
+  color: #0ff;
+  z-index: -1;
+}
+
+.porto-nav-label::after {
+  color: #fff;
+  z-index: -2;
+}
+
+.porto-nav-arrow {
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
+  font-size: 1.2rem;
+  color: var(--p-red);
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* =========================================
+   HOVER EFFECTS
+   ========================================= */
+.porto-nav-item:hover,
+.porto-nav-item:focus,
+.porto-nav-item.is-active-click {
+  border-bottom-color: transparent;
+}
+
+.porto-nav-item:hover .porto-nav-highlight,
+.porto-nav-item:focus .porto-nav-highlight,
+.porto-nav-item.is-active-click .porto-nav-highlight {
+  transform: translateX(-100%); /* Swoops in entirely from right */
+}
+
+.porto-nav-item:hover .porto-nav-num,
+.porto-nav-item:focus .porto-nav-num,
+.porto-nav-item.is-active-click .porto-nav-num {
+  color: rgba(255,255,255,0.7);
+  transform: translateX(20px);
+}
+
+.porto-nav-item:hover .porto-nav-label,
+.porto-nav-item:focus .porto-nav-label,
+.porto-nav-item.is-active-click .porto-nav-label {
+  transform: scale(1.05) translateX(30px); /* Slightly less aggressive push */
+  color: var(--p-white);
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+}
+
+.porto-nav-item:hover .porto-nav-label::before,
+.porto-nav-item:focus .porto-nav-label::before,
+.porto-nav-item.is-active-click .porto-nav-label::before {
+  animation: glitch-flash-1 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1;
+}
+
+.porto-nav-item:hover .porto-nav-label::after,
+.porto-nav-item:focus .porto-nav-label::after,
+.porto-nav-item.is-active-click .porto-nav-label::after {
+  animation: glitch-flash-2 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1;
+}
+
+.porto-nav-item:hover .porto-nav-arrow,
+.porto-nav-item:focus .porto-nav-arrow,
+.porto-nav-item.is-active-click .porto-nav-arrow {
+  opacity: 1;
+  color: var(--p-white);
+  transform: translateX(-20px);
+}
+
+/* Crisp Horizontal Glitch Keyframes */
+@keyframes glitch-flash-1 {
+  0% { opacity: 0; transform: translate(0); clip-path: inset(20% 0 80% 0); }
+  20% { opacity: 1; transform: translate(-3px, 1px); clip-path: inset(10% 0 60% 0); }
+  40% { opacity: 1; transform: translate(3px, -1px); clip-path: inset(50% 0 30% 0); }
+  60% { opacity: 1; transform: translate(-3px, 1px); clip-path: inset(30% 0 50% 0); }
+  80% { opacity: 1; transform: translate(3px, -1px); clip-path: inset(80% 0 10% 0); }
+  100% { opacity: 0; transform: translate(0); clip-path: inset(100% 0 0 0); }
+}
+
+@keyframes glitch-flash-2 {
+  0% { opacity: 0; transform: translate(0); clip-path: inset(60% 0 30% 0); }
+  20% { opacity: 1; transform: translate(3px, -1px); clip-path: inset(30% 0 10% 0); }
+  40% { opacity: 1; transform: translate(-3px, 1px); clip-path: inset(10% 0 50% 0); }
+  60% { opacity: 1; transform: translate(3px, -1px); clip-path: inset(80% 0 5% 0); }
+  80% { opacity: 1; transform: translate(-3px, 1px); clip-path: inset(5% 0 80% 0); }
+  100% { opacity: 0; transform: translate(0); clip-path: inset(0 0 100% 0); }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 900px) {
+  .porto-menu-fullscreen {
+    height: 100vh !important;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .porto-menu-inner {
+    flex-direction: column;
+    height: 100vh;
+    padding: 70px 0 0 0 !important; /* Top padding to clear the fixed navbar */
+    justify-content: stretch;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  /* Split into 35% (intro) and 65% (nav list) */
+  .porto-menu-left {
+    flex: 0 0 35% !important;
+    width: 100%;
+    padding: 1.25rem 1.5rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--p-border-2);
+  }
+
+  .porto-menu-right {
+    flex: 0 0 65% !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Intro Text adjustments to fit in 25% height */
+  .porto-hero-eyebrow {
+    font-size: 0.65rem;
+    margin-bottom: 0.25rem !important;
+    gap: 8px;
+  }
+  .porto-hero-eyebrow::before {
+    width: 15px;
+  }
+
+  .porto-hero-title {
+    font-size: clamp(1.4rem, 6vw, 1.8rem) !important;
+    line-height: 1.1;
+    margin-bottom: 0.25rem !important;
+    letter-spacing: -0.5px;
+  }
+
+  .porto-hero-index {
+    display: none; /* Hide subtitle to preserve space in the 25% height segment */
+  }
+
+  /* Nav links split the remaining 75% height into 3 equal parts of 25% each */
+  .porto-nav-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .porto-nav-item {
+    flex: 1 !important; /* Forces equal height split */
+    padding: 0 1.5rem !important;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--p-border-2);
+  }
+
+  .porto-nav-item:first-child {
+    border-top: none; /* border bottom of intro serves as divider */
+  }
+
+  .porto-nav-label {
+    font-size: clamp(1.2rem, 5vw, 1.6rem) !important;
+    letter-spacing: 0px;
+  }
+
+  /* Show arrow by default on mobile touchscreens */
+  .porto-nav-arrow {
+    opacity: 0.8;
+    transform: translateX(0);
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   CONTENT WRAPPER
+   ========================================= */
+.porto-content-wrap {
+  padding: 4rem 0 6rem;
+  max-width: 1320px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .porto-content-wrap {
+    padding: 2.5rem 1.5rem 4rem;
+  }
+}
+
+/* ---- Section label ---- */
+.porto-section-label {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--p-border);
+}
+
+.porto-section-title {
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--p-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.porto-section-title i {
+  color: var(--p-red);
+  font-size: 0.7rem;
+}
+
+.porto-section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--p-border);
+}
+
+.porto-content-block {
+  padding: 3.5rem 0 4rem;
+  border-bottom: 1px solid var(--p-border);
+}
+
+.porto-content-block:last-child {
+  border-bottom: none;
+}
+
+/* =========================================
+   WEB DEV — SPLIT-SCREEN LAYOUT
+   ========================================= */
+.porto-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.porto-split-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.porto-split-preview {
+  position: relative;
+  height: 100%;
+}
+
+.porto-preview-sticky {
+  position: sticky;
+  top: 100px;
+  background: var(--p-surface);
+  border: 1px solid var(--p-border);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color var(--p-fast);
+}
+
+.porto-preview-sticky:hover {
+  border-color: var(--p-border-2);
+}
+
+.porto-preview-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--p-border-2);
+  background: var(--p-bg);
+}
+
+.porto-preview-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity var(--p-fast);
+}
+
+.porto-preview-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.porto-preview-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0.5rem 0;
+}
+
+.porto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--p-surface-2);
+  border: 1px solid var(--p-border-2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.7rem;
+  color: var(--p-text);
+}
+
+.porto-badge i {
+  color: var(--p-red);
+  font-size: 0.85rem;
+}
+
+.porto-preview-title {
+  font-family: var(--p-font-head) !important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--p-text);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.porto-preview-desc {
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.8rem;
+  color: var(--p-muted);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.porto-preview-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.9rem 1.4rem;
+  background: var(--p-surface-2);
+  border: 1px solid var(--p-border-2);
+  color: var(--p-text) !important;
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: border-color var(--p-fast), color var(--p-fast), transform var(--p-fast);
+  margin-top: 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.porto-preview-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--p-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+}
+
+.porto-preview-btn:hover {
+  border-color: var(--p-red);
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+.porto-preview-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.porto-project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.porto-project-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border: none;
+  border-bottom: 1px solid var(--p-border);
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  transition: padding-left var(--p-fast), border-color var(--p-fast), background var(--p-fast);
+  text-decoration: none !important;
+  min-width: 0;
+}
+
+.porto-project-row:first-child {
+  border-top: 1px solid var(--p-border);
+}
+
+.porto-project-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--p-red);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--p-fast);
+}
+
+.porto-project-row:hover,
+.porto-project-row.active {
+  padding-left: 1.2rem;
+  border-color: var(--p-border-2);
+  background: var(--p-surface);
+}
+
+.porto-project-row:hover::before,
+.porto-project-row.active::before {
+  transform: scaleY(1);
+}
+
+.porto-mobile-img,
+.porto-mobile-stack,
+.porto-mobile-visit {
+  display: none;
+}
+
+.porto-row-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+#portofolio-content {
+  scroll-margin-top: 100px;
+}
+
+@keyframes pageEntry {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-page-entry {
+  animation: pageEntry 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.porto-row-num {
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.65rem;
+  color: var(--p-muted-2);
+  min-width: 28px;
+  transition: color var(--p-fast);
+}
+
+.porto-project-row:hover .porto-row-num {
+  color: var(--p-red);
+}
+
+.porto-row-name {
+  font-family: var(--p-font-head) !important;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--p-white);
+  flex: 1;
+  transition: color var(--p-fast);
+}
+
+.porto-row-dash {
+  flex: 1;
+  height: 1px;
+  background: var(--p-border);
+  margin: 0 1rem;
+  transition: background var(--p-fast);
+}
+
+.porto-project-row:hover .porto-row-dash {
+  background: var(--p-border-2);
+}
+
+.porto-row-type {
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.65rem;
+  color: var(--p-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  min-width: 120px;
+  max-width: 160px;
+  text-align: right;
+  transition: color var(--p-fast);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.porto-row-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.porto-project-row:hover .porto-row-type {
+  color: var(--p-white);
+}
+
+.porto-row-icon {
+  font-size: 0.8rem;
+  color: var(--p-muted);
+  transition: color var(--p-fast), transform var(--p-fast);
+  min-width: 20px;
+  text-align: center;
+}
+
+.porto-project-row:hover .porto-row-icon {
+  color: var(--p-red);
+  transform: translate(2px, -2px);
+}
+
+/* ---- See more ---- */
+.porto-see-more {
+  margin-top: 2rem;
+}
+
+.porto-see-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--p-muted) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color var(--p-fast), border-color var(--p-fast), gap var(--p-fast);
+}
+
+.porto-see-more-link:hover {
+  color: var(--p-red) !important;
+  border-bottom-color: var(--p-red);
+  gap: 12px;
+}
+
+/* =========================================
+   MOBILE APP CARD
+   ========================================= */
+.porto-mobile-item {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border: 1px solid var(--p-border);
+  max-width: 520px;
+  text-decoration: none !important;
+  transition: border-color var(--p-fast), box-shadow var(--p-fast);
+}
+
+.porto-mobile-item:hover {
+  border-color: var(--p-red);
+  box-shadow: 4px 4px 0 var(--p-red);
+}
+
+.porto-mobile-thumb {
+  width: 140px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--p-surface);
+}
+
+.porto-mobile-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: filter var(--p-mid);
+}
+
+.porto-mobile-item:hover .porto-mobile-thumb img {
+  filter: grayscale(0%);
+}
+
+.porto-mobile-body {
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.porto-mobile-body h3 {
+  font-family: var(--p-font-head) !important;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--p-white);
+  margin: 0;
+}
+
+.porto-mobile-body p {
+  font-size: 0.8rem;
+  color: var(--p-muted);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.porto-mobile-cta {
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--p-red) !important;
+  transition: gap var(--p-fast);
+}
+
+.porto-mobile-item:hover .porto-mobile-cta { gap: 10px; }
+
+/* =========================================
+   SOFTWARE CARDS
+   ========================================= */
+.porto-software-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border: 1px solid var(--p-border);
+  background: var(--p-border);
+}
+
+@media (max-width: 992px) {
+  .porto-software-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .porto-software-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.porto-soft-card {
+  background: var(--p-surface);
+  padding: 1.6rem;
+  position: relative;
+  overflow: hidden;
+  transition: background var(--p-fast);
+}
+
+.porto-soft-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--p-red);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--p-fast);
+}
+
+.porto-soft-card:hover {
+  background: var(--p-surface-2);
+}
+
+.porto-soft-card:hover::before {
+  transform: scaleY(1);
+}
+
+.porto-soft-card-num {
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.6rem;
+  color: var(--p-muted-2);
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+}
+
+.porto-soft-card h3 {
+  font-family: var(--p-font-head) !important;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--p-white);
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.porto-soft-card p {
+  font-size: 0.78rem;
+  color: var(--p-muted);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.porto-soft-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.porto-soft-links li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--p-border-2);
+  background: transparent;
+  color: var(--p-muted) !important;
+  transition: border-color var(--p-fast), color var(--p-fast), background var(--p-fast);
+}
+
+.porto-soft-links li a:hover {
+  border-color: var(--p-red);
+  background: var(--p-red-dim);
+  color: var(--p-red) !important;
+}
+
+.porto-soft-links li a svg {
+  fill: currentColor;
+  width: 14px;
+  height: 14px;
+}
+
+/* =========================================
+   TECH STACK — BENTO GRID
+   ========================================= */
+.porto-tech-bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--p-border);
+  border: 1px solid var(--p-border);
+}
+
+@media (max-width: 900px) {
+  .porto-split-layout {
+    display: block; /* Remove grid to let carousel take full width */
+  }
+
+  .porto-split-preview {
+    display: none; /* Hide the sticky preview entirely */
+  }
+  
+  .porto-project-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding-bottom: 2rem; /* space for scrollbar or shadow */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .porto-project-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .porto-carousel-item {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+
+  .porto-project-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    border: 1px solid var(--p-border);
+    background: var(--p-surface);
+    height: 100%;
+  }
+
+  .porto-project-row::before {
+    display: none; /* Remove red hover bar */
+  }
+
+  .porto-project-row:hover,
+  .porto-project-row.active {
+    padding-left: 0;
+    border-color: var(--p-red);
+  }
+
+  .porto-mobile-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--p-border-2);
+  }
+
+  .porto-row-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  .porto-row-num {
+    display: none; /* Hide number on mobile card */
+  }
+
+  .porto-row-dash {
+    display: none; /* Hide dash */
+  }
+
+  .porto-row-name {
+    font-size: 1.4rem;
+  }
+
+  .porto-row-type {
+    font-size: 0.9rem;
+    color: var(--p-muted);
+  }
+
+  .porto-mobile-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 0.5rem;
+  }
+
+  .porto-mobile-visit {
+    display: inline-flex;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .porto-tech-bento { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .porto-tech-bento { grid-template-columns: 1fr; }
+}
+
+.porto-bento-cell {
+  background: var(--p-surface);
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: background var(--p-fast), transform var(--p-fast);
+}
+
+.porto-bento-cell::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--p-red);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--p-fast);
+}
+
+.porto-bento-cell:hover {
+  background: var(--p-surface-2);
+}
+
+.porto-bento-cell:hover::before {
+  transform: scaleY(1);
+}
+
+.porto-bento-num {
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.7rem;
+  color: var(--p-muted-2);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.porto-bento-title {
+  font-family: var(--p-font-head) !important;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--p-text);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.porto-bento-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.porto-bento-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.porto-bento-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--p-border);
+  background: var(--p-bg);
+  transition: border-color var(--p-fast), background var(--p-fast), transform var(--p-fast);
+}
+
+.porto-bento-item:hover {
+  border-color: var(--p-red);
+  background: var(--p-red-dim);
+  transform: translateY(-2px);
+}
+
+.porto-bento-item img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.6);
+  transition: filter var(--p-fast);
+}
+
+.porto-bento-cell:hover .porto-bento-item img,
+.porto-bento-item:hover img {
+  filter: grayscale(0) opacity(1);
+}
+
+.porto-bento-item span {
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.65rem;
+  color: var(--p-muted);
+  transition: color var(--p-fast);
+}
+
+.porto-bento-cell:hover .porto-bento-item span,
+.porto-bento-item:hover span {
+  color: var(--p-text);
+}
+
+/* =========================================
+   PHOTOGRAPHY — MASONRY & SUBNAV
+   ========================================= */
+.porto-tab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.porto-photo-subnav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.porto-subnav-btn {
+  background: var(--p-surface);
+  border: 1px solid var(--p-border);
+  color: var(--p-white);
+  padding: 0.8rem 1.5rem;
+  font-family: var(--p-font-head) !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all var(--p-fast);
+  box-shadow: 2px 2px 0 var(--p-border);
+}
+
+.porto-subnav-btn:hover {
+  background: var(--p-border);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--p-border-2);
+}
+
+.porto-subnav-btn.active {
+  background: var(--p-red);
+  border-color: var(--p-red);
+  box-shadow: 2px 2px 0 var(--p-border-2);
+  transform: translate(1px, 1px);
+}
+
+.porto-photo-pane {
+  display: none;
+}
+
+.porto-photo-pane.active {
+  display: block;
+}
+
+.porto-gallery-grid {
+  columns: 3;
+  column-gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .porto-gallery-grid { columns: 2; }
+}
+
+@media (max-width: 480px) {
+  .porto-gallery-grid { columns: 1; }
+}
+
+.porto-gallery-shot {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  position: relative;
+  border: 3px solid var(--p-border-2);
+  background: #000;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--p-border-2);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.porto-gallery-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(20%) brightness(0.9);
+  transition: filter 0.3s ease, transform 0.5s ease;
+}
+
+.porto-gallery-shot:hover {
+  border-color: var(--p-red);
+  box-shadow: 6px 6px 0 var(--p-red);
+  transform: translate(-2px, -2px);
+  z-index: 2; /* Pop out over others */
+}
+
+.porto-gallery-shot:hover img {
+  filter: grayscale(0%) brightness(1.1);
+  transform: scale(1.05);
+}
+
+.porto-gallery-shot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  transition: border-color 0.3s ease;
+  pointer-events: none;
+}
+
+.porto-gallery-shot:hover::after {
+  border-color: rgba(232, 25, 44, 0.5); /* Inner red glow */
+}
+
+/* =========================================
+   VIDEO SECTION
+   ========================================= */
+.porto-video-player-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.porto-video-featured {
+  border: 2px solid var(--p-border-2);
+  background: #000;
+  box-shadow: 4px 4px 0 var(--p-border-2);
+}
+
+.porto-video-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .porto-video-thumbnails { grid-template-columns: repeat(2, 1fr); }
+}
+
+.porto-video-thumb {
+  position: relative;
+  background: #000;
+  border: 2px solid var(--p-border);
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 3px 3px 0 var(--p-border);
+}
+
+.porto-video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.7;
+  transition: opacity var(--p-fast), transform var(--p-fast);
+}
+
+.porto-thumb-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--p-white);
+  font-size: 1.5rem;
+  opacity: 0.8;
+  transition: all var(--p-fast);
+}
+
+.porto-video-thumb:hover,
+.porto-video-thumb.active {
+  border-color: var(--p-red);
+  box-shadow: 5px 5px 0 var(--p-red);
+  transform: translate(-2px, -2px);
+}
+
+.porto-video-thumb:hover img,
+.porto-video-thumb.active img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.porto-video-thumb:hover .porto-thumb-overlay {
+  color: var(--p-red);
+  transform: scale(1.2);
+}
+
+.porto-video-thumb.active .porto-thumb-overlay {
+  display: none; /* Hide play icon if it's currently playing */
+}
+
+.porto-video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.porto-video-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+  display: block;
+}
+
+.porto-shorts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .porto-shorts-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .porto-shorts-grid { grid-template-columns: 1fr; }
+}
+
+.porto-short-tile {
+  position: relative;
+  border: 3px solid var(--p-border-2);
+  border-radius: 0; /* Boxy sharp */
+  overflow: hidden;
+  background: #000;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 5px 5px 0 var(--p-border-2);
+}
+
+.porto-short-tile::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 3px solid transparent;
+  pointer-events: none;
+  transition: border-color 0.3s ease;
+}
+
+.porto-short-tile:hover {
+  border-color: var(--p-red);
+  box-shadow: 8px 8px 0 var(--p-red);
+  transform: translate(-3px, -3px);
+}
+
+.porto-short-tile:hover::after {
+  border-color: rgba(232, 25, 44, 0.5); /* subtle inner glow */
+}
+
+.porto-short-embed {
+  position: relative;
+  padding-bottom: 177.78%;
+  height: 0;
+}
+
+.porto-short-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+/* =========================================
+   TAB PANE ANIMATION
+   ========================================= */
+.tab-pane.fade {
+  display: none;
+}
+
+.tab-pane.fade.show.active {
+  display: block;
+  animation: paneCut 0.22s var(--p-ease) forwards;
+}
+
+@keyframes paneCut {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   SCROLL REVEAL
+   ========================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s var(--p-ease), transform 0.4s var(--p-ease);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   RESPONSIVE — LAYOUT
+   ========================================= */
+@media (max-width: 768px) {
+  .porto-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1.2rem 2.5rem;
+  }
+
+  .porto-hero-right { text-align: left; }
+
+  .porto-row-dash { display: none; }
+
+  .porto-row-type {
+    display: none;
+  }
+
+  .porto-mobile-item {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .porto-mobile-thumb {
+    width: 100%;
+    height: 180px;
+  }
+
+  .porto-gallery-grid {
+    columns: 2;
+    column-gap: 2px;
+  }
+
+  .porto-stack-marquee-wrap {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .porto-split-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .porto-preview-sticky {
+    position: relative;
+    top: 0;
+  }
+  
+  .porto-split-preview {
+    order: -1;
+  }
+  
+  .porto-row-num { display: none; }
+
+  .porto-hero-title {
+    font-size: clamp(2rem, 12vw, 3.5rem);
+  }
+
+  .porto-bento-cell {
+    padding: 1.25rem;
+  }
+
+  .porto-gallery-grid {
+    columns: 1;
+  }
+}

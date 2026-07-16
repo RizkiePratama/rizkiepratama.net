@@ -1,56 +1,122 @@
-global:
-  english: 英語
-  japanese: 日本
-  software: ソフトウェア
-  website: ウェブサイト
-  mobiledev: スマホアプリ
-  games: ゲーム
-  street: 街
-  cosplay: コスプレ
-  soft_dev: ソフトウェア開発者
-  game_dev: ゲーム開発者
-  video_editor: 動画編集者
-  photog: 写真家
-pages:
-  home: 家
-  about: 約
-  portofolio: ポートフォリオ
-  blog: ブログ
 about_page:
-  title: 私についての小さな話
+  assoc_video_eng: アソシエイト・ビデオエンジニア
+  bandung: インドネシア、バンドン
   current_employment: 現在の雇用
   founder_of: の創設者
-  vidio_sub: インドネシア ＃1 OTT プラットフォーム
+  full_time: 正社員
   hkz_sub: インディーゲームとソフトウェアスタジオ
-  social_title: ソーシャルメディアで私に従ってください
+  hybrid: ハイブリッド
+  infrastructure: インフラストラクチャ
+  jakarta: インドネシア、ジャカルタ
+  livestream_eng: ライブ配信運用エンジニア
+  onsite: オフィス勤務
+  present: 現在
+  role_1: シニア・システムエンジニア
+  role_2: OTT / ライブトランスコーディング・アーキテクト
+  role_3: ビデオパイプライン・ビルダー
+  skill_game_dev: ゲーム開発
+  skill_linux_admin: Linux管理
+  skill_linux_sys_admin: Linuxシステム管理
+  skill_live_broadcast: ライブ配信
+  skill_live_transcoding: ライブトランスコーディング
+  skill_network_infra: ネットワークインフラ
+  skill_software_design: ソフトウェア設計
+  skill_software_infra: ソフトウェアインフラ
+  skill_stream_monitoring: 配信モニタリング
+  skill_video_transcoding: 動画エンコード
   social_sub: もっと面白いビットを見つけるために
+  social_title: ソーシャルメディアで私に従ってください
+  software_eng: ソフトウェアエンジニア
+  sys_admin: システム管理者
+  tech_stack_title: 技術スタックとツール
+  timeline_1_desc: HTMLとウェブ構築に出会う。2年後には独学で本格的なプログラミングを開始。
+  timeline_1_title: 最初のきっかけ
+  timeline_1_year: 小学6年生
+  timeline_2_desc: シンプルなHTMLページやWebサイトを作成し、初のFPSゲームを開発。
+  timeline_2_title: ものづくり
+  timeline_2_year: 高校生
+  timeline_3_desc: C/C++、アセンブリ、低レベル・ベアメタルシステムに深くのめり込む。
+  timeline_3_title: 深層へ
+  timeline_3_year: 大学生
+  timeline_4_desc: Vidio.comでビデオエンジニアリングに従事し、開発者ツールを構築。
+  timeline_4_title: ビデオシステムとスケーリング
+  timeline_4_year: 現在
+  timeline_title: 私の軌跡
+  title: 私についての小さな話
+  video_engineering: ビデオエンジニアリング
+  vidio_sub: インドネシア ＃1 OTT プラットフォーム
+blog_page:
+  pagination:
+    next: 次へ
+    of: /
+    page: ページ
+    previous: 前へ
+  post:
+    done_reading: この投稿を読み終えましたか？
+    posted_at: 投稿日
+    similar_content: 他の類似コンテンツもチェック...
+  sidebar:
+    blog_post: ブログ投稿
+    tags: タグ
+global:
+  back: 戻る
+  cosplay: コスプレ
+  english: 英語
+  game_dev: ゲーム開発者
+  games: ゲーム
+  japanese: 日本
+  mo: ヶ月
+  mobiledev: スマホアプリ
+  mos: ヶ月
+  photog: 写真家
+  soft_dev: ソフトウェア開発者
+  software: ソフトウェア
+  street: 街
+  video_editor: 動画編集者
+  website: ウェブサイト
+  yr: 年
+  yrs: 年
+pages:
+  about: 約
+  blog: ブログ
+  home: 家
+  portofolio: ポートフォリオ
 portofolio_page:
-  heroes_title: 考え、構築し、創造する!!
-  heroes_subtitle: ":::: 過去数年間に私が達成した<br>:::: 注目のプロジェクトをいくつか紹介します"
-  tech: 技術スタック
-  prog_lang: プログラミング言語
-  framework: 枠組み
-  template_design: ウェブサイトのテンプレートとデザインの詳細
+  ai_art:
+    stable_diffusion: 安定拡散アート
+    title: AIアート
+  all_web: すべてのウェブプロジェクト
   dev: 開発
+  engines: エンジン
+  framework: 枠組み
+  heroes_subtitle: ':::: 過去数年間に私が達成した<br>:::: 注目のプロジェクトをいくつか紹介します'
+  heroes_title: <em>考える</em>、構築する、<em>創造する!!</em>
+  heroes_title_1: 考える、
+  heroes_title_2: 構築する、
+  heroes_title_3: 創造する!!
+  photography:
+    cosplay: コスプレ
+    potraiture: ポートレート
+    street: ストリート
+    title: 写真撮影
+  prog_lang: プログラミング言語
+  software:
+    alter_pass_desc: クラウド ベースのパスワード マネージャー。パスワードと資格情報をクラウドに保存し、WebUI と Android アプリからアクセスします。
+    briefly_desc: Flutter フレームワークで構築され、<b>gnews.dart</b> プラグインを利用したシンプルなニュース リーダー
+      アプリです。
+    gnews_dart_desc: Google ニュース スクレーパー パッケージは Dart で構築されており、サードパーティのニュース サイトから集約されたニュースを解析するプラグインも備えています。
+    majin_paste_desc: 独自に生成された URL でペースト/コード スニペットを作成、保存、共有して Web ページから表示するための Pastebin
+      のようなソフトウェア。
+    red_catalyst_desc: ブロードキャストとライブ トランスコードの中継に使用できる RTMP および SRT プロトコルをサポートする統合ストリーミング
+      メディア サーバー ソフトウェア。
+    vim_desc: ウィンドウの全画面プレーヤーを有効にすることで、<b>Vidio.com</b> での視聴エクスペリエンスを向上させるブラウザ拡張機能。
+  tech: 技術スタック
+  template_design: ウェブサイトのテンプレートとデザインの詳細
+  video_editing:
+    shorts: 短い形式のコンテンツ
+    title: ビデオ編集
+    yt_content: YouTube コンテンツ
+  visit_site: サイトを見る
   website:
     hibikaze_desc: リモートおよびローカルクライアント向けのソフトウェアおよびゲーム開発に特化した、インドネシアのバンドンに拠点を置くクリエイティブスタジオ。
     symphonyart_desc: SymphonyArt Photographyは、バンドンにある写真サービスで、製品写真やウェディング写真などのさまざまなタイプの写真サービスを提供しています。
-  software:
-    majin_paste_desc: 独自に生成された URL でペースト/コード スニペットを作成、保存、共有して Web ページから表示するための Pastebin のようなソフトウェア。
-    red_catalyst_desc: ブロードキャストとライブ トランスコードの中継に使用できる RTMP および SRT プロトコルをサポートする統合ストリーミング メディア サーバー ソフトウェア。
-    alter_pass_desc: クラウド ベースのパスワード マネージャー。パスワードと資格情報をクラウドに保存し、WebUI と Android アプリからアクセスします。
-    gnews_dart_desc: Google ニュース スクレーパー パッケージは Dart で構築されており、サードパーティのニュース サイトから集約されたニュースを解析するプラグインも備えています。
-    briefly_desc: Flutter フレームワークで構築され、<b>gnews.dart</b> プラグインを利用したシンプルなニュース リーダー アプリです。
-    vim_desc: ウィンドウの全画面プレーヤーを有効にすることで、<b>Vidio.com</b> での視聴エクスペリエンスを向上させるブラウザ拡張機能。
-  photography:
-    title: 写真撮影
-    street: ストリート
-    potraiture: ポートレート
-    cosplay: コスプレ
-  ai_art:
-    title: AIアート
-    stable_diffusion: 安定拡散アート
-  video_editing:
-    title: ビデオ編集
-    yt_content: YouTube コンテンツ
-    shorts: 短い形式のコンテンツ
