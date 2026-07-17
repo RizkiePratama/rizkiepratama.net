@@ -42,7 +42,37 @@ $(document).ready(function(){
   window.syncBodyPage();
 
   window.initBlogScripts = function() {
-    // No-op: scroll jacking removed (carousel replaced with grid)
+    const thread = document.getElementById('disqus_thread');
+    if (thread) {
+      const url = thread.getAttribute('data-disqus-url');
+      const identifier = thread.getAttribute('data-disqus-identifier');
+      const title = thread.getAttribute('data-disqus-title');
+
+      if (typeof DISQUS !== 'undefined') {
+        try {
+          DISQUS.reset({
+            reload: true,
+            config: function () {
+              this.page.identifier = identifier;
+              this.page.url = url;
+              this.page.title = title;
+            }
+          });
+        } catch (err) {
+          console.warn('Failed to reset Disqus:', err);
+        }
+      } else {
+        window.disqus_config = function () {
+          this.page.url = url;
+          this.page.identifier = identifier;
+          this.page.title = title;
+        };
+        const d = document, s = d.createElement('script');
+        s.src = 'https://rpnet-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+    }
   };
 
   window.checkAndInvertNavLinks = function() {
@@ -182,6 +212,11 @@ $(document).ready(function(){
       behavior: 'smooth'
     });
   });
+
+  // Trigger page-level scripts on initial direct load
+  window.checkAndInvertNavLinks();
+  window.initReadProgressBar();
+  window.initBlogScripts();
 });
 
 // SPA Initialization
