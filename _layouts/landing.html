@@ -6,17 +6,39 @@
       {% include header.html %}
 
       <!-- Home -->
-      <section id="home" class="container">
-        <div class="row d-flex vh-100 align-items-center justify-content-center reveal">
-          <div class="col-12 col-lg-8 home-content text-center">
-            <h1 class="home-name">Rizkie <span>Pratama</span></h1>
-            <h2 class="cd-headline clip home-headline"><span class="cd-words-wrapper single-headline" style="max-width: 469.92px; overflow: hidden;"><b class="is-hidden">{% t global.soft_dev %}</b><b class="is-hidden">{% t global.video_editor %}</b><b class="is-hidden">{% t global.photog %}</b><b class="is-visible">{% t global.game_dev %}</b></span></h2>
-          </div>
+      <main id="swup" class="transition-fade">
+      <section id="home" class="container-fluid p-0 m-0">
+        <!-- HUD Frame (top left via CSS) -->
+        <div class="landing-hud-frame" id="landing-hud-frame">
+          <div class="hud-bracket hud-bracket-tl"></div>
+          <div class="hud-bracket hud-bracket-br"></div>
+          <div class="hud-bracket hud-bracket-tr"></div>
+          <div class="hud-bracket hud-bracket-bl"></div>
+          
+          <p class="sys-meta">[SYS.ID: XXXXXX] <span class="accent-text">// ONLINE</span></p>
+          <h1 class="home-name decode-text" data-value="RIZKIE PRATAMA">XXXXXXXXXXXXXXXX</h1>
+          <h2 class="terminal-role">> <span id="landing-typewriter"></span><span class="blinking-cursor">█</span></h2>
+          
+          <span id="role-strings" style="display:none;"
+            data-dev="{% t global.soft_dev %}"
+            data-vid="{% t global.video_editor %}"
+            data-pho="{% t global.photog %}"
+            data-game="{% t global.game_dev %}"
+            {% if site.lang == 'jp' %}
+            data-dev-kana="ソフトウェアかいはつしゃ"
+            data-vid-kana="どうがへんしゅうしゃ"
+            data-pho-kana="しゃしんか"
+            data-game-kana="ゲームかいはつしゃ"
+            {% endif %}>
+          </span>
         </div>
+        
+        <!-- Scanline overlay (CSS handles styling) -->
+        <div class="scanline-overlay"></div>
 
         <div class="fixed-bottom">
           <!-- Languages list-->
-          <div class="fixed-block block-left">
+          <div class="fixed-block block-right">
             <ul class="list-unstyled languages-list">
               <li><a href="/"><span class="single-language">{% t global.english %}</span></a></li>
               <li><a href="/jp/"><span class="single-language">{% t global.japanese %}</span></a></li>
@@ -24,6 +46,7 @@
           </div>
         </div>
       </section>
+      </main>
       <!-- Footer -->
       {% include footer.html %}
     </body>

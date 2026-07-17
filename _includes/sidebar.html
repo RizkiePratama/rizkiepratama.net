@@ -1,11 +1,11 @@
 <div class="blog-badge">
-    <h1>BLOG POST</h1>
+    <h1 class="lane-label"><span class="hud-sys">[01]</span> // {% t blog_page.sidebar.blog_post %}</h1>
 </div>
 <div class="tags-list">
-    <h1>Tags</h1>
+    <h1 class="lane-label"><span class="hud-sys">[02]</span> // {% t blog_page.sidebar.tags %}</h1>
     <div class="list-group-flush">
         {% for tag in site.tags %}
-        <a href="/blog/tags/{{ tag[0] }}" class="list-group-item-dark-rp">{{ tag[0] }} <span class="list-item-article-count">({{ tag[1] | size }})</b></a>
+        <a href="/blog/tags/{{ tag[0] }}" class="list-group-item-dark-rp tag-chip">{{ tag[0] }} <span class="list-item-article-count">[{{ tag[1] | size }}]</span></a>
         {% endfor %}
     </div>
 </div>

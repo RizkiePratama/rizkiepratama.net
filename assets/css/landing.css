@@ -1,0 +1,287 @@
+/* ==========================================================================
+   LANDING PAGE (Watchdogs HUD Theme)
+   ========================================================================== */
+
+#landing {
+  background-color: #050505; /* Deep, dark background */
+  position: relative;
+}
+
+#home {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Background image set by JS */
+  background-size: cover !important;
+  background-position: center !important;
+  overflow: hidden;
+}
+
+/* Dark overlay for contrast */
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(5, 5, 5, 0.75); /* Darken the background image */
+  z-index: 1;
+}
+
+/* Ensure content stays above the dark overlay */
+.home-content {
+  position: relative;
+  z-index: 2;
+}
+.fixed-bottom {
+  position: absolute !important;
+  bottom: 0;
+  width: 100%;
+  z-index: 10 !important;
+}
+
+/* ── SCANLINE OVERLAY ──────────────────────────────────── */
+.scanline-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 10;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.15) 50%,
+    rgba(0,0,0,0.15)
+  );
+  background-size: 100% 4px;
+  opacity: 0.8;
+  animation: scroll-scanlines 10s linear infinite;
+}
+
+@keyframes scroll-scanlines {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100vh; }
+}
+
+/* ── STARTUP SEQUENCE ──────────────────────────────────── */
+#startup-sequence-wrapper {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: #050505;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+}
+
+.startup-sequence {
+  font-family: var(--ff-mono, 'Courier New', monospace);
+  font-size: 1rem;
+  color: var(--c-accent, #e8192c);
+  text-shadow: 0 0 5px rgba(232, 25, 44, 0.5);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 400px;
+  line-height: 1.5;
+}
+.startup-line {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* ── COMPONENT ENTRANCE ANIMATIONS ─────────────────────── */
+body#landing .navbar {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.2s, opacity 0.8s ease 0.2s;
+}
+
+body#landing .fixed-bottom .block-right {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.6s, opacity 0.8s ease 0.6s;
+}
+body#landing .fixed-bottom .block-right .languages-list {
+  margin: 0;
+  text-align: right;
+}
+
+/* When Booted */
+body#landing.booted .navbar {
+  transform: translateY(0);
+  opacity: 1;
+}
+body#landing.booted .fixed-bottom .block-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+body#landing.skip-anims .navbar,
+body#landing.skip-anims .fixed-bottom .block-right,
+body#landing.skip-anims .landing-hud-frame {
+  transition: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+/* ── HUD BRACKETS ──────────────────────────────────────── */
+.landing-hud-frame {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  padding: 40px;
+  display: inline-block;
+  text-align: left;
+  z-index: 5;
+  transform: translateX(-150%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.4s, opacity 0.8s ease 0.4s;
+}
+
+body#landing.booted .landing-hud-frame {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@keyframes hud-boot {
+  0% { filter: blur(5px); opacity: 0; transform: scale(1.05); }
+  100% { filter: blur(0); opacity: 1; transform: scale(1); }
+}
+
+.hud-bracket {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--c-accent, #e8192c);
+  transition: transform 0.2s ease-out;
+}
+body#landing.booted .hud-bracket {
+  animation: bracket-snap 0.8s ease-out forwards 0.4s;
+}
+@keyframes bracket-snap {
+  0% { width: 100px; height: 100px; opacity: 0; }
+  50% { width: 50px; height: 50px; opacity: 0.5; }
+  100% { width: 20px; height: 20px; opacity: 1; }
+}
+.hud-bracket-tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+.hud-bracket-tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+.hud-bracket-bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+.hud-bracket-br { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+/* Subtle pulse on the frame after boot */
+body#landing.booted .landing-hud-frame {
+  animation: hud-pulse 4s infinite ease-in-out 1.2s;
+}
+@keyframes hud-pulse {
+  0% { opacity: 0.9; }
+  50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(232, 25, 44, 0.4)); }
+  100% { opacity: 0.9; }
+}
+
+/* ── TYPOGRAPHY ────────────────────────────────────────── */
+.sys-meta {
+  font-family: var(--ff-mono, 'Courier New', monospace);
+  font-size: 0.8rem;
+  color: #777;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.sys-meta .accent-text {
+  color: var(--c-accent, #e8192c);
+}
+
+.home-name {
+  font-family: var(--ff-head, 'Mako', sans-serif) !important;
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  line-height: 1.1;
+  text-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+  white-space: nowrap;
+}
+
+.terminal-role {
+  font-family: var(--ff-mono, 'Courier New', monospace);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ccc;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Blinking Cursor */
+.blinking-cursor {
+  display: inline-block;
+  color: var(--c-accent, #e8192c);
+  animation: blink 1s step-end infinite;
+  margin-left: 4px;
+  vertical-align: text-bottom;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────── */
+@media (max-width: 770px) {
+  .landing-hud-frame {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    bottom: unset;
+    padding: 25px 15px;
+    width: calc(100% - 30px);
+    max-width: 320px;
+    transform: translate(-50%, -50%) translateX(-150%);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.4s, opacity 0.8s ease 0.4s;
+    text-align: center;
+  }
+
+  body#landing.booted .landing-hud-frame {
+    transform: translate(-50%, -50%) translateX(0);
+    opacity: 1;
+  }
+
+  .landing-hud-frame .sys-meta {
+    justify-content: center;
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.65rem;
+  }
+  
+  .landing-hud-frame .home-name {
+    font-size: clamp(1.3rem, 8vw, 2.1rem);
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .landing-hud-frame .terminal-role {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+
+/* Japanese IME Typewriter Simulation */
+.ime-composition {
+  text-decoration: underline dashed rgba(255, 255, 255, 0.6) !important;
+  text-underline-offset: 4px;
+}
+.ime-converted {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  text-decoration: underline solid #fff !important;
+  text-underline-offset: 4px;
+}

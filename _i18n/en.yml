@@ -1,56 +1,130 @@
-global:
-  english: Eng
-  japanese: Jap
-  software: Software Projects
-  website: Website Development
-  mobiledev: Mobile App Development
-  games: Game Development
-  street: Street
-  cosplay: Cosplay
-  soft_dev: Software Developer
-  game_dev: Game Developer
-  video_editor: Video Editor
-  photog: Photographer
-pages:
-  home: Home
-  about: About
-  portofolio: Portofolio
-  blog: Blog
 about_page:
-  title: A Little Story About Me
+  assoc_video_eng: Associate Video Engineer
+  bandung: Bandung, Indonesia
   current_employment: Current Employment
   founder_of: Founder Of
-  vidio_sub: 'Indonesia #1 OTT Platform'
+  full_time: Full-time
   hkz_sub: A Indie Game and Software Studio
-  social_title: Come and Follow me on Social Media
+  hybrid: Hybrid
+  infrastructure: Infrastructure
+  jakarta: Jakarta, Indonesia
+  livestream_eng: Livestream Operations Engineer
+  onsite: On-site
+  present: Present
+  role_1: Senior Systems Engineer
+  role_2: OTT / Live Transcoding Architect
+  role_3: Video Pipeline Builder
+  skill_game_dev: Game Development
+  skill_linux_admin: Linux Admin
+  skill_linux_sys_admin: Linux System Administration
+  skill_live_broadcast: Live Broadcast
+  skill_live_transcoding: Live Transcoding
+  skill_network_infra: Network Infrastructure
+  skill_software_design: Software Design
+  skill_software_infra: Software Infrastructure
+  skill_stream_monitoring: Stream Monitoring
+  skill_video_transcoding: Video Transcoding
   social_sub: to find more interesting bits
+  social_title: Come and Follow me on Social Media
+  software_eng: Software Engineer
+  sys_admin: System Administrator
+  tech_stack_title: Tech Stack & Tools
+  timeline_1_desc: First discovered HTML and web building. Taught myself programming
+    two years later.
+  timeline_1_title: The Spark
+  timeline_1_year: 6th Grade
+  timeline_2_desc: Created simple HTML pages, websites, and coded my first FPS game.
+  timeline_2_title: Building Things
+  timeline_2_year: High School
+  timeline_3_desc: Dived into C/C++, assembly, and low-level bare-metal systems.
+  timeline_3_title: Going Deep
+  timeline_3_year: College Years
+  timeline_4_desc: Working on video engineering at Vidio.com and building developer
+    tools.
+  timeline_4_title: Video Systems & Scale
+  timeline_4_year: Now
+  timeline_title: My Journey
+  title: A Little Story About Me
+  video_engineering: Video Engineering
+  vidio_sub: 'Indonesia #1 OTT Platform'
+blog_page:
+  pagination:
+    next: Next
+    of: of
+    page: Page
+    previous: Previous
+  post:
+    done_reading: Done Reading this Post?
+    posted_at: Posted at
+    similar_content: Maybe check some More Similar Content...
+  sidebar:
+    blog_post: BLOG POST
+    tags: Tags
+global:
+  back: Back
+  cosplay: Cosplay
+  english: Eng
+  game_dev: Game Developer
+  games: Game Development
+  japanese: Jap
+  mo: mo
+  mobiledev: Mobile App Development
+  mos: mos
+  photog: Photographer
+  soft_dev: Software Developer
+  software: Software Projects
+  street: Street
+  video_editor: Video Editor
+  website: Website Development
+  yr: yr
+  yrs: yrs
+pages:
+  about: About
+  blog: Blog
+  home: Home
+  portofolio: Portofolio
 portofolio_page:
-  heroes_title: THINK, BUILD AND CREATE!!
-  heroes_subtitle: ":::: Here's some featured projects<br>:::: i have accomplish this past years"
-  tech: Tech Stack
-  prog_lang: Language
-  framework: Framework
-  template_design: More Website Template & Design
-  dev: Development
-  website:
-    hibikaze_desc: Creative Studio based on Bandung Indonesia, specialized in Software and Game Development for remote and local client.
-    symphonyart_desc: SymphonyArt Photography is a Photography services in Bandung. Offering different types photography services such as product and wedding photography.
-  software:
-    majin_paste_desc: A Pastebin-like software to Create, Save and Share your paste/code snippet by the unique generated URL to view it from your web page.
-    red_catalyst_desc: Unified streaming media server software, supporting RTMP and SRT Protocol that can be used to relay broadcast and live transcode.
-    alter_pass_desc: Cloud base Password Manager, store your pasword and cridential on the cloud and access it trough the WebUI and Android App.
-    gnews_dart_desc: Google News scraper packages build with Dart, also equipped with plugin to parse aggregated news from 3rd party news site.
-    briefly_desc: A Simple News Reader App build with Flutter frameworks and powered by <b>gnews.dart</b> plugin.
-    vim_desc: Browser Extensions for better Watch Experience on <b>Vidio.com</b> by Enabling windowed fullscreen player.
-  photography:
-    title: Photography
-    street: Street Photography
-    potraiture: Portraiture
-    cosplay: Cosplay
   ai_art:
-    title: Ai Art
     stable_diffusion: Stable Diffusion Art
+    title: Ai Art
+  all_web: All Web Projects
+  dev: Development
+  engines: Engines
+  framework: Framework
+  heroes_subtitle: ':::: Here''s some featured projects<br>:::: i have accomplish
+    this past years'
+  heroes_title: <em>THINK</em>, BUILD AND <em>CREATE!!</em>
+  heroes_title_1: THINK,
+  heroes_title_2: BUILD
+  heroes_title_3: AND CREATE!!
+  photography:
+    cosplay: Cosplay
+    potraiture: Portraiture
+    street: Street Photography
+    title: Photography
+  prog_lang: Language
+  software:
+    alter_pass_desc: Cloud base Password Manager, store your pasword and cridential
+      on the cloud and access it trough the WebUI and Android App.
+    briefly_desc: A Simple News Reader App build with Flutter frameworks and powered
+      by <b>gnews.dart</b> plugin.
+    gnews_dart_desc: Google News scraper packages build with Dart, also equipped with
+      plugin to parse aggregated news from 3rd party news site.
+    majin_paste_desc: A Pastebin-like software to Create, Save and Share your paste/code
+      snippet by the unique generated URL to view it from your web page.
+    red_catalyst_desc: Unified streaming media server software, supporting RTMP and
+      SRT Protocol that can be used to relay broadcast and live transcode.
+    vim_desc: Browser Extensions for better Watch Experience on <b>Vidio.com</b> by
+      Enabling windowed fullscreen player.
+  tech: Tech Stack
+  template_design: More Website Template & Design
   video_editing:
+    shorts: Short Form Content
     title: Video Editing
     yt_content: Youtube Content
-    shorts: Short Form Content
+  visit_site: Visit Site
+  website:
+    hibikaze_desc: Creative Studio based on Bandung Indonesia, specialized in Software
+      and Game Development for remote and local client.
+    symphonyart_desc: SymphonyArt Photography is a Photography services in Bandung.
+      Offering different types photography services such as product and wedding photography.
