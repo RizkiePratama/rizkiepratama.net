@@ -6,101 +6,7 @@
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── 0. Startup Sequence ───────────────────────────────── */
-  function initStartupSequence(onComplete) {
-    const wrapper = document.getElementById('startup-sequence-wrapper');
-    const container = document.getElementById('startup-sequence');
-    const hudFrame = document.getElementById('landing-hud-frame');
-    
-    if (!wrapper || !container || !hudFrame) {
-      if (onComplete) onComplete();
-      return;
-    }
-    
-    if (reducedMotion) {
-      wrapper.style.display = 'none';
-      hudFrame.style.display = 'inline-block';
-      document.body.classList.add('skip-anims');
-      document.body.classList.add('booted');
-      if (onComplete) onComplete();
-      return;
-    }
 
-    // Reset for boot sequence
-    document.body.classList.remove('skip-anims');
-    document.body.classList.remove('booted');
-    wrapper.style.opacity = '1';
-    wrapper.style.visibility = 'visible';
-    wrapper.style.display = 'flex';
-    container.innerHTML = '';
-    container.style.display = 'flex';
-    hudFrame.style.display = 'none';
-
-    const lines = [
-      "INITIATING SYSTEM...",
-      "ESTABLISHING SECURE CONNECTION...",
-      "LOADING KERNEL MODULES...",
-      "DECRYPTING IDENTITY...",
-      "ACCESS GRANTED."
-    ];
-
-    let currentLine = 0;
-    let charIndex = 0;
-    let p = null;
-    
-    function typeNextChar() {
-      if (!document.getElementById('startup-sequence')) return; // Exit if navigated away
-      
-      if (currentLine >= lines.length) {
-        // Sequence finished
-        setTimeout(() => {
-          if (!document.getElementById('startup-sequence-wrapper')) return;
-          
-          // Fade to black and reveal
-          wrapper.style.opacity = '0';
-          wrapper.style.visibility = 'hidden';
-          hudFrame.style.display = 'inline-block';
-          
-          // Wait for the fade out to finish before triggering component intro animations
-          setTimeout(() => {
-             document.body.classList.add('booted');
-             if (onComplete) onComplete();
-          }, 400);
-
-        }, 200);
-        return;
-      }
-      
-      if (charIndex === 0) {
-        p = document.createElement('p');
-        p.className = 'startup-line';
-        container.appendChild(p);
-      }
-      
-      const lineText = '> ' + lines[currentLine];
-      
-      if (charIndex < lineText.length) {
-        // Random glitch character chance
-        let charToType = lineText[charIndex];
-        if (Math.random() > 0.95 && charToType !== ' ') {
-          charToType = '!@#$%^&*()'[Math.floor(Math.random() * 10)];
-          // don't increment charIndex so it fixes itself next tick, like a real glitch
-        } else {
-          charIndex++;
-        }
-        
-        p.textContent = lineText.substring(0, charIndex) + (Math.random() > 0.5 ? '█' : '');
-        setTimeout(typeNextChar, 7 + Math.random() * 10); // Accelerated typing delay
-      } else {
-        p.textContent = lineText; // Ensure block cursor is gone and text is perfect
-        currentLine++;
-        charIndex = 0;
-        setTimeout(typeNextChar, 100 + Math.random() * 120); // Accelerated line pause
-      }
-    }
-    
-    setTimeout(typeNextChar, 300);
-  }
 
   /* ── 1. Text Decode Animation ──────────────────────────── */
   function runDecodeAnimation(element) {
@@ -147,40 +53,74 @@
     
     if (!target || !stringsData) return;
 
-    const lines = [
-      stringsData.getAttribute('data-dev') || 'Software Developer',
-      stringsData.getAttribute('data-vid') || 'Video Engineer',
-      stringsData.getAttribute('data-pho') || 'Photographer',
-      stringsData.getAttribute('data-game') || 'Game Developer'
-    ];
+    const lines = [];
+    const keys = ['dev', 'vid', 'pho', 'game'];
+    const defaults = {
+      dev: 'Software Developer',
+      vid: 'Video Editor',
+      pho: 'Photographer',
+      game: 'Game Developer'
+    };
+
+    keys.forEach(key => {
+      const kanji = stringsData.getAttribute(`data-${key}`) || defaults[key];
+      const kana = stringsData.getAttribute(`data-${key}-kana`);
+      lines.push({ kanji, kana });
+    });
 
     let lineIndex = 0;
     let charIndex = 0;
-    let deleting = false;
-    const SPEED_TYPE = 60;
+    let state = 'typing'; // 'typing', 'converting', 'pause', 'deleting'
+    
+    const SPEED_TYPE = 65;
     const SPEED_DEL  = 30;
     const PAUSE_END  = 2000;
     const PAUSE_DEL  = 600;
+    const PAUSE_CONV = 350; // Visual pause for the IME candidate select
 
-    function tick () {
+    function tick() {
       if (!document.getElementById('landing-typewriter')) return; // Exit if navigated away
       
-      const current = lines[lineIndex];
+      const line = lines[lineIndex];
 
-      if (!deleting) {
-        target.textContent = current.slice(0, charIndex + 1);
-        charIndex++;
-        if (charIndex === current.length) {
-          deleting = true;
-          setTimeout(tick, PAUSE_END);
-          return;
+      if (state === 'typing') {
+        if (line.kana) {
+          // Japanese phonetic composition typing
+          target.innerHTML = `<span class="ime-composition">${line.kana.slice(0, charIndex + 1)}</span>`;
+          charIndex++;
+          if (charIndex === line.kana.length) {
+            state = 'converting';
+            setTimeout(tick, SPEED_TYPE + 100); // Slight delay before space conversion
+            return;
+          }
+        } else {
+          // Standard English typing
+          target.textContent = line.kanji.slice(0, charIndex + 1);
+          charIndex++;
+          if (charIndex === line.kanji.length) {
+            state = 'deleting';
+            setTimeout(tick, PAUSE_END);
+            return;
+          }
         }
         setTimeout(tick, SPEED_TYPE);
-      } else {
-        target.textContent = current.slice(0, charIndex - 1);
+      } else if (state === 'converting') {
+        // Simulates space bar conversion to Kanji with solid background candidate select highlight
+        target.innerHTML = `<span class="ime-converted">${line.kanji}</span>`;
+        state = 'pause';
+        setTimeout(tick, PAUSE_CONV);
+      } else if (state === 'pause') {
+        // Clears selection style, displays finalized Kanji text
+        target.textContent = line.kanji;
+        charIndex = line.kanji.length;
+        state = 'deleting';
+        setTimeout(tick, PAUSE_END);
+      } else if (state === 'deleting') {
+        // Backspaces the Kanji characters
+        target.textContent = line.kanji.slice(0, charIndex - 1);
         charIndex--;
         if (charIndex === 0) {
-          deleting = false;
+          state = 'typing';
           lineIndex = (lineIndex + 1) % lines.length;
           setTimeout(tick, PAUSE_DEL);
           return;
@@ -232,10 +172,9 @@
       homeEl.style.backgroundImage = `url('/assets/images/bg/${bgId}.jpg')`;
     }
 
-    initStartupSequence(function() {
-      initLandingDecode();
-      initLandingTypewriter();
-    });
+    document.body.classList.add('booted');
+    initLandingDecode();
+    initLandingTypewriter();
   };
 
   if (document.readyState === 'loading') {

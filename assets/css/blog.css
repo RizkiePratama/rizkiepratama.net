@@ -581,6 +581,15 @@ span.list-item-article-count {
     .sys-log-overlay {
         margin-right: 0;
     }
+    .sys-log-title-main {
+        font-size: 1.8rem !important; /* Smaller title on mobile viewport */
+        line-height: 1.2 !important;
+    }
+    .sys-log-header {
+        flex-direction: column !important; /* Stack metadata chips vertically */
+        align-items: flex-start !important;
+        gap: 0.5rem !important; /* Spacing between stacked items */
+    }
 }
 
 .sys-log-title-main {

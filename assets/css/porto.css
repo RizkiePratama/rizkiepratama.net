@@ -403,7 +403,7 @@
   }
 
   .porto-hero-title {
-    font-size: clamp(1.4rem, 6vw, 1.8rem) !important;
+    font-size: clamp(1.4rem, 8vw, 1.8rem) !important;
     line-height: 1.1;
     margin-bottom: 0.25rem !important;
     letter-spacing: -0.5px;
@@ -496,7 +496,6 @@
 }
 
 .porto-content-block {
-  padding: 3.5rem 0 4rem;
   border-bottom: 1px solid var(--p-border);
 }
 
@@ -1290,10 +1289,6 @@
   .porto-gallery-grid { columns: 2; }
 }
 
-@media (max-width: 480px) {
-  .porto-gallery-grid { columns: 1; }
-}
-
 .porto-gallery-shot {
   display: block;
   break-inside: avoid;
@@ -1552,7 +1547,13 @@
 
   .porto-gallery-grid {
     columns: 2;
-    column-gap: 2px;
+    column-gap: 8px;
+  }
+
+  .porto-gallery-grid .porto-gallery-shot {
+    margin-bottom: 8px;
+    border-width: 2px;
+    box-shadow: 2px 2px 0 var(--p-border-2);
   }
 
   .porto-stack-marquee-wrap {
@@ -1585,7 +1586,5 @@
     padding: 1.25rem;
   }
 
-  .porto-gallery-grid {
-    columns: 1;
-  }
+
 }

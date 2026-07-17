@@ -207,6 +207,7 @@ body#landing.booted .landing-hud-frame {
   color: #fff;
   line-height: 1.1;
   text-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+  white-space: nowrap;
 }
 
 .terminal-role {
@@ -232,10 +233,10 @@ body#landing.booted .landing-hud-frame {
 }
 
 /* ── RESPONSIVE ────────────────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .landing-hud-frame {
     position: absolute;
-    top: 55%;
+    top: 48%;
     left: 50%;
     bottom: unset;
     padding: 25px 15px;
@@ -261,7 +262,8 @@ body#landing.booted .landing-hud-frame {
   }
   
   .landing-hud-frame .home-name {
-    font-size: 2.1rem;
+    font-size: clamp(1.3rem, 8vw, 2.1rem);
+    white-space: nowrap;
     text-align: center;
     margin-bottom: 0.5rem;
   }
@@ -270,4 +272,16 @@ body#landing.booted .landing-hud-frame {
     font-size: 0.85rem;
     text-align: center;
   }
+}
+
+/* Japanese IME Typewriter Simulation */
+.ime-composition {
+  text-decoration: underline dashed rgba(255, 255, 255, 0.6) !important;
+  text-underline-offset: 4px;
+}
+.ime-converted {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  text-decoration: underline solid #fff !important;
+  text-underline-offset: 4px;
 }

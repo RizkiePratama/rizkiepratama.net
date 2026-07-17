@@ -27,12 +27,16 @@ permalink: /portofolio/video-editing
               <!-- Featured Frame -->
               <div class="porto-video-featured">
                 <div class="porto-video-embed">
-                  <iframe id="porto-featured-iframe" src="https://www.youtube.com/embed/VZQkNPft6D8" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                  <iframe id="porto-featured-iframe" src="https://www.youtube.com/embed/jgv4LeEDFis" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                 </div>
               </div>
 
               <!-- Thumbnail Grid -->
               <div class="porto-video-thumbnails">
+                <button class="porto-video-thumb active" data-video-id="jgv4LeEDFis" aria-label="Play video 1">
+                  <img src="https://img.youtube.com/vi/jgv4LeEDFis/mqdefault.jpg" alt="Thumbnail 1">
+                  <div class="porto-thumb-overlay"><i class="fa-solid fa-play"></i></div>
+                </button>
                 <button class="porto-video-thumb active" data-video-id="VZQkNPft6D8" aria-label="Play video 1">
                   <img src="https://img.youtube.com/vi/VZQkNPft6D8/mqdefault.jpg" alt="Thumbnail 1">
                   <div class="porto-thumb-overlay"><i class="fa-solid fa-play"></i></div>
@@ -71,4 +75,4 @@ permalink: /portofolio/video-editing
   </section>
 </div>
 
-<script src="/assets/js/porto.js?v=29" defer></script>
+<script src="/assets/js/porto.js?v={{ site.time | date: '%s' }}" defer></script>

@@ -8,13 +8,8 @@
       <!-- Home -->
       <main id="swup" class="transition-fade">
       <section id="home" class="container-fluid p-0 m-0">
-        <!-- Startup sequence overlay -->
-        <div id="startup-sequence-wrapper">
-          <div id="startup-sequence" class="startup-sequence text-start"></div>
-        </div>
-
         <!-- HUD Frame (top left via CSS) -->
-        <div class="landing-hud-frame" id="landing-hud-frame" style="display: none;">
+        <div class="landing-hud-frame" id="landing-hud-frame">
           <div class="hud-bracket hud-bracket-tl"></div>
           <div class="hud-bracket hud-bracket-br"></div>
           <div class="hud-bracket hud-bracket-tr"></div>
@@ -24,12 +19,17 @@
           <h1 class="home-name decode-text" data-value="RIZKIE PRATAMA">XXXXXXXXXXXXXXXX</h1>
           <h2 class="terminal-role">> <span id="landing-typewriter"></span><span class="blinking-cursor">█</span></h2>
           
-          <!-- Hidden string data for JS -->
           <span id="role-strings" style="display:none;"
             data-dev="{% t global.soft_dev %}"
             data-vid="{% t global.video_editor %}"
             data-pho="{% t global.photog %}"
-            data-game="{% t global.game_dev %}">
+            data-game="{% t global.game_dev %}"
+            {% if site.lang == 'jp' %}
+            data-dev-kana="ソフトウェアかいはつしゃ"
+            data-vid-kana="どうがへんしゅうしゃ"
+            data-pho-kana="しゃしんか"
+            data-game-kana="ゲームかいはつしゃ"
+            {% endif %}>
           </span>
         </div>
         
