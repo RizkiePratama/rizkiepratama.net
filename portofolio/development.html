@@ -134,22 +134,98 @@ permalink: /portofolio/development
                 {% t global.mobiledev %}
               </span>
             </div>
-            <div class="reveal">
-              <a href="https://apps.apple.com/us/app/football-money/id6605934587"
-                target="_blank" rel="noopener"
-                class="porto-mobile-item">
+            <div class="porto-mobile-grid reveal">
+
+              <div class="porto-mobile-item">
+                <div class="porto-mobile-thumb">
+                  <img class="skeleton-loader" alt="Pikiran Rakyat Mobile"
+                    src="/assets/images/portofolio/mobile-app/thumbs/pikiranrakyat.jpg" loading="lazy">
+                </div>
+                <div class="porto-mobile-body">
+                  <h3>Pikiran Rakyat Mobile</h3>
+                  <p>Official cross-platform mobile application for Pikiran Rakyat news media, featuring brand-aligned UI/UX and real-time news delivery.</p>
+
+                  <button type="button" class="porto-mobile-work-toggle" aria-expanded="false" onclick="event.stopPropagation(); const g = this.closest('.porto-mobile-grid'); const exp = this.getAttribute('aria-expanded') === 'true'; if (g) { g.querySelectorAll('.porto-mobile-work-toggle').forEach(t => { if (t !== this) { t.setAttribute('aria-expanded', 'false'); const d = t.parentElement.querySelector('.porto-mobile-work-drawer'); if (d) d.classList.remove('is-open'); } }); } this.setAttribute('aria-expanded', exp ? 'false' : 'true'); this.nextElementSibling.classList.toggle('is-open', !exp);">
+                    <span><i class="fa-solid fa-layer-group"></i> What I Built</span>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+
+                  <div class="porto-mobile-work-drawer">
+                    <div class="porto-drawer-inner">
+                      <div class="porto-work-meta">
+                        <span class="porto-work-role"><i class="fa-solid fa-user-gear"></i> Initial App Development</span>
+                        <div class="porto-work-stack">
+                          <span class="porto-badge"><i class="fa-solid fa-mobile-screen"></i> Flutter</span>
+                          <span class="porto-badge"><i class="fa-solid fa-cloud"></i> REST API</span>
+                          <span class="porto-badge"><i class="fa-brands fa-android"></i> Android</span>
+                          <span class="porto-badge"><i class="fa-brands fa-apple"></i> iOS</span>
+                        </div>
+                      </div>
+                      <ul class="porto-work-list">
+                        <li>Designed and built initial UI/UX (2018) aligning with Pikiran Rakyat brand colors and guidelines.</li>
+                        <li>Engineered mobile front-end using Flutter for cross-platform Android and iOS deployment.</li>
+                        <li>Integrated News REST API to fetch live feeds, category channels, and tag filtering.</li>
+                        <li>Implemented user login and authentication flows.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="porto-mobile-store-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.pikiran_rakyat.mobile&hl=en"
+                      target="_blank" rel="noopener" class="porto-mobile-cta">
+                      <i class="fa-brands fa-google-play"></i> Google Play <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="https://apps.apple.com/us/app/pikiran-rakyat-mobile/id6502698155"
+                      target="_blank" rel="noopener" class="porto-mobile-cta">
+                      <i class="fa-brands fa-apple"></i> App Store <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="porto-mobile-item">
                 <div class="porto-mobile-thumb">
                   <img class="skeleton-loader" alt="Football Money App"
                     src="/assets/images/portofolio/mobile-app/thumbs/footballmoney.webp" loading="lazy">
                 </div>
                 <div class="porto-mobile-body">
                   <h3>Football Money</h3>
-                  <p>Track football finances and player transactions. Available on the App Store.</p>
-                  <span class="porto-mobile-cta">
-                    <i class="fa-brands fa-apple"></i> App Store <i class="fa-solid fa-arrow-right"></i>
-                  </span>
+                  <p>Football match gamification app featuring match statistic UI, player valuation tracking, and trading leaderboards.</p>
+
+                  <button type="button" class="porto-mobile-work-toggle" aria-expanded="false" onclick="event.stopPropagation(); const g = this.closest('.porto-mobile-grid'); const exp = this.getAttribute('aria-expanded') === 'true'; if (g) { g.querySelectorAll('.porto-mobile-work-toggle').forEach(t => { if (t !== this) { t.setAttribute('aria-expanded', 'false'); const d = t.parentElement.querySelector('.porto-mobile-work-drawer'); if (d) d.classList.remove('is-open'); } }); } this.setAttribute('aria-expanded', exp ? 'false' : 'true'); this.nextElementSibling.classList.toggle('is-open', !exp);">
+                    <span><i class="fa-solid fa-layer-group"></i> What I Built</span>
+                    <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </button>
+
+                  <div class="porto-mobile-work-drawer">
+                    <div class="porto-drawer-inner">
+                      <div class="porto-work-meta">
+                        <span class="porto-work-role"><i class="fa-solid fa-user-gear"></i> Mobile App Developer</span>
+                        <div class="porto-work-stack">
+                          <span class="porto-badge"><i class="fa-brands fa-react"></i> React Native</span>
+                          <span class="porto-badge"><i class="fa-solid fa-cloud"></i> REST API</span>
+                          <span class="porto-badge"><i class="fa-brands fa-apple"></i> iOS</span>
+                          <span class="porto-badge"><i class="fa-brands fa-android"></i> Android</span>
+                        </div>
+                      </div>
+                      <ul class="porto-work-list">
+                        <li>Implemented core mobile front-end features for football match gamification and fantasy mechanics.</li>
+                        <li>Built interactive Match Graph and Statistic UI for real-time game visualization.</li>
+                        <li>Developed Player Performance Stats tracking and Trading Leaderboard systems.</li>
+                        <li>Targeted both Android and iOS cross-platform builds with React Native.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="porto-mobile-store-links">
+                    <a href="https://apps.apple.com/us/app/football-money/id6605934587"
+                      target="_blank" rel="noopener" class="porto-mobile-cta">
+                      <i class="fa-brands fa-apple"></i> App Store <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                  </div>
                 </div>
-              </a>
+              </div>
+
             </div>
           </div><!-- /mobile -->
 
