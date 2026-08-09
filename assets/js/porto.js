@@ -221,13 +221,51 @@
     });
   }
 
+  // =========================================
+  // MOBILE APP ACCORDION TOGGLE (Single Accordion Behavior)
+  // =========================================
+  document.addEventListener('click', function (e) {
+    const toggle = e.target.closest('.porto-mobile-work-toggle');
+    if (!toggle) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    const grid = toggle.closest('.porto-mobile-grid');
+
+    if (grid) {
+      grid.querySelectorAll('.porto-mobile-work-toggle').forEach(t => {
+        if (t !== toggle) {
+          t.setAttribute('aria-expanded', 'false');
+          const d = t.parentElement.querySelector('.porto-mobile-work-drawer');
+          if (d) d.classList.remove('is-open');
+        }
+      });
+    }
+
+    const parentBody = toggle.closest('.porto-mobile-body') || toggle.parentElement;
+    const drawer = parentBody.querySelector('.porto-mobile-work-drawer');
+
+    toggle.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+    if (drawer) {
+      drawer.classList.toggle('is-open', !isExpanded);
+    }
+  });
+
   };
   
   // Call on initial load
-  document.addEventListener('DOMContentLoaded', () => {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof window.initPortoScripts === 'function') {
+        window.initPortoScripts();
+      }
+    });
+  } else {
     if (typeof window.initPortoScripts === 'function') {
       window.initPortoScripts();
     }
-  });
+  }
 
 })();

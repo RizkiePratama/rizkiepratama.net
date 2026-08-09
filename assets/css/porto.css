@@ -497,10 +497,14 @@
 
 .porto-content-block {
   border-bottom: 1px solid var(--p-border);
+  padding-bottom: 4.5rem;
+  margin-bottom: 4.5rem;
 }
 
 .porto-content-block:last-child {
   border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* =========================================
@@ -832,12 +836,34 @@
 /* =========================================
    MOBILE APP CARD
    ========================================= */
+.porto-mobile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .porto-mobile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .porto-mobile-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
 .porto-mobile-item {
   display: flex;
+  flex-direction: column;
   align-items: stretch;
   gap: 0;
   border: 1px solid var(--p-border);
-  max-width: 520px;
+  width: 100%;
+  background: var(--p-surface);
   text-decoration: none !important;
   transition: border-color var(--p-fast), box-shadow var(--p-fast);
 }
@@ -848,10 +874,13 @@
 }
 
 .porto-mobile-thumb {
-  width: 140px;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 320px;
   flex-shrink: 0;
   overflow: hidden;
   background: var(--p-surface);
+  border-bottom: 1px solid var(--p-border);
 }
 
 .porto-mobile-thumb img {
@@ -860,19 +889,21 @@
   object-fit: cover;
   display: block;
   filter: grayscale(20%);
-  transition: filter var(--p-mid);
+  transition: filter var(--p-mid), transform var(--p-mid);
 }
 
 .porto-mobile-item:hover .porto-mobile-thumb img {
   filter: grayscale(0%);
+  transform: scale(1.03);
 }
 
 .porto-mobile-body {
-  padding: 1.2rem 1.4rem;
+  padding: 1.4rem 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
+  justify-content: flex-start;
+  flex: 1;
+  gap: 0.6rem;
 }
 
 .porto-mobile-body h3 {
@@ -904,6 +935,118 @@
 }
 
 .porto-mobile-item:hover .porto-mobile-cta { gap: 10px; }
+
+.porto-mobile-store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 0.6rem;
+}
+
+.porto-mobile-work-toggle {
+  background: var(--p-surface);
+  border: 1px solid var(--p-border);
+  color: var(--p-muted);
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  pointer-events: auto !important;
+  transition: border-color var(--p-fast), color var(--p-fast), background var(--p-fast);
+}
+
+.porto-mobile-work-toggle:hover {
+  border-color: var(--p-red);
+  color: var(--p-white);
+  background: rgba(230, 57, 70, 0.08);
+}
+
+.porto-mobile-work-toggle .toggle-icon {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 0.68rem;
+  pointer-events: none;
+}
+
+.porto-mobile-work-toggle[aria-expanded="true"] .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.porto-mobile-work-drawer {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 1px dashed transparent;
+  transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.35s ease,
+              margin-top 0.35s ease,
+              padding-top 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.porto-drawer-inner {
+  overflow: hidden;
+}
+
+.porto-mobile-work-drawer.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top-color: var(--p-border);
+}
+
+.porto-work-meta {
+  margin-bottom: 8px;
+}
+
+.porto-work-role {
+  display: inline-block;
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.68rem;
+  color: var(--p-red);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.porto-work-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.porto-work-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.porto-work-list li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 0.78rem;
+  color: var(--p-muted);
+  line-height: 1.55;
+  margin-bottom: 5px;
+}
+
+.porto-work-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--p-red);
+}
 
 /* =========================================
    SOFTWARE CARDS
@@ -1542,7 +1685,7 @@
 
   .porto-mobile-thumb {
     width: 100%;
-    height: 180px;
+    height: auto;
   }
 
   .porto-gallery-grid {
