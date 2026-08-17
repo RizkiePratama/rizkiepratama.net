@@ -31,9 +31,9 @@ module Jekyll
       # Construct processing options. Default to no-op if empty.
       opts = options.to_s.strip
       if opts.empty?
-        "#{imgproxy_url}/insecure/plain/local:///#{clean_path}#{format_suffix}"
+        "#{imgproxy_url}/insecure/plain/#{clean_path}#{format_suffix}"
       else
-        "#{imgproxy_url}/insecure/#{opts}/plain/local:///#{clean_path}#{format_suffix}"
+        "#{imgproxy_url}/insecure/#{opts}/plain/#{clean_path}#{format_suffix}"
       end
     end
   end

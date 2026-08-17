@@ -23,7 +23,7 @@ module Jekyll
           
           if use_imgproxy && original_src =~ /\.(jpg|jpeg|png)$/i
             # Route to imgproxy (resize to max 1200px for post body content, convert to webp)
-            img_tag['src'] = "#{imgproxy_url}/insecure/rs:fit:1200:1200/plain/local:///#{clean_path}@webp"
+            img_tag['src'] = "#{imgproxy_url}/insecure/rs:fit:1200:1200/plain/#{clean_path}@webp"
             modified = true
           else
             # Fallback to original local WebP conversion logic if the file exists in destination
