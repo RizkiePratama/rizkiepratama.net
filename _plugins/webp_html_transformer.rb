@@ -3,19 +3,30 @@ require 'nokogiri'
 
 module Jekyll
   module WebPHTMLTransformer
-    Jekyll::Hooks.register :pages, :post_render do |page|
-      # Only process HTML pages
-      if page.output_ext == '.html'
-        doc = Nokogiri::HTML.parse(page.output)
-        
-        doc.css('img').each do |img_tag|
-          original_src = img_tag['src']
-          
-          next if original_src.nil? || original_src.empty? || original_src.start_with?('data:') || original_src.end_with?('.webp') || original_src.end_with?('.svg')
-          next if img_tag.ancestors('picture').any?
+    def self.process_images(page)
+      # Only process HTML pages/documents
+      return unless page.output_ext == '.html'
 
-          if original_src.start_with?('/assets/images/')
-            # Construct the WebP path
+      doc = Nokogiri::HTML.parse(page.output)
+      imgproxy_url = page.site.config['imgproxy_url']
+      use_imgproxy = imgproxy_url && !imgproxy_url.empty?
+      modified = false
+
+      doc.css('img').each do |img_tag|
+        original_src = img_tag['src']
+        
+        next if original_src.nil? || original_src.empty? || original_src.start_with?('data:') || original_src.end_with?('.svg')
+        next if img_tag.ancestors('picture').any?
+
+        if original_src.start_with?('/assets/images/')
+          clean_path = original_src.sub(/^\//, '').sub(/^assets\/images\//, '')
+          
+          if use_imgproxy && original_src =~ /\.(jpg|jpeg|png)$/i
+            # Route to imgproxy (resize to max 1200px for post body content, convert to webp)
+            img_tag['src'] = "#{imgproxy_url}/insecure/rs:fit:1200:1200/plain/local:///#{clean_path}@webp"
+            modified = true
+          else
+            # Fallback to original local WebP conversion logic if the file exists in destination
             webp_src = original_src.sub('/assets/images/', '/assets/images/webp/')
             webp_src = webp_src.sub(/\.(jpg|jpeg|png)$/i, '.webp')
 
@@ -43,11 +54,21 @@ module Jekyll
               else
                 img_tag.replace(picture_tag)
               end
+              modified = true
             end
           end
         end
-        page.output = doc.to_html
       end
+
+      page.output = doc.to_html if modified
+    end
+
+    Jekyll::Hooks.register :pages, :post_render do |page|
+      WebPHTMLTransformer.process_images(page)
+    end
+
+    Jekyll::Hooks.register :documents, :post_render do |document|
+      WebPHTMLTransformer.process_images(document)
     end
   end
 end

@@ -55,10 +55,7 @@ custom_css: blog
                         <div class="blog-grid-card">
                             <div class="blog-grid-thumb">
                                 <a href="{{ post.url }}" class="blog-grid-thumb-link">
-                                    <picture>
-                                        <source srcset="{{ post.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
-                                        <img src="{{ post.cover | replace: '/source/', '/' }}" alt="{{ post.title }}" loading="lazy">
-                                    </picture>
+                                    <img src="{{ post.cover | imgproxy: 'rs:fill:600:350' }}" alt="{{ post.title }}" loading="lazy">
                                     <div class="blog-grid-scanline"></div>
                                 </a>
                             </div>

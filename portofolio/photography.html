@@ -4,6 +4,38 @@ title: Photography
 custom_css:
   - porto
 permalink: /portofolio/photography
+street_images:
+  - MAY06511.jpg
+  - MAY06585.jpg
+  - MAY06590.jpg
+  - YGA07658.jpg
+  - YGA07979.jpg
+  - YGA06773.jpg
+  - YGA06824.jpg
+  - YGA07986.jpg
+portrait_images:
+  - IMG_9558.jpg
+  - IMG_9638.jpg
+  - IMG_9685.jpg
+  - IMG_9641.jpg
+  - YGA06802.jpg
+  - YGA06835.jpg
+  - YGA06838.jpg
+  - YGA06841.jpg
+  - YGA06845.jpg
+  - IMG_0034_2.jpg
+  - IMG_0036-1.jpg
+  - IMG_0039.jpg
+  - IMG_0374.jpg
+  - IMG_0375.jpg
+  - IMG_0377.jpg
+cosplay_images:
+  - YGA08815.jpg
+  - YGA08817.jpg
+  - YGA08809.jpg
+  - YGA08792.jpg
+  - YGA06937.jpg
+  - IMG_8149.jpg
 ---
 
 <div id="portofolio">
@@ -27,45 +59,31 @@ permalink: /portofolio/photography
 
           <div class="porto-photo-pane active" id="photo-street">
             <div class="porto-gallery-grid reveal">
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/MAY06511.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/street/thumbs/MAY06511.jpg" loading="lazy" alt="Street"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/MAY06585.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/street/thumbs/MAY06585.jpg" loading="lazy" alt="Street"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/MAY06590.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/street/thumbs/MAY06590.jpg" loading="lazy" alt="Street"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA07658.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/street/thumbs/YGA07658.jpg" loading="lazy" alt="Street"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA07979.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/street/thumbs/YGA07979.jpg" loading="lazy" alt="Street"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA06773.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/street/thumbs/YGA06773.jpg" loading="lazy" alt="Street"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA06824.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/street/thumbs/YGA06824.jpg" loading="lazy" alt="Street"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/street/source/YGA07986.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/street/thumbs/YGA07986.jpg" loading="lazy" alt="Street"></a>
+              {% for img in page.street_images %}
+                <a class="porto-gallery-shot" href="#" data-lity data-lity-target="{{ '/portofolio/photography/street/source/' | append: img | imgproxy: 'rs:fit:1920:1920' }}">
+                  <img class="skeleton-loader" src="{{ '/portofolio/photography/street/source/' | append: img | imgproxy: 'rs:fill:300:300' }}" loading="lazy" alt="Street">
+                </a>
+              {% endfor %}
             </div>
           </div>
 
           <div class="porto-photo-pane" id="photo-portrait" style="display: none;">
             <div class="porto-gallery-grid reveal">
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_9558.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_9558.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_9638.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_9638.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_9685.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_9685.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_9641.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_9641.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/YGA06802.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/YGA06802.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/YGA06835.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/YGA06835.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/YGA06838.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/YGA06838.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/YGA06841.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/YGA06841.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/YGA06845.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/YGA06845.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0034_2.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0034_2.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0036-1.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0036-1.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0039.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0039.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0374.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0374.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0375.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0375.jpg" loading="lazy" alt="Portrait"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/portraiture/source/IMG_0377.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/portraiture/thumbs/IMG_0377.jpg" loading="lazy" alt="Portrait"></a>
+              {% for img in page.portrait_images %}
+                <a class="porto-gallery-shot" href="#" data-lity data-lity-target="{{ '/portofolio/photography/portraiture/source/' | append: img | imgproxy: 'rs:fit:1920:1920' }}">
+                  <img class="skeleton-loader" src="{{ '/portofolio/photography/portraiture/source/' | append: img | imgproxy: 'rs:fill:300:300' }}" loading="lazy" alt="Portrait">
+                </a>
+              {% endfor %}
             </div>
           </div>
 
           <div class="porto-photo-pane" id="photo-cosplay" style="display: none;">
             <div class="porto-gallery-grid reveal">
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/YGA08815.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/cosplay/thumbs/YGA08815.jpg" loading="lazy" alt="Cosplay"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/YGA08817.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/cosplay/thumbs/YGA08817.jpg" loading="lazy" alt="Cosplay"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/YGA08809.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/cosplay/thumbs/YGA08809.jpg" loading="lazy" alt="Cosplay"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/YGA08792.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/cosplay/thumbs/YGA08792.jpg" loading="lazy" alt="Cosplay"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/YGA06937.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/cosplay/thumbs/YGA06937.jpg" loading="lazy" alt="Cosplay"></a>
-              <a class="porto-gallery-shot" href="#" data-lity data-lity-target="/assets/images/portofolio/photography/cosplay/source/IMG_8149.jpg"><img class="skeleton-loader" src="/assets/images/portofolio/photography/cosplay/thumbs/IMG_8149.jpg" loading="lazy" alt="Cosplay"></a>
+              {% for img in page.cosplay_images %}
+                <a class="porto-gallery-shot" href="#" data-lity data-lity-target="{{ '/portofolio/photography/cosplay/source/' | append: img | imgproxy: 'rs:fit:1920:1920' }}">
+                  <img class="skeleton-loader" src="{{ '/portofolio/photography/cosplay/source/' | append: img | imgproxy: 'rs:fill:300:300' }}" loading="lazy" alt="Cosplay">
+                </a>
+              {% endfor %}
             </div>
           </div>
 

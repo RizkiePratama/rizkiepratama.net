@@ -8,7 +8,7 @@
         <!-- Reading Progress Bar -->
         <div id="read-progress-bar" class="read-progress-bar"></div>
         <div id="blog-post">
-        <div class="row mx-0 hero-post-header" style="background: url('{{page.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' | uri_escape }}') no-repeat center center">
+        <div class="row mx-0 hero-post-header" style="background: url('{{ page.cover | imgproxy: 'rs:fill:1600:900' }}') no-repeat center center">
         </div>
         <div class="container">
           <div class="row blog-block py-5 px-3">
@@ -56,10 +56,7 @@
                                     <div class="blog-grid-card">
                                         <div class="blog-grid-thumb">
                                             <a href="{{ post.url }}" class="blog-grid-thumb-link">
-                                                <picture>
-                                                    <source srcset="{{ post.cover | replace: '/assets/images/', '/assets/images/webp/' | replace: '/source/', '/' | replace: '.jpg', '.webp' | replace: '.png', '.webp' }}" type="image/webp">
-                                                    <img src="{{ post.cover | replace: '/source/', '/' }}" alt="{{ post.title }}" loading="lazy">
-                                                </picture>
+                                                <img src="{{ post.cover | imgproxy: 'rs:fill:600:350' }}" alt="{{ post.title }}" loading="lazy">
                                                 <div class="blog-grid-scanline"></div>
                                             </a>
                                         </div>
