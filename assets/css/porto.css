@@ -29,23 +29,23 @@
 
 /* ---- Tokens ---- */
 :root {
-  --p-bg:        #080808;
-  --p-surface:   #101010;
-  --p-surface-2: #161616;
-  --p-border:    #1c1c1c;
-  --p-border-2:  #2a2a2a;
-  --p-text:      #f0f0f0;
-  --p-muted:     #4a4a4a;
-  --p-muted-2:   #333333;
-  --p-red:       #e8192c;
-  --p-red-dim:   rgba(232, 25, 44, 0.1);
-  --p-white:     #f0f0f0;
+  --p-bg:        var(--bg-main, #0a0a0a);
+  --p-surface:   var(--bg-surface, #121212);
+  --p-surface-2: var(--bg-surface-elevated, #181818);
+  --p-border:    var(--border-subtle, #1e1e1e);
+  --p-border-2:  var(--border-active, #2e2e2e);
+  --p-text:      var(--text-primary, #f5f5f5);
+  --p-muted:     var(--text-secondary, #aaaaaa);
+  --p-muted-2:   var(--text-muted, #666666);
+  --p-red:       var(--accent-red, #e8192c);
+  --p-red-dim:   var(--accent-red-dim, rgba(232, 25, 44, 0.12));
+  --p-white:     var(--text-primary, #f5f5f5);
 
-  --p-font-head: 'Mako', sans-serif !important;
-  --p-font-mono: 'Roboto', sans-serif !important;
-  --p-font-body: 'Roboto', sans-serif !important;
+  --p-font-head: var(--font-display, 'Syne', sans-serif) !important;
+  --p-font-mono: var(--font-mono, 'JetBrains Mono', monospace) !important;
+  --p-font-body: var(--font-sans, 'Inter', sans-serif) !important;
 
-  --p-ease:      cubic-bezier(0.4, 0, 0.2, 1);
+  --p-ease:      cubic-bezier(0.16, 1, 0.3, 1);
   --p-fast:      0.15s var(--p-ease);
   --p-mid:       0.25s var(--p-ease);
   --p-slow:      0.45s var(--p-ease);
@@ -91,15 +91,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.7) 40%, rgba(8,8,8,0.95) 100%);
-}
-
-.porto-menu-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px);
-  pointer-events: none;
+  background: linear-gradient(to right, rgba(10,10,10,0.98) 0%, rgba(10,10,10,0.7) 40%, rgba(10,10,10,0.98) 100%);
 }
 
 .porto-menu-inner {
@@ -205,23 +197,7 @@
   border-top: 1px solid var(--p-border-2);
 }
 
-/* Scanline Overlay on Hover */
-.porto-nav-item::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.15) 2px, rgba(0,0,0,0.15) 4px);
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-
-.porto-nav-item:hover::before {
-  opacity: 1;
-}
-
-/* Hover Sweep Highlight Bar (Solid Red Frame) */
+/* Hover Sweep Highlight Bar */
 .porto-nav-highlight {
   position: absolute;
   top: 0; right: -100%; left: auto; bottom: 0;
@@ -1728,6 +1704,118 @@
   .porto-bento-cell {
     padding: 1.25rem;
   }
-
-
 }
+
+/* =========================================
+   SISTER SITE SHOWCASE BANNER
+   ========================================= */
+.porto-sister-site-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 2.25rem;
+  background: var(--p-surface);
+  border: 1px solid var(--p-border-2);
+  border-left: 3px solid var(--p-red);
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .porto-sister-site-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.porto-sister-site-banner:hover {
+  background: var(--p-surface-2);
+  border-color: var(--p-border-2);
+  border-left-color: var(--p-red);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+}
+
+.sister-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 750px;
+}
+
+.sister-banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--p-red);
+  text-transform: uppercase;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background-color: var(--p-red);
+  box-shadow: 0 0 8px var(--p-red);
+  animation: bannerPulse 2s infinite ease-in-out;
+}
+
+@keyframes bannerPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.sister-banner-title {
+  font-family: var(--p-font-head) !important;
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.porto-sister-site-banner:hover .sister-banner-title {
+  color: var(--p-red);
+}
+
+.sister-banner-desc {
+  font-size: 0.85rem;
+  color: var(--p-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.sister-banner-action {
+  flex-shrink: 0;
+}
+
+.sister-banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.4rem;
+  background: #181818;
+  border: 1px solid var(--p-border-2);
+  border-radius: 9999px !important;
+  font-family: var(--p-font-mono) !important;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.porto-sister-site-banner:hover .sister-banner-btn {
+  background: var(--p-red);
+  border-color: var(--p-red);
+  color: #ffffff;
+  transform: translateX(4px);
+}
+

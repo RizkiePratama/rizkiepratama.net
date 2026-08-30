@@ -1,53 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include head.html %}
-    <body id="landing" class="d-flex flex-fill flex-column">
-      <!-- Landing Header -->
-      {% include header.html %}
+{% include head.html %}
 
-      <!-- Home -->
-      <main id="swup" class="transition-fade">
-      <section id="home" class="container-fluid p-0 m-0">
-        <!-- HUD Frame (top left via CSS) -->
-        <div class="landing-hud-frame" id="landing-hud-frame">
-          <div class="hud-bracket hud-bracket-tl"></div>
-          <div class="hud-bracket hud-bracket-br"></div>
-          <div class="hud-bracket hud-bracket-tr"></div>
-          <div class="hud-bracket hud-bracket-bl"></div>
-          
-          <p class="sys-meta">[SYS.ID: XXXXXX] <span class="accent-text">// ONLINE</span></p>
-          <h1 class="home-name decode-text" data-value="RIZKIE PRATAMA">XXXXXXXXXXXXXXXX</h1>
-          <h2 class="terminal-role">> <span id="landing-typewriter"></span><span class="blinking-cursor">█</span></h2>
-          
-          <span id="role-strings" style="display:none;"
-            data-dev="{% t global.soft_dev %}"
-            data-vid="{% t global.video_editor %}"
-            data-pho="{% t global.photog %}"
-            data-game="{% t global.game_dev %}"
-            {% if site.lang == 'jp' %}
-            data-dev-kana="ソフトウェアかいはつしゃ"
-            data-vid-kana="どうがへんしゅうしゃ"
-            data-pho-kana="しゃしんか"
-            data-game-kana="ゲームかいはつしゃ"
-            {% endif %}>
-          </span>
-        </div>
-        
-        <!-- Scanline overlay (CSS handles styling) -->
-        <div class="scanline-overlay"></div>
+<body id="landing" class="d-flex flex-fill flex-column">
+  <!-- Global Navigation -->
+  {% include header.html %}
 
-        <div class="fixed-bottom">
-          <!-- Languages list-->
-          <div class="fixed-block block-right">
-            <ul class="list-unstyled languages-list">
-              <li><a href="/"><span class="single-language">{% t global.english %}</span></a></li>
-              <li><a href="/jp/"><span class="single-language">{% t global.japanese %}</span></a></li>
-            </ul>
+  <!-- Home Hero Container -->
+  <main id="swup" class="transition-fade flex-grow-1 d-flex flex-column">
+    <section id="home-hero" class="hero-showcase">
+      <!-- Cinematic Background Image with Noir Gradient Overlay -->
+      <div class="hero-backdrop" style="background-image: url('/assets/images/bg/2.jpg');"></div>
+      <div class="hero-vignette"></div>
+
+      <!-- Editorial Content Area (Full Fluid Container) -->
+      <div class="hero-content-wrap">
+        <div class="hero-left-col">
+          <!-- Grand Editorial Headline -->
+          <h1 class="hero-headline">
+            ENGINEERING, SYSTEMS <br>
+            <span class="hero-serif-accent">&amp; CREATIVE MEDIA.</span>
+          </h1>
+
+          <!-- Narrative Subtitle -->
+          <p class="hero-description">
+            Software engineer and technical lead specializing in high-throughput video pipelines, distributed cloud
+            backend architectures, and creative visual production.
+          </p>
+
+          <!-- Gateway Action Buttons -->
+          <div class="hero-actions">
+            <a href="{{ site.baseurl }}/portofolio/development" class="hero-btn-primary">
+              <i class="fa-solid fa-code"></i>
+              <span>Software Portfolio</span>
+            </a>
+
+            <a href="https://photography.rizkiepratama.net/" target="_blank" rel="noopener noreferrer"
+              class="hero-btn-glass">
+              <i class="fa-solid fa-camera text-accent"></i>
+              <span>Photography Showcase</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-muted-arrow"></i>
+            </a>
+
+            <a href="{{ site.baseurl }}/about/" class="hero-btn-glass">
+              <i class="fa-solid fa-user"></i>
+              <span>About &amp; Dossier</span>
+            </a>
           </div>
         </div>
-      </section>
-      </main>
-      <!-- Footer -->
-      {% include footer.html %}
-    </body>
+
+        <!-- Bottom Counter / Telemetry Stats -->
+        <div class="hero-stats-row">
+          <div class="hero-stat-item">
+            <span class="hero-stat-value">10+</span>
+            <span class="hero-stat-label">Years Engineering</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-value text-accent">Go &amp; Ruby</span>
+            <span class="hero-stat-label">Core Tech Stack</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-value">Bandung, ID</span>
+            <span class="hero-stat-label">Workstation Loc</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Language Selector Badge -->
+      <div class="hero-language-pill">
+        <a href="/" class="lang-link {% if site.lang == 'en' %}active{% endif %}">EN</a>
+        <span class="lang-sep">/</span>
+        <a href="/jp/" class="lang-link {% if site.lang == 'jp' %}active{% endif %}">JP</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  {% include footer.html %}
+</body>
+
 </html>

@@ -1,27 +1,96 @@
 <header class="site-header">
   <div class="wrapper">
     <!-- Navbar -->
-    <nav id="navbar" class="navbar-expand-md navbar fixed-top">
+    <nav id="navbar" class="navbar navbar-expand-md">
       <div class="container-fluid">
-        <a href="/" class="navbar-brand home-name p-3">Rizkie <span>Pratama</span></a>
-        <button class="navbar-toggler ms-auto border-0" aria-label="Navigation Menu">
-          <i class="fas fa-bars text-light"></i>
+        <!-- Brand -->
+        <a href="/" class="brand-link">
+          <span class="brand-text">
+            RIZKIE <span class="brand-accent">PRATAMA</span>
+          </span>
+          <span class="brand-kicker">/ PORTFOLIO</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler ms-auto border-0 d-md-none" aria-label="Toggle Navigation">
+          <i class="fas fa-bars"></i>
         </button>
+
+        <!-- Desktop & Mobile Navigation Collapse -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Mobile Drawer Header -->
-          <div class="navbar-drawer-header d-md-none w-100">
-            <span class="hud-sys">&gt; SELECT_NAVIGATION_NODE_</span>
-            <button class="sys-btn navbar-drawer-close" aria-label="Close Menu">[ X ]</button>
-          </div>
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- Mobile Drawer Container (Only visible on < 768px) -->
+          <div class="mobile-drawer-inner d-md-none">
+            <div class="mobile-nav-group">
+              <span class="mobile-group-title">Navigation</span>
               {% if site.lang == "en" %}
-              <li class="nav-item"><a class="nav-link" href="/">{% t pages.home %}</a></li>
+              <a href="/"
+                class="mobile-nav-link {% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">
+                <span>{% t pages.home %}</span>
+              </a>
               {% elsif site.lang == "jp" %}
-              <li class="nav-item"><a class="nav-link" href="/jp">{% t pages.home %}</a></li>
+              <a href="/jp"
+                class="mobile-nav-link {% if page.url == '/jp/' or page.url == '/jp/index.html' %}active{% endif %}">
+                <span>{% t pages.home %}</span>
+              </a>
               {% endif %}
-              <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/about/">{% t pages.about %}</a></li>
-              <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/portofolio/">{% t pages.portofolio %}</a></li>
-              <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/blog/">{% t pages.blog %}</a></li>
+              <a href="{{ site.baseurl }}/about/"
+                class="mobile-nav-link {% if page.url contains '/about' %}active{% endif %}">
+                <span>{% t pages.about %}</span>
+              </a>
+            </div>
+
+            <div class="mobile-nav-group">
+              <span class="mobile-group-title">Portfolio Sections</span>
+              <a href="{{ site.baseurl }}/portofolio/development"
+                class="mobile-nav-link {% if page.url contains '/development' %}active{% endif %}">
+                <span>Software Development</span>
+                <span class="mobile-badge">Engineering</span>
+              </a>
+              <a href="{{ site.baseurl }}/portofolio/video-editing"
+                class="mobile-nav-link {% if page.url contains '/video-editing' %}active{% endif %}">
+                <span>Video Editing</span>
+                <span class="mobile-badge">Media</span>
+              </a>
+              <a href="https://photography.rizkiepratama.net/" target="_blank" rel="noopener noreferrer"
+                class="mobile-nav-link">
+                <span>Photography Showcase</span>
+                <span class="mobile-badge text-accent">Gallery ↗</span>
+              </a>
+            </div>
+
+            <div class="mobile-nav-group">
+              <span class="mobile-group-title">Writing</span>
+              <a href="{{ site.baseurl }}/blog/"
+                class="mobile-nav-link {% if page.url contains '/blog' %}active{% endif %}">
+                <span>{% t pages.blog %}</span>
+                <span class="mobile-badge">Articles</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation (Only visible on >= 768px) -->
+          <ul class="navbar-nav ms-auto mb-0 d-none d-md-flex">
+            {% if site.lang == "en" %}
+            <li class="nav-item {% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">
+              <a class="nav-link" href="/">{% t pages.home %}</a>
+            </li>
+            {% elsif site.lang == "jp" %}
+            <li class="nav-item {% if page.url == '/jp/' or page.url == '/jp/index.html' %}active{% endif %}">
+              <a class="nav-link" href="/jp">{% t pages.home %}</a>
+            </li>
+            {% endif %}
+
+            <li class="nav-item {% if page.url contains '/about' %}active{% endif %}">
+              <a class="nav-link" href="{{ site.baseurl }}/about/">{% t pages.about %}</a>
+            </li>
+
+            <li class="nav-item {% if page.url contains '/portofolio' %}active{% endif %}">
+              <a class="nav-link" href="{{ site.baseurl }}/portofolio/">{% t pages.portofolio %}</a>
+            </li>
+
+            <li class="nav-item {% if page.url contains '/blog' %}active{% endif %}">
+              <a class="nav-link" href="{{ site.baseurl }}/blog/">{% t pages.blog %}</a>
+            </li>
           </ul>
         </div>
       </div>

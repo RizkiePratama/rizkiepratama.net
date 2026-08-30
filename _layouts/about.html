@@ -1,304 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include head.html %}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <body id="about" class="d-flex flex-fill flex-column">
-        {% include header.html %}
+{% include head.html %}
 
-        <div id="swup" class="transition-fade">
-          <main id="about-section"
-            data-yr="{% t global.yr %}"
-            data-yrs="{% t global.yrs %}"
-            data-mo="{% t global.mo %}"
-            data-mos="{% t global.mos %}">
-            <div class="about-hud-grid">
+<body id="about" class="d-flex flex-fill flex-column">
+  {% include header.html %}
 
-              <!-- ==============================================
-                   LEFT COLUMN: HUD IDENTITY FRAME
+  <main id="swup" class="transition-fade flex-grow-1">
+    <div id="about-page" data-yr="{% t global.yr %}" data-yrs="{% t global.yrs %}" data-mo="{% t global.mo %}"
+      data-mos="{% t global.mos %}">
+
+      <div class="about-container py-4 py-md-5">
+
+        <!-- ==============================================
+                   01 / ASYMMETRIC MAGAZINE SPREAD HERO
               =============================================== -->
-              <aside class="hud-left">
-                <div class="hud-identity-card">
-                  <div class="hud-bracket hud-bracket-tl"></div>
-                  <div class="hud-bracket hud-bracket-tr"></div>
-                  <div class="hud-bracket hud-bracket-bl"></div>
-                  <div class="hud-bracket hud-bracket-br"></div>
-                  
-                  <div class="hud-header">
-                    <span class="hud-label">[ TARGET_ACQUIRED ]</span>
-                    <span class="hud-hex">// 0x08F //</span>
-                  </div>
+        <section class="magazine-hero-spread">
+          <div class="magazine-hero-layout">
 
-                  <div class="avatar-rig">
-                    <picture>
-                      <source srcset="/assets/images/webp/YGA08659_F.webp" type="image/webp">
-                      <img src="/assets/images/YGA08659_F.jpg" alt="Rizkie Pratama" class="avatar-img skeleton-loader" loading="eager">
-                    </picture>
-                    <div class="avatar-scanlines"></div>
-                  </div>
+            <!-- Left: Controlled 4:5 Vertical Portrait Card -->
+            <div class="magazine-col-portrait">
+              <div class="magazine-portrait-card">
+                <div class="magazine-portrait-wrap">
+                  <picture>
+                    <source srcset="/assets/images/webp/YGA08659_F.webp" type="image/webp">
+                    <img src="/assets/images/YGA08659_F.jpg" alt="Rizkie Pratama" class="magazine-portrait-img"
+                      loading="eager">
+                  </picture>
+                  <div class="magazine-portrait-overlay"></div>
 
-                  <div class="hero-right">
-                    <p class="hero-handle"><span class="mono-dim">&gt;</span> <span class="mono-accent">rizkie</span><span class="mono-dim">@workstation:~$</span></p>
-                    <h1 class="hero-name" aria-label="Rizkie Pratama">
-                      <span class="char-row decode-text" data-value="Rizkie Pratama" aria-hidden="true">
-                        Rizkie Pratama
-                      </span>
-                    </h1>
-                    <p class="hero-role" 
-                       data-role1="{% t about_page.role_1 %}" 
-                       data-role2="{% t about_page.role_2 %}" 
-                       data-role3="{% t about_page.role_3 %}">
-                      <span id="typewriter-text"></span><span class="typer-cursor">_</span>
-                    </p>
-                    
-                    <div class="hud-status-box">
-                      <p class="hero-location"><span class="hud-sys">SYS.LOC:</span> BANDUNG_ID</p>
-                      <p class="hero-location"><span class="hud-sys">SYS.STAT:</span> <span class="hud-stat-ok">ONLINE</span></p>
-                    </div>
-
-                    <div class="hero-social">
-                      <a href="https://github.com/RizkiePratama" target="_blank" rel="noopener noreferrer" class="social-pill terminal-link" title="GitHub">&gt; EXE: GITHUB</a>
-                      <a href="https://www.linkedin.com/in/rizkie-pratama-0153b6b4/" target="_blank" rel="noopener noreferrer" class="social-pill terminal-link" title="LinkedIn">&gt; EXE: LINKEDIN</a>
-                      <a href="https://x.com/RizkiePratama_" target="_blank" rel="noopener noreferrer" class="social-pill terminal-link" title="X">&gt; EXE: X_TWITTER</a>
-                      <a href="https://www.instagram.com/yuuga.ic/" target="_blank" rel="noopener noreferrer" class="social-pill terminal-link" title="Instagram">&gt; EXE: INSTAGRAM</a>
-                    </div>
+                  <!-- Floating Badge on Portrait -->
+                  <div class="magazine-portrait-badge">
+                    <span class="pulse-dot-green"></span>
+                    <span>Bandung, ID · Available</span>
                   </div>
                 </div>
-              </aside>
 
-              <!-- ==============================================
-                   RIGHT COLUMN: DATA NODES
+                <!-- Social Channel Pills under Portrait -->
+                <div class="magazine-social-strip">
+                  <a href="https://github.com/RizkiePratama" target="_blank" rel="noopener noreferrer"
+                    class="magazine-social-pill" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/rizkie-pratama-0153b6b4/" target="_blank"
+                    rel="noopener noreferrer" class="magazine-social-pill" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="https://x.com/RizkiePratama_" target="_blank" rel="noopener noreferrer"
+                    class="magazine-social-pill" title="Twitter / X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span>Twitter</span>
+                  </a>
+                  <a href="https://www.instagram.com/yuuga.ic/" target="_blank" rel="noopener noreferrer"
+                    class="magazine-social-pill" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Grand Typography, Metrics, and Biography -->
+            <div class="magazine-col-content">
+              <div class="magazine-intro-content">
+                <h1 class="magazine-title">
+                  RIZKIE <br>
+                  <span class="magazine-serif-accent">PRATAMA.</span>
+                </h1>
+
+                <p class="magazine-quote">
+                  Architecting low-level video transcoding pipelines, high-throughput distributed systems, and creative
+                  visual media.
+                </p>
+
+                <!-- Biography Prose -->
+                <div class="magazine-bio-prose">
+                  {{ content }}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==============================================
+                   02 / CAPABILITIES & SPECIFICATION TRACKS
               =============================================== -->
-              <div class="hud-right">
+        <section class="magazine-section js-reveal">
+          <div class="magazine-section-header">
+            <h2 class="magazine-section-title">Core Capabilities &amp; Tech Stack</h2>
+          </div>
 
-                <!-- BIO NODE -->
-                <section class="about-block js-reveal data-node">
-                  <div class="node-tab">
-                    <span class="node-tab-text">01 // ABOUT_ME</span>
-                    <div class="node-tab-deco"></div>
-                  </div>
-                  <div class="node-content">
-                    <div class="bio-prose">{{ content }}</div>
-                  </div>
-                </section>
+          <div class="spec-tracks-list">
+            <!-- Spec Row 1: Languages -->
+            <div class="spec-row">
+              <div class="spec-row-label">
+                <h3 class="spec-row-name"><i class="fa-solid fa-code text-accent me-2"></i>{% t
+                  portofolio_page.prog_lang %}</h3>
+              </div>
+              <div class="spec-row-tags">
+                <span class="spec-tag"><i class="fa-brands fa-golang me-1 text-go"></i>Go</span>
+                <span class="spec-tag"><i class="fa-solid fa-gem me-1 text-ruby"></i>Ruby</span>
+                <span class="spec-tag">C / C++</span>
+                <span class="spec-tag"><i class="fa-brands fa-python me-1 text-python"></i>Python</span>
+                <span class="spec-tag"><i class="fa-brands fa-js me-1 text-js"></i>JavaScript</span>
+                <span class="spec-tag">TypeScript</span>
+                <span class="spec-tag">C#</span>
+              </div>
+            </div>
 
-                <!-- TECH STACK NODE -->
-                <section class="about-block js-reveal data-node">
-                  <div class="node-tab">
-                    <span class="node-tab-text">02 // TECH_STACK</span>
-                    <div class="node-tab-deco"></div>
-                  </div>
-                  <div class="node-content stack-grid">
-                    <div class="stack-card">
-                      <div class="hud-bracket hud-bracket-tl"></div><div class="hud-bracket hud-bracket-br"></div>
-                      <div class="stack-card-inner">
-                        <h3 class="lane-label"><span class="hud-sys">[01]</span> <i class="fa-solid fa-code me-2"></i>{% t portofolio_page.prog_lang %}</h3>
-                        <ul class="tag-list">
-                          <li class="tag"><i class="fa-brands fa-golang me-1" style="color:#00add8"></i>Go</li>
-                          <li class="tag"><i class="fa-solid fa-gem me-1" style="color:#cc342d"></i>Ruby</li>
-                          <li class="tag">C / C++</li>
-                          <li class="tag"><i class="fa-brands fa-python me-1" style="color:#3776ab"></i>Python</li>
-                          <li class="tag"><i class="fa-brands fa-js me-1" style="color:#f7df1e"></i>JavaScript</li>
-                          <li class="tag">C#</li>
-                        </ul>
-                      </div>
-                    </div>
+            <!-- Spec Row 2: Infrastructure -->
+            <div class="spec-row">
+              <div class="spec-row-label">
+                <h3 class="spec-row-name"><i class="fa-solid fa-server text-accent me-2"></i>{% t
+                  about_page.infrastructure %}</h3>
+              </div>
+              <div class="spec-row-tags">
+                <span class="spec-tag"><i class="fa-brands fa-linux me-1 text-linux"></i>{% t
+                  about_page.skill_linux_admin %}</span>
+                <span class="spec-tag"><i class="fa-brands fa-docker me-1 text-docker"></i>Docker</span>
+                <span class="spec-tag"><i class="fa-brands fa-git-alt me-1 text-git"></i>Git</span>
+                <span class="spec-tag">CI / CD Pipelines</span>
+                <span class="spec-tag">Kubernetes</span>
+                <span class="spec-tag">Distributed Storage</span>
+              </div>
+            </div>
 
-                    <div class="stack-card">
-                      <div class="hud-bracket hud-bracket-tl"></div><div class="hud-bracket hud-bracket-br"></div>
-                      <div class="stack-card-inner">
-                        <h3 class="lane-label"><span class="hud-sys">[02]</span> <i class="fa-solid fa-server me-2"></i>{% t about_page.infrastructure %}</h3>
-                        <ul class="tag-list">
-                          <li class="tag"><i class="fa-brands fa-linux me-1" style="color:#fcc624"></i>{% t about_page.skill_linux_admin %}</li>
-                          <li class="tag"><i class="fa-brands fa-docker me-1" style="color:#2496ed"></i>Docker</li>
-                          <li class="tag"><i class="fa-brands fa-git-alt me-1" style="color:#f05032"></i>Git</li>
-                          <li class="tag">CI / CD</li>
-                          <li class="tag">NAS / Storage</li>
-                        </ul>
-                      </div>
-                    </div>
-                    
-                    <div class="stack-card">
-                      <div class="hud-bracket hud-bracket-tl"></div><div class="hud-bracket hud-bracket-br"></div>
-                      <div class="stack-card-inner">
-                        <h3 class="lane-label"><span class="hud-sys">[03]</span> <i class="fa-solid fa-video me-2"></i>{% t about_page.video_engineering %}</h3>
-                        <ul class="tag-list">
-                          <li class="tag">RTMP / SRT</li>
-                          <li class="tag">HLS / MPEG-DASH</li>
-                          <li class="tag">FFmpeg</li>
-                          <li class="tag">GStreamer</li>
-                          <li class="tag">H.264</li>
-                          <li class="tag">HEVC</li>
-                          <li class="tag">AV1</li>
-                          <li class="tag">{% t about_page.skill_live_transcoding %}</li>
-                          <li class="tag">Shaka Packager</li>
-                          <li class="tag">Shaka Player</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </section>
+            <!-- Spec Row 3: Video Pipelines -->
+            <div class="spec-row">
+              <div class="spec-row-label">
+                <h3 class="spec-row-name"><i class="fa-solid fa-video text-accent me-2"></i>{% t
+                  about_page.video_engineering %}</h3>
+              </div>
+              <div class="spec-row-tags">
+                <span class="spec-tag spec-tag-accent">RTMP / SRT Streaming</span>
+                <span class="spec-tag spec-tag-accent">HLS &amp; MPEG-DASH</span>
+                <span class="spec-tag">FFmpeg Automation</span>
+                <span class="spec-tag">GStreamer</span>
+                <span class="spec-tag">HEVC &amp; AV1 Encoding</span>
+                <span class="spec-tag">{% t about_page.skill_live_transcoding %}</span>
+                <span class="spec-tag">Shaka Packager &amp; Player</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                <!-- AFFILIATIONS NODE -->
-                <section class="about-block js-reveal data-node">
-                  <div class="node-tab">
-                    <span class="node-tab-text">03 // AFFILIATIONS</span>
-                    <div class="node-tab-deco"></div>
-                  </div>
-                  <div class="node-content aff-grid">
-                    <a href="https://vidio.com/" target="_blank" rel="noopener noreferrer" class="aff-card">
-                      <div class="hud-bracket hud-bracket-tl"></div><div class="hud-bracket hud-bracket-br"></div>
-                      <span class="aff-chip">{% t about_page.current_employment %} · 6+ yrs</span>
-                      <div class="aff-logo-wrap">
-                        <img src="/assets/images/vidio.svg" alt="Vidio.com" class="aff-logo">
-                      </div>
-                      <p class="aff-desc">{% t about_page.vidio_sub %}</p>
-                      <span class="aff-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                    </a>
+        <!-- ==============================================
+                   03 / AFFILIATIONS & STUDIOS
+              =============================================== -->
+        <section class="magazine-section js-reveal">
+          <div class="magazine-section-header">
+            <h2 class="magazine-section-title">Affiliations &amp; Studios</h2>
+          </div>
 
-                    <a href="https://hibikaze.id/" target="_blank" rel="noopener noreferrer" class="aff-card">
-                      <div class="hud-bracket hud-bracket-tl"></div><div class="hud-bracket hud-bracket-br"></div>
-                      <span class="aff-chip">{% t about_page.founder_of %} · <span data-start-date="2017-03" data-format="short">9+ yrs</span></span>
-                      <div class="aff-logo-wrap">
-                        <picture>
-                          <source srcset="/assets/images/webp/hibikaze_studio.webp" type="image/webp">
-                          <img src="/assets/images/hibikaze_studio.png" alt="Hibikaze Studios" class="aff-logo aff-logo-invert">
-                        </picture>
-                      </div>
-                      <p class="aff-desc">{% t about_page.hkz_sub %}</p>
-                      <span class="aff-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                    </a>
-                  </div>
-                </section>
+          <div class="aff-grid">
+            <!-- Vidio -->
+            <a href="https://vidio.com/" target="_blank" rel="noopener noreferrer" class="magazine-aff-card">
+              <div class="aff-card-top">
+                <span class="aff-badge">{% t about_page.current_employment %} · 6+ yrs</span>
+                <i class="fa-solid fa-arrow-up-right-from-square aff-arrow-icon"></i>
+              </div>
+              <div class="aff-logo-box">
+                <img src="/assets/images/vidio.svg" alt="Vidio.com" class="aff-logo-img">
+              </div>
+              <div class="aff-card-body">
+                <h3 class="aff-title">Vidio.com</h3>
+                <p class="aff-summary">{% t about_page.vidio_sub %}</p>
+              </div>
+            </a>
 
-                <!-- WORK HISTORY NODE -->
-                <section class="about-block js-reveal data-node">
-                  <div class="node-tab">
-                    <span class="node-tab-text">04 // EXPERIENCE_LOG</span>
-                    <div class="node-tab-deco"></div>
-                  </div>
-                  <div class="node-content">
-                    <ol class="exp-list">
-                      <!-- Vidio -->
-                      <li class="exp-company">
-                        <div class="exp-company-header">
-                          <div class="exp-company-logo-wrap">
-                            <img src="/assets/images/vidio.svg" alt="Vidio.com" class="exp-company-logo">
-                          </div>
-                          <div class="exp-company-meta">
-                            <h3 class="exp-company-name decode-text" data-value="Vidio.com">Vidio.com</h3>
-                            <span class="exp-company-sub">{% t about_page.full_time %} · <span data-start-date="2020-07">6 yrs</span> · {% t about_page.jakarta %}</span>
-                          </div>
-                        </div>
+            <!-- Hibikaze Studios -->
+            <a href="https://hibikaze.id/" target="_blank" rel="noopener noreferrer" class="magazine-aff-card">
+              <div class="aff-card-top">
+                <span class="aff-badge">{% t about_page.founder_of %} · <span data-start-date="2017-03"
+                    data-format="short">9+ yrs</span></span>
+                <i class="fa-solid fa-arrow-up-right-from-square aff-arrow-icon"></i>
+              </div>
+              <div class="aff-logo-box">
+                <picture>
+                  <source srcset="/assets/images/webp/hibikaze_studio.webp" type="image/webp">
+                  <img src="/assets/images/hibikaze_studio.png" alt="Hibikaze Studios"
+                    class="aff-logo-img aff-logo-invert">
+                </picture>
+              </div>
+              <div class="aff-card-body">
+                <h3 class="aff-title">Hibikaze Studios</h3>
+                <p class="aff-summary">{% t about_page.hkz_sub %}</p>
+              </div>
+            </a>
+          </div>
+        </section>
 
-                        <ol class="exp-roles-list">
-                          <li class="exp-role-item">
-                            <div class="exp-role-dot"></div>
-                            <div class="exp-role-body">
-                              <div class="exp-role-top">
-                                <h4 class="exp-role-title">{% t about_page.assoc_video_eng %}</h4>
-                                <span class="exp-role-badge">{% t about_page.hybrid %}</span>
-                              </div>
-                              <span class="exp-role-period">Oct 2022 – {% t about_page.present %} · <span data-start-date="2022-10">3 yrs 9 mos</span></span>
-                              <div class="exp-role-tags">
-                                <span class="tag tag-accent">Ruby on Rails</span>
-                                <span class="tag tag-accent">{% t about_page.skill_video_transcoding %}</span>
-                                <span class="tag tag-accent">HLS / DASH</span>
-                                <span class="tag">Go</span>
-                                <span class="tag">FFmpeg</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="exp-role-item">
-                            <div class="exp-role-dot"></div>
-                            <div class="exp-role-body">
-                              <div class="exp-role-top">
-                                <h4 class="exp-role-title">{% t about_page.livestream_eng %}</h4>
-                                <span class="exp-role-badge">{% t about_page.onsite %}</span>
-                              </div>
-                              <span class="exp-role-period">Jul 2020 – Oct 2022 · 2 {% t global.yrs %} 4 {% t global.mos %}</span>
-                              <div class="exp-role-tags">
-                                <span class="tag tag-accent">{% t about_page.skill_live_broadcast %}</span>
-                                <span class="tag tag-accent">RTMP / SRT</span>
-                                <span class="tag tag-accent">{% t about_page.skill_stream_monitoring %}</span>
-                                <span class="tag">{% t about_page.skill_linux_admin %}</span>
-                              </div>
-                            </div>
-                          </li>
-                        </ol>
-                      </li>
+        <!-- ==============================================
+                   04 / PROFESSIONAL EXPERIENCE LEDGER
+              =============================================== -->
+        <section class="magazine-section js-reveal">
+          <div class="magazine-section-header">
+            <h2 class="magazine-section-title">Career Milestones &amp; History</h2>
+          </div>
 
-                      <!-- Hibikaze Studios -->
-                      <li class="exp-company">
-                        <div class="exp-company-header">
-                          <div class="exp-company-logo-wrap exp-logo-dark">
-                            <picture>
-                              <source srcset="/assets/images/webp/hibikaze_studio.webp" type="image/webp">
-                              <img src="/assets/images/hibikaze_studio.png" alt="Hibikaze Studios" class="exp-company-logo exp-company-logo-invert">
-                            </picture>
-                          </div>
-                          <div class="exp-company-meta">
-                            <h3 class="exp-company-name decode-text" data-value="Hibikaze Studios">Hibikaze Studios</h3>
-                            <span class="exp-company-sub">{% t about_page.full_time %} · <span data-start-date="2017-03">9 yrs 4 mos</span> · {% t about_page.bandung %} · {% t about_page.hybrid %}</span>
-                          </div>
-                        </div>
-                        <ol class="exp-roles-list">
-                          <li class="exp-role-item no-connector">
-                            <div class="exp-role-dot"></div>
-                            <div class="exp-role-body">
-                              <div class="exp-role-top">
-                                <h4 class="exp-role-title">{% t about_page.software_eng %}</h4>
-                                <span class="exp-role-badge">{% t about_page.hybrid %}</span>
-                              </div>
-                              <span class="exp-role-period">Mar 2017 – {% t about_page.present %} · <span data-start-date="2017-03">9 yrs 4 mos</span></span>
-                              <div class="exp-role-tags">
-                                <span class="tag">{% t about_page.skill_software_design %}</span>
-                                <span class="tag">{% t about_page.skill_software_infra %}</span>
-                                <span class="tag">{% t about_page.skill_game_dev %}</span>
-                              </div>
-                            </div>
-                          </li>
-                        </ol>
-                      </li>
-
-                      <!-- KMK -->
-                      <li class="exp-company last">
-                        <div class="exp-company-header">
-                          <div class="exp-company-logo-wrap exp-logo-placeholder">
-                            <i class="fa-solid fa-building"></i>
-                          </div>
-                          <div class="exp-company-meta">
-                            <h3 class="exp-company-name decode-text" data-value="PT. Kreatif Media Karya">PT. Kreatif Media Karya</h3>
-                            <span class="exp-company-sub">{% t about_page.full_time %} · 1 {% t global.yr %} 10 {% t global.mos %} · {% t about_page.jakarta %} · {% t about_page.onsite %}</span>
-                          </div>
-                        </div>
-                        <ol class="exp-roles-list">
-                          <li class="exp-role-item no-connector">
-                            <div class="exp-role-dot"></div>
-                            <div class="exp-role-body">
-                              <div class="exp-role-top">
-                                <h4 class="exp-role-title">{% t about_page.sys_admin %}</h4>
-                                <span class="exp-role-badge">{% t about_page.onsite %}</span>
-                              </div>
-                              <span class="exp-role-period">Oct 2018 – Jul 2020 · 1 {% t global.yr %} 10 {% t global.mos %}</span>
-                              <div class="exp-role-tags">
-                                <span class="tag">{% t about_page.skill_linux_sys_admin %}</span>
-                                <span class="tag">NAS / Storage</span>
-                                <span class="tag">{% t about_page.skill_network_infra %}</span>
-                              </div>
-                            </div>
-                          </li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </div>
-                </section>
+          <div class="career-ledger">
+            <!-- Row 1: Vidio Assoc Video Eng -->
+            <div class="ledger-row">
+              <div class="ledger-col-period">
+                <span class="ledger-dates">Oct 2022 — Present</span>
+                <span class="ledger-duration" data-start-date="2022-10">3 yrs 9 mos</span>
               </div>
 
-            </div>
-          </main>
-        </div>
+              <div class="ledger-col-company">
+                <div class="ledger-company-wrap">
+                  <div class="ledger-thumb">
+                    <img src="/assets/images/vidio.svg" alt="Vidio.com">
+                  </div>
+                  <div>
+                    <h3 class="ledger-company-name">Vidio.com</h3>
+                    <span class="ledger-company-loc">Jakarta, ID</span>
+                  </div>
+                </div>
+              </div>
 
-        {% include footer.html %}
-    </body>
+              <div class="ledger-col-role">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <h4 class="ledger-role-title">{% t about_page.assoc_video_eng %}</h4>
+                  <span class="ledger-badge">{% t about_page.hybrid %}</span>
+                  <span class="ledger-badge">{% t about_page.full_time %}</span>
+                </div>
+                <div class="spec-row-tags mt-2">
+                  <span class="spec-tag spec-tag-accent">Ruby on Rails</span>
+                  <span class="spec-tag spec-tag-accent">{% t about_page.skill_video_transcoding %}</span>
+                  <span class="spec-tag spec-tag-accent">HLS / DASH</span>
+                  <span class="spec-tag">Go</span>
+                  <span class="spec-tag">FFmpeg</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Vidio Livestream Eng -->
+            <div class="ledger-row">
+              <div class="ledger-col-period">
+                <span class="ledger-dates">Jul 2020 — Oct 2022</span>
+                <span class="ledger-duration">2 yrs 4 mos</span>
+              </div>
+
+              <div class="ledger-col-company">
+                <div class="ledger-company-wrap">
+                  <div class="ledger-thumb">
+                    <img src="/assets/images/vidio.svg" alt="Vidio.com">
+                  </div>
+                  <div>
+                    <h3 class="ledger-company-name">Vidio.com</h3>
+                    <span class="ledger-company-loc">Jakarta, ID</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ledger-col-role">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <h4 class="ledger-role-title">{% t about_page.livestream_eng %}</h4>
+                  <span class="ledger-badge">{% t about_page.onsite %}</span>
+                  <span class="ledger-badge">{% t about_page.full_time %}</span>
+                </div>
+                <div class="spec-row-tags mt-2">
+                  <span class="spec-tag spec-tag-accent">{% t about_page.skill_live_broadcast %}</span>
+                  <span class="spec-tag spec-tag-accent">RTMP / SRT</span>
+                  <span class="spec-tag spec-tag-accent">{% t about_page.skill_stream_monitoring %}</span>
+                  <span class="spec-tag">{% t about_page.skill_linux_admin %}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 3: Hibikaze Studios -->
+            <div class="ledger-row">
+              <div class="ledger-col-period">
+                <span class="ledger-dates">Mar 2017 — Present</span>
+                <span class="ledger-duration" data-start-date="2017-03">9 yrs 4 mos</span>
+              </div>
+
+              <div class="ledger-col-company">
+                <div class="ledger-company-wrap">
+                  <div class="ledger-thumb">
+                    <picture>
+                      <source srcset="/assets/images/webp/hibikaze_studio.webp" type="image/webp">
+                      <img src="/assets/images/hibikaze_studio.png" alt="Hibikaze Studios" class="aff-logo-invert">
+                    </picture>
+                  </div>
+                  <div>
+                    <h3 class="ledger-company-name">Hibikaze Studios</h3>
+                    <span class="ledger-company-loc">Bandung, ID</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ledger-col-role">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <h4 class="ledger-role-title">{% t about_page.software_eng %}</h4>
+                  <span class="ledger-badge">{% t about_page.hybrid %}</span>
+                  <span class="ledger-badge">{% t about_page.full_time %}</span>
+                </div>
+                <div class="spec-row-tags mt-2">
+                  <span class="spec-tag">{% t about_page.skill_software_design %}</span>
+                  <span class="spec-tag">{% t about_page.skill_software_infra %}</span>
+                  <span class="spec-tag">{% t about_page.skill_game_dev %}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 4: KMK -->
+            <div class="ledger-row">
+              <div class="ledger-col-period">
+                <span class="ledger-dates">Oct 2018 — Jul 2020</span>
+                <span class="ledger-duration">1 yr 10 mos</span>
+              </div>
+
+              <div class="ledger-col-company">
+                <div class="ledger-company-wrap">
+                  <div class="ledger-thumb">
+                    <i class="fa-solid fa-building text-muted"></i>
+                  </div>
+                  <div>
+                    <h3 class="ledger-company-name">PT. Kreatif Media Karya</h3>
+                    <span class="ledger-company-loc">Jakarta, ID</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ledger-col-role">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <h4 class="ledger-role-title">{% t about_page.sys_admin %}</h4>
+                  <span class="ledger-badge">{% t about_page.onsite %}</span>
+                  <span class="ledger-badge">{% t about_page.full_time %}</span>
+                </div>
+                <div class="spec-row-tags mt-2">
+                  <span class="spec-tag">{% t about_page.skill_linux_sys_admin %}</span>
+                  <span class="spec-tag">NAS / Storage</span>
+                  <span class="spec-tag">{% t about_page.skill_network_infra %}</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  {% include footer.html %}
+</body>
+
 </html>
