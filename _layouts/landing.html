@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang }}">
 {% include head.html %}
 
 <body id="landing" class="d-flex flex-fill flex-column">
@@ -18,33 +18,33 @@
         <div class="hero-left-col">
           <!-- Grand Editorial Headline -->
           <h1 class="hero-headline">
-            ENGINEERING, SYSTEMS <br>
-            <span class="hero-serif-accent">&amp; CREATIVE MEDIA.</span>
+            {% t landing_page.headline_1 %}<br>
+            <span class="hero-accent-bold">{% t landing_page.headline_2 %}</span><br>
+            {% t landing_page.headline_3 %}
           </h1>
 
           <!-- Narrative Subtitle -->
           <p class="hero-description">
-            Software engineer and technical lead specializing in high-throughput video pipelines, distributed cloud
-            backend architectures, and creative visual production.
+            {% t landing_page.description %}
           </p>
 
           <!-- Gateway Action Buttons -->
           <div class="hero-actions">
-            <a href="{{ site.baseurl }}/portofolio/development" class="hero-btn-primary">
+            <a href="{% if site.lang == 'jp' %}/jp{% endif %}/portofolio/development" class="hero-btn-primary">
               <i class="fa-solid fa-code"></i>
-              <span>Software Portfolio</span>
+              <span>{% t landing_page.btn_software %}</span>
             </a>
 
             <a href="https://photography.rizkiepratama.net/" target="_blank" rel="noopener noreferrer"
               class="hero-btn-glass">
               <i class="fa-solid fa-camera text-accent"></i>
-              <span>Photography Showcase</span>
+              <span>{% t landing_page.btn_photography %}</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-muted-arrow"></i>
             </a>
 
-            <a href="{{ site.baseurl }}/about/" class="hero-btn-glass">
+            <a href="{% if site.lang == 'jp' %}/jp{% endif %}/about/" class="hero-btn-glass">
               <i class="fa-solid fa-user"></i>
-              <span>About &amp; Dossier</span>
+              <span>{% t landing_page.btn_about %}</span>
             </a>
           </div>
         </div>
@@ -52,18 +52,18 @@
         <!-- Bottom Counter / Telemetry Stats -->
         <div class="hero-stats-row">
           <div class="hero-stat-item">
-            <span class="hero-stat-value">10+</span>
-            <span class="hero-stat-label">Years Engineering</span>
+            <span class="hero-stat-value">{% t landing_page.stat_years_val %}</span>
+            <span class="hero-stat-label">{% t landing_page.stat_years_lbl %}</span>
           </div>
           <div class="hero-stat-divider"></div>
           <div class="hero-stat-item">
-            <span class="hero-stat-value text-accent">Go &amp; Ruby</span>
-            <span class="hero-stat-label">Core Tech Stack</span>
+            <span class="hero-stat-value text-accent">{% t landing_page.stat_stack_val %}</span>
+            <span class="hero-stat-label">{% t landing_page.stat_stack_lbl %}</span>
           </div>
           <div class="hero-stat-divider"></div>
           <div class="hero-stat-item">
-            <span class="hero-stat-value">Bandung, ID</span>
-            <span class="hero-stat-label">Workstation Loc</span>
+            <span class="hero-stat-value">{% t landing_page.stat_loc_val %}</span>
+            <span class="hero-stat-label">{% t landing_page.stat_loc_lbl %}</span>
           </div>
         </div>
       </div>

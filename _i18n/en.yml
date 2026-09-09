@@ -78,6 +78,20 @@ global:
   website: Website Development
   yr: yr
   yrs: yrs
+landing_page:
+  btn_about: About & Dossier
+  btn_photography: Photography Showcase
+  btn_software: Software Portfolio
+  description: Senior systems engineer & technical lead specializing in high-throughput video pipelines, distributed cloud architecture, and creative visual media.
+  headline_1: THINK,
+  headline_2: BUILD
+  headline_3: AND CREATE!!
+  stat_loc_lbl: Workstation Loc
+  stat_loc_val: Bandung, ID
+  stat_stack_lbl: Core Tech Stack
+  stat_stack_val: Go & Ruby
+  stat_years_lbl: Years Engineering
+  stat_years_val: 10+
 pages:
   about: About
   blog: Blog

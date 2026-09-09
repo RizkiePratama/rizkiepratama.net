@@ -76,6 +76,20 @@ global:
   website: ウェブサイト
   yr: 年
   yrs: 年
+landing_page:
+  btn_about: 経歴・プロフィール
+  btn_photography: 写真ギャラリー
+  btn_software: ソフトウェア ポートフォリオ
+  description: 大規模ビデオパイプライン、分散クラウドアーキテクチャ、およびクリエイティブな映像制作を専門とするシニアシステムエンジニア兼テクニカルリード。
+  headline_1: 考える、
+  headline_2: 構築する、
+  headline_3: 創造する!!
+  stat_loc_lbl: 活動拠点
+  stat_loc_val: インドネシア、バンドン
+  stat_stack_lbl: 主要技術スタック
+  stat_stack_val: Go & Ruby
+  stat_years_lbl: エンジニア経験年数
+  stat_years_val: 10年以上
 pages:
   about: 約
   blog: ブログ
