@@ -224,7 +224,10 @@ if (typeof Swup !== 'undefined') {
   try {
     const plugins = [];
     if (typeof SwupHeadPlugin !== 'undefined') {
-      plugins.push(new SwupHeadPlugin());
+      plugins.push(new SwupHeadPlugin({
+        awaitAssets: true,
+        persistAssets: true
+      }));
     } else {
       console.warn('SwupHeadPlugin is not defined, running without it.');
     }
